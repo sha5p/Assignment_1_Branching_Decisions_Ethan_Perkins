@@ -1,0 +1,327 @@
+[gd_scene load_steps=26 format=3 uid="uid://7l5xddgv3d28"]
+
+[ext_resource type="Script" path="res://Scripts/Bullet.gd" id="1_sj7gx"]
+[ext_resource type="Texture2D" uid="uid://dbrar35ghbe3g" path="res://Assests/Tech Dungeon Roguelite - Asset Pack (DEMO)/SpriteSheets/Sprite_Sheet_Main.png" id="2_mhq26"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6i1er"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxfo7"]
+atlas = ExtResource("2_mhq26")
+region = Rect2(2560, 1200, 80, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ut50n"]
+atlas = ExtResource("2_mhq26")
+region = Rect2(2640, 1200, 80, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwl6a"]
+atlas = ExtResource("2_mhq26")
+region = Rect2(2720, 1200, 80, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqyx7"]
+atlas = ExtResource("2_mhq26")
+region = Rect2(2800, 1200, 80, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3r7d1"]
+atlas = ExtResource("2_mhq26")
+region = Rect2(2531, 871, 70, 67)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w87h7"]
+atlas = ExtResource("2_mhq26")
+region = Rect2(2601, 871, 70, 67)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqyls"]
+atlas = ExtResource("2_mhq26")
+region = Rect2(2671, 871, 70, 67)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ntk0"]
+atlas = ExtResource("2_mhq26")
+region = Rect2(2741, 871, 70, 67)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cnnp5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxfo7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ut50n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwl6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqyx7")
+}],
+"loop": true,
+"name": &"Destroyed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3r7d1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w87h7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqyls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ntk0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p68uv"]
+atlas = ExtResource("2_mhq26")
+region = Rect2(2791, 1066, 44, 41)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hvbj5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxfo7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ut50n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwl6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqyx7")
+}],
+"loop": true,
+"name": &"Burst",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p68uv")
+}],
+"loop": true,
+"name": &"Shotgun",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lju2s"]
+atlas = ExtResource("2_mhq26")
+region = Rect2(2541, 1296, 77, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2b5h3"]
+atlas = ExtResource("2_mhq26")
+region = Rect2(2618, 1296, 77, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16nbi"]
+atlas = ExtResource("2_mhq26")
+region = Rect2(2695, 1296, 77, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxqtm"]
+atlas = ExtResource("2_mhq26")
+region = Rect2(2772, 1296, 77, 72)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oiew7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lju2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2b5h3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16nbi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxqtm")
+}],
+"loop": true,
+"name": &"Rocket",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlbqx"]
+atlas = ExtResource("2_mhq26")
+region = Rect2(2689, 894, 44, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bgxo8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wlbqx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_qmbhx"]
+resource_name = "Bullet"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D/AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D/AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [&"default"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(10, 0), Vector2(20, 0), Vector2(30, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nw3kf"]
+resource_name = "BulletDestroyed"
+length = 0.35
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Destroyed"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D/AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_62dqm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D/AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D/AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [&"default"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_437hq"]
+_data = {
+"Bullet": SubResource("Animation_qmbhx"),
+"BulletDestroyed": SubResource("Animation_nw3kf"),
+"RESET": SubResource("Animation_62dqm")
+}
+
+[node name="Player_Bullet" type="Area2D"]
+collision_layer = 9
+collision_mask = 13
+script = ExtResource("1_sj7gx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3, 3)
+shape = SubResource("CircleShape2D_6i1er")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
+visible = false
+texture_filter = 1
+position = Vector2(-24, -1)
+sprite_frames = SubResource("SpriteFrames_cnnp5")
+
+[node name="ShotGun" type="AnimatedSprite2D" parent="CollisionShape2D"]
+visible = false
+texture_filter = 1
+position = Vector2(-19.3333, 3)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_hvbj5")
+animation = &"Shotgun"
+flip_h = true
+
+[node name="Bazoka" type="AnimatedSprite2D" parent="CollisionShape2D"]
+position = Vector2(17, -11)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_oiew7")
+animation = &"Rocket"
+
+[node name="AutoAim" type="Area2D" parent="CollisionShape2D/Bazoka"]
+process_mode = 4
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CollisionShape2D/Bazoka/AutoAim"]
+position = Vector2(-5.27778, 1.11111)
+polygon = PackedVector2Array(1.66667, 3.88889, 1.38889, 11.6667, 55.2778, 49.7222, 57.2222, -37.5)
+
+[node name="Laser" type="AnimatedSprite2D" parent="CollisionShape2D"]
+visible = false
+position = Vector2(68.3333, -0.666667)
+scale = Vector2(5.58713, 1)
+sprite_frames = SubResource("SpriteFrames_bgxo8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_437hq")
+}
+autoplay = "Bullet"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="CollisionShape2D/Bazoka/AutoAim" to="." method="_on_auto_aim_body_entered"]

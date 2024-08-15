@@ -1,0 +1,100 @@
+[gd_scene load_steps=12 format=3 uid="uid://b4h63wsi5bxvn"]
+
+[ext_resource type="Texture2D" uid="uid://bls4alg7maxja" path="res://Assests/guns/original sized/50 bmg sniper.png" id="1_dv4ex"]
+[ext_resource type="Script" path="res://Scripts/Weapon.gd" id="1_ubrll"]
+[ext_resource type="Texture2D" uid="uid://bn0xkmyss4rik" path="res://Assests/guns/original sized/colt m1911.png" id="2_6c6m8"]
+[ext_resource type="Texture2D" uid="uid://gh7qrqiq3qpq" path="res://Assests/guns/original sized/vector.png" id="4_2nk17"]
+[ext_resource type="Texture2D" uid="uid://bkglrbqt427dh" path="res://Assests/guns/original sized/winchester shotgun ww2 version.png" id="5_6c4fu"]
+[ext_resource type="Texture2D" uid="uid://b8202rv0s05bh" path="res://Assests/guns/original sized/AR.png" id="6_x2cje"]
+[ext_resource type="Texture2D" uid="uid://cqphnogw3brto" path="res://Assests/guns/other guns/big goob.png" id="7_6jhfl"]
+[ext_resource type="Texture2D" uid="uid://bwuox2283tfls" path="res://Assests/guns/original sized/idk.png" id="8_f07mi"]
+[ext_resource type="Texture2D" uid="uid://c46umlkeivco3" path="res://Assests/guns/TheUltimateWeaponsPack/TheUltimateWeaponsPack_Sheet.png" id="9_os2fj"]
+[ext_resource type="PackedScene" uid="uid://coqyxcm4m5q6e" path="res://Laser.tscn" id="10_i2sp0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qps1t"]
+radius = 86.1452
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_ubrll")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qps1t")
+
+[node name="WeaponPivot" type="Marker2D" parent="."]
+rotation = -0.0106717
+
+[node name="Pistol" type="Sprite2D" parent="WeaponPivot"]
+texture_filter = 1
+position = Vector2(36.9873, 1.39479)
+rotation = 0.0106717
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_6c6m8")
+
+[node name="Sniper" type="Sprite2D" parent="WeaponPivot"]
+visible = false
+texture_filter = 1
+position = Vector2(45, 0)
+rotation = 0.0205038
+texture = ExtResource("1_dv4ex")
+
+[node name="LMG" type="Sprite2D" parent="WeaponPivot"]
+visible = false
+position = Vector2(36.062, -5.61548)
+rotation = 0.0106717
+texture = ExtResource("4_2nk17")
+
+[node name="ShotGun" type="Sprite2D" parent="WeaponPivot"]
+visible = false
+position = Vector2(49.0506, -4.47681)
+rotation = 0.0106717
+texture = ExtResource("5_6c4fu")
+
+[node name="BulletSpawn" type="Marker2D" parent="WeaponPivot"]
+position = Vector2(63.1138, -10.3271)
+rotation = 0.0205038
+
+[node name="BurstShotGun" type="Marker2D" parent="WeaponPivot"]
+position = Vector2(61.3914, -36.3469)
+
+[node name="BurstShotGun2" type="Marker2D" parent="WeaponPivot"]
+position = Vector2(59.8579, 13.6396)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Ak-47" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(39, -6)
+texture = ExtResource("6_x2cje")
+
+[node name="Laser" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(40, -4)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_6jhfl")
+
+[node name="RailGun" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(34, -1)
+texture = ExtResource("8_f07mi")
+
+[node name="Bazoka" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(38, -8)
+texture = ExtResource("9_os2fj")
+region_enabled = true
+region_rect = Rect2(333.217, 71.0078, 42.8064, 14.3887)
+
+[node name="Burst Shoty" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(36, -5)
+texture = ExtResource("9_os2fj")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(92.2652, 116.885, 38.9556, 13.9283)
+
+[node name="Laser2" parent="." instance=ExtResource("10_i2sp0")]
+visible = false
+position = Vector2(67, -6)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
