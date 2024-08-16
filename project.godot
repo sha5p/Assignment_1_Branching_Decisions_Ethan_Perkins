@@ -29,6 +29,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"General_Kobob": "res://General_Kobob.dch",
 "PlayerChracter": "res://Scences/Player/PlayerChracter.dch"
 }
 directories/dtl_directory={}

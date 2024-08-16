@@ -296,6 +296,7 @@ animation = &"Shotgun"
 flip_h = true
 
 [node name="Bazoka" type="AnimatedSprite2D" parent="CollisionShape2D"]
+visible = false
 position = Vector2(17, -11)
 scale = Vector2(1.2, 1.2)
 sprite_frames = SubResource("SpriteFrames_oiew7")
