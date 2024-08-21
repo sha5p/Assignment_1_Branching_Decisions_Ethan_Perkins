@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://svt4aqbevtt0"]
+[gd_scene load_steps=11 format=3 uid="uid://svt4aqbevtt0"]
 
 [ext_resource type="Texture2D" uid="uid://s0xf71edia4g" path="res://Assests/Tech Dungeon Roguelite - Asset Pack (DEMO)/SpriteSheets/Doors_shooter.png" id="1_gk0fy"]
 [ext_resource type="Script" path="res://door.gd" id="1_lakos"]
@@ -21,32 +21,32 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vmbvl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xi8ht"]
 atlas = ExtResource("1_gk0fy")
-region = Rect2(1067, 175, 118, 175)
+region = Rect2(1300, 175, 118, 175)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f257k"]
 atlas = ExtResource("1_gk0fy")
 region = Rect2(1185, 175, 118, 175)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xi8ht"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmbvl"]
 atlas = ExtResource("1_gk0fy")
-region = Rect2(1300, 175, 118, 175)
+region = Rect2(1067, 175, 118, 175)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xxh2t"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vmbvl")
+"texture": SubResource("AtlasTexture_xi8ht")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_f257k")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xi8ht")
+"texture": SubResource("AtlasTexture_vmbvl")
 }],
 "loop": true,
-"name": &"Close",
+"name": &"close",
 "speed": 5.0
 }, {
 "frames": [{
@@ -62,31 +62,44 @@ animations = [{
 "loop": true,
 "name": &"open",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xi8ht")
+}],
+"loop": true,
+"name": &"opened",
+"speed": 5.0
 }]
 
-[node name="Sprite2D" type="Sprite2D"]
-position = Vector2(0, -1)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4pkwb"]
+size = Vector2(122, 65)
+
+[node name="Door" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("1_lakos")
 
-[node name="Door" type="Area2D" parent="."]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4.25, 23)
 shape = SubResource("RectangleShape2D_5inny")
 
-[node name="Main" type="AnimatedSprite2D" parent="Door"]
+[node name="Main" type="AnimatedSprite2D" parent="."]
 position = Vector2(3, 45)
 sprite_frames = SubResource("SpriteFrames_ii1ua")
 autoplay = "default"
 
-[node name="Door" type="AnimatedSprite2D" parent="Door"]
+[node name="Door" type="AnimatedSprite2D" parent="."]
 visible = false
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_xxh2t")
-animation = &"Close"
-frame_progress = 0.856516
+animation = &"opened"
 
-[connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
-[connection signal="body_exited" from="Door" to="Door" method="_on_body_exited"]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(3, 25.5)
+shape = SubResource("RectangleShape2D_4pkwb")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

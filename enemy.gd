@@ -1,14 +1,18 @@
 extends CharacterBody2D
-@export var player:Node2D
+@onready var player:Node2D=get_tree().get_root().get_node("World Map/Player")
 @onready var nav_agent = $NavigationAgent2D
 @onready var shooting_cool_down = $ShootingCoolDown
 @onready var  animation = $"66x66x30"
 @onready var main =get_tree().get_root().get_node("World Map")
 @onready var BULLET = load("res://Scences/Enemy/Enemy_Bullet.tscn")
+@onready var health = $Health
+
+
 var shooting =false
 var ACCEL = 50
 var SPEED =100
 var dead=false
+var Health =5
 func _ready():
 	pass
 func _physics_process(delta: float) ->void:
@@ -29,10 +33,15 @@ func _on_shooting_cool_down_timeout():
 		new_bullet.position =$".".global_position
 		main.add_child.call_deferred(new_bullet)
 func take_damage():
-	dead=true
-	animation.play("Death")
-	await get_tree().create_timer(0.9).timeout
-	queue_free()
+	Health+=-1
+	if Health >0 and Health !=5:
+		health.play(str(Health,"HP"))
+	else:
+		health.play(str(Health,"HP"))
+		dead=true
+		animation.play("Death")
+		await get_tree().create_timer(0.9).timeout
+		queue_free()
 
 
 func _on_detection_body_entered(body):

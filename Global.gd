@@ -74,3 +74,4 @@ var upgrades={
 		"Range": 0,
 	}
 }
+var enemyFighting:bool=false
