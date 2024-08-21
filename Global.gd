@@ -75,3 +75,9 @@ var upgrades={
 	}
 }
 var enemyFighting:bool=false
+var Room={
+	0: {
+		"Enemy":2,
+	}
+}
+var currentRoom =0

@@ -36,11 +36,13 @@ func take_damage():
 	Health+=-1
 	if Health >0 and Health !=5:
 		health.play(str(Health,"HP"))
-	else:
+	elif Health ==0:
 		health.play(str(Health,"HP"))
 		dead=true
 		animation.play("Death")
 		await get_tree().create_timer(0.9).timeout
+		print(Global.Room[Global.currentRoom]["Enemy"])
+		Global.Room[Global.currentRoom]["Enemy"]-=1
 		queue_free()
 
 
