@@ -86,7 +86,8 @@ func _on_buy_pressed():
 			if Global.items[currentItem]["Name"]==Global.item[0]["Weapon"]:
 				upgrade.visible=true
 	elif 0<Global.Health[0]["HP"] and Global.Health[0]["HP"]<8 and currentItem==0:
-		Global.curcits = -Global.Health[0]["Cost"]
+		Global.curcits -= Global.Health[0]["Cost"]
+		Global.Health[0]["HP"] +=1
 		upgrade.visible=false
 	print(Global.curcits)
 func _on_next_pressed():

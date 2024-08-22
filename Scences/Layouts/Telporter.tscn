@@ -3,9 +3,6 @@
 [ext_resource type="Script" path="res://Scripts/Map_Scripts/Teleport.gd" id="1_r14ek"]
 [ext_resource type="Texture2D" uid="uid://jbxhq444pth2" path="res://Assests/Teleporter_Spritesheet.png" id="2_2ggex"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_66j1d"]
-radius = 16.2788
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_x1oob"]
 atlas = ExtResource("2_2ggex")
 region = Rect2(0, 0, 144, 144)
@@ -134,17 +131,20 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_7buj1"]
+radius = 48.5077
+
 [node name="Area2D" type="Area2D"]
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_r14ek")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 34)
-shape = SubResource("CircleShape2D_66j1d")
-
 [node name="Teleport" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_5hbb6")
 animation = &"Unacctive"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 21)
+shape = SubResource("CircleShape2D_7buj1")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

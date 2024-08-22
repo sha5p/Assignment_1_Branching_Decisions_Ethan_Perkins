@@ -210,6 +210,14 @@ animations = [{
 "loop": true,
 "name": &"SootDownPart2",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqfxx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5argj"]
@@ -362,7 +370,7 @@ texture_filter = 1
 position = Vector2(6, -25)
 scale = Vector2(1.0047, 1)
 sprite_frames = SubResource("SpriteFrames_vxg8m")
-animation = &"Death"
+animation = &"idle"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

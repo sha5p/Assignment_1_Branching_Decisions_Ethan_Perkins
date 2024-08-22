@@ -1,9 +1,9 @@
 extends CharacterBody2D
-@onready var player:Node2D=get_tree().get_root().get_node("World Map/Player")
+@onready var player:Node2D=get_tree().get_root().get_node(get_tree().current_scene.name+"/Player")
 @onready var nav_agent = $NavigationAgent2D
 @onready var shooting_cool_down = $ShootingCoolDown
 @onready var  animation = $"66x66x30"
-@onready var main =get_tree().get_root().get_node("World Map")
+@onready var main =get_tree().get_root().get_node("Level_"+str(Global.Level))
 @onready var BULLET = load("res://Scences/Enemy/Enemy_Bullet.tscn")
 @onready var health = $Health
 

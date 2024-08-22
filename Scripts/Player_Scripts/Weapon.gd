@@ -23,7 +23,7 @@ var velocity=Vector2(1,0)
 @onready var timer = $Timer
 func _physics_process(delta):
 	look_at(get_global_mouse_position())
-	if CanShoot:
+	if CanShoot and !Global.talking:
 		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 			if Global.item[0]["Weapon"] =="Laser":
 				$Laser2.visible=true
