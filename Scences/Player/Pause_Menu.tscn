@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://1r5h23nlxob8"]
 
-[ext_resource type="Script" path="res://Scripts/Pause_menu.gd" id="1_2y1b5"]
+[ext_resource type="Script" path="res://Scripts/Player_Scripts/Pause_menu.gd" id="1_2y1b5"]
 [ext_resource type="PackedScene" uid="uid://ps2w6o2mwdtk" path="res://Scences/Menu_Scences/Settings/Options.tscn" id="2_gio5l"]
 
 [node name="Pause" type="Control"]

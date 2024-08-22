@@ -15,7 +15,7 @@ func get_input():
 	return input.normalized()
 func _process(delta):
 	var playerInput=get_input()
-	if Health >0:
+	if Health >0 and !Global.talking:
 		if velocity.x != 0:
 			$AnimatedSprite2D.play("Run")
 			$AnimatedSprite2D.flip_h = velocity.x < 0
@@ -24,8 +24,8 @@ func _process(delta):
 			$AnimatedSprite2D.flip_h = velocity.y > 0
 		#print(playerInput)
 	#lerp is linear interpolation it just smooths values
-	velocity=lerp(velocity,playerInput*SPEED,delta*ACCEL)
-	move_and_slide()
+		velocity=lerp(velocity,playerInput*SPEED,delta*ACCEL)
+		move_and_slide()
 	if pause ==true:
 		pause=false
 func _on_timer_timeout():

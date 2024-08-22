@@ -1,6 +1,6 @@
 [gd_scene load_steps=26 format=3 uid="uid://7l5xddgv3d28"]
 
-[ext_resource type="Script" path="res://Scripts/Bullet.gd" id="1_sj7gx"]
+[ext_resource type="Script" path="res://Scripts/Player_Scripts/Bullet.gd" id="1_sj7gx"]
 [ext_resource type="Texture2D" uid="uid://dbrar35ghbe3g" path="res://Assests/Tech Dungeon Roguelite - Asset Pack (DEMO)/SpriteSheets/Sprite_Sheet_Main.png" id="2_mhq26"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6i1er"]

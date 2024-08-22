@@ -8,6 +8,10 @@
 
 config_version=5
 
+[addons]
+
+universal_fade/patterns_directory="res://addons/UniversalFade/Patterns"
+
 [application]
 
 config/name="Assigment_1_Dialouge_System_Ethan_Perkins"
@@ -29,10 +33,16 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"General_Kobob": "res://General_Kobob.dch",
+"AIBot": "res://Chracters/AIBot.dch",
+"Captian Zia": "res://Chracters/Captian Zia.dch",
+"Clueless Sam": "res://Chracters/Clueless Sam.dch",
+"General_Kobob": "res://Chracters/General_Kobob.dch",
 "PlayerChracter": "res://Scences/Player/PlayerChracter.dch"
 }
-directories/dtl_directory={}
+directories/dtl_directory={
+"Misson_Briefing_intro1": "res://Timelines/Misson_Briefing_intro1.dtl",
+"Tutorial": "res://Tutorial.dtl"
+}
 
 [display]
 

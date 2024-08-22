@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://b4h63wsi5bxvn"]
 
 [ext_resource type="Texture2D" uid="uid://bls4alg7maxja" path="res://Assests/guns/original sized/50 bmg sniper.png" id="1_dv4ex"]
-[ext_resource type="Script" path="res://Scripts/Weapon.gd" id="1_ubrll"]
+[ext_resource type="Script" path="res://Scripts/Player_Scripts/Weapon.gd" id="1_ubrll"]
 [ext_resource type="Texture2D" uid="uid://bn0xkmyss4rik" path="res://Assests/guns/original sized/colt m1911.png" id="2_6c6m8"]
 [ext_resource type="Texture2D" uid="uid://gh7qrqiq3qpq" path="res://Assests/guns/original sized/vector.png" id="4_2nk17"]
 [ext_resource type="Texture2D" uid="uid://bkglrbqt427dh" path="res://Assests/guns/original sized/winchester shotgun ww2 version.png" id="5_6c4fu"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cqphnogw3brto" path="res://Assests/guns/other guns/big goob.png" id="7_6jhfl"]
 [ext_resource type="Texture2D" uid="uid://bwuox2283tfls" path="res://Assests/guns/original sized/idk.png" id="8_f07mi"]
 [ext_resource type="Texture2D" uid="uid://c46umlkeivco3" path="res://Assests/guns/TheUltimateWeaponsPack/TheUltimateWeaponsPack_Sheet.png" id="9_os2fj"]
-[ext_resource type="PackedScene" uid="uid://coqyxcm4m5q6e" path="res://Laser.tscn" id="10_i2sp0"]
+[ext_resource type="PackedScene" uid="uid://coqyxcm4m5q6e" path="res://Scences/Player/Laser.tscn" id="10_i2sp0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qps1t"]
 radius = 86.1452

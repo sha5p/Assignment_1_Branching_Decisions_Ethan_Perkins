@@ -78,6 +78,11 @@ var enemyFighting:bool=false
 var Room={
 	0: {
 		"Enemy":1,
+	},
+	1: {
+		"Enemy":2,
 	}
 }
+var talking:bool=false
 var currentRoom =0
+var Level=0

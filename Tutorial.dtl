@@ -1,0 +1,8 @@
+join "Clueless Sam" 1
+"Clueless Sam": Hello Yes I think we have arrived on the ship how can I move well with W,A,S,D and I open my menu by using Esc
+"Clueless Sam": If your wondering how to improve your weapons along with us we sent many AI cyborgs to hack into the mainframe they look like this
+join AIBot 1
+[wait time="1.0"]
+leave AIBot
+"Clueless Sam": But we need curcits from the Beffren-Robots to let us hack in the more we have the more power we can put into the hack
+[end_timeline]
