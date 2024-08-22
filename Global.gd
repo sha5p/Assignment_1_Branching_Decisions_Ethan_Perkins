@@ -1,5 +1,5 @@
 extends Node
-
+signal room_entered(room)
 var player: Node
 var curcits = 500
 var items = {
@@ -77,7 +77,7 @@ var upgrades={
 var enemyFighting:bool=false
 var Room={
 	0: {
-		"Enemy":2,
+		"Enemy":1,
 	}
 }
 var currentRoom =0

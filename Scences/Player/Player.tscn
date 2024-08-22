@@ -1,7 +1,8 @@
-[gd_scene load_steps=45 format=3 uid="uid://djffro4dr0uc2"]
+[gd_scene load_steps=46 format=3 uid="uid://djffro4dr0uc2"]
 
 [ext_resource type="Script" path="res://Scences/Player/Player.gd" id="1_lg055"]
 [ext_resource type="Texture2D" uid="uid://swjivgbtnmeg" path="res://Assests/Tech Dungeon Roguelite - Asset Pack (DEMO)/Players/players blue x3.png" id="2_6eirs"]
+[ext_resource type="Script" path="res://Player_camera.gd" id="2_h7n4q"]
 [ext_resource type="Texture2D" uid="uid://ga6381gvjxgh" path="res://Assests/Tech Dungeon Roguelite - Asset Pack (DEMO)/ShootDown.png" id="3_4m3gh"]
 [ext_resource type="PackedScene" uid="uid://1r5h23nlxob8" path="res://Scences/Player/Pause_Menu.tscn" id="3_ysiol"]
 [ext_resource type="PackedScene" uid="uid://b4h63wsi5bxvn" path="res://Scences/Player/Weapon.tscn" id="5_epfer"]
@@ -353,6 +354,8 @@ shape = SubResource("CapsuleShape2D_4mja0")
 [node name="Camera2D" type="Camera2D" parent="."]
 texture_filter = 1
 position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+script = ExtResource("2_h7n4q")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

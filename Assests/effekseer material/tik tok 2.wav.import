@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cuy60absgh77d"
+path="res://.godot/imported/tik tok 2.wav-996b0d984c1fa4ad1707b83f9dd70d59.sample"
+
+[deps]
+
+source_file="res://Assests/effekseer material/tik tok 2.wav"
+dest_files=["res://.godot/imported/tik tok 2.wav-996b0d984c1fa4ad1707b83f9dd70d59.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

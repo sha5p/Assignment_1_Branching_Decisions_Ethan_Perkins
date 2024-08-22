@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://dk57628idxoq1"]
+
+[ext_resource type="Script" path="res://Teleport.gd" id="1_r14ek"]
+[ext_resource type="Texture2D" uid="uid://bkpyplcx5koc7" path="res://Assests/Scifi lab Files/Scifi lab Files/layers/middle.png" id="2_u6c4f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b82g6"]
+atlas = ExtResource("2_u6c4f")
+region = Rect2(109, 33, 70, 207)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eqoxn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b82g6")
+}],
+"loop": true,
+"name": &"Teleport",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_66j1d"]
+radius = 16.2788
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_r14ek")
+
+[node name="Teleport" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_eqoxn")
+animation = &"Teleport"
+
+[node name="Defualt" type="Sprite2D" parent="."]
+position = Vector2(0.25, -4.25)
+scale = Vector2(1.01485, 1.00847)
+texture = ExtResource("2_u6c4f")
+region_enabled = true
+region_rect = Rect2(205.847, 47.2296, 101.086, 177.584)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 34)
+shape = SubResource("CircleShape2D_66j1d")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -2,7 +2,7 @@ extends Control
 @onready var setting_button = $MarginContainer/HBoxContainer/VBoxContainer/Setting_Button
 @onready var options = $Options 
 @onready var margin_container = $MarginContainer
-@export var MAP=preload("res://Scences/world_map.tscn")
+@export var MAP=preload("res://Scences/Levels/Tutorial.tscn")
 
 func _ready():
 	#_load_keybindings_from_setting()
