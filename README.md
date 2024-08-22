@@ -18,7 +18,8 @@ For this game Research I will be comparing three diffrent types of branching dec
 
 |Compared|Fianl Fantasy XVII|Soul Knight|Stellaris|
 |:-----|:----|:-----|:----|
-
+|Branching choices|Has 'Branching' affecting how the user interacts with the game using a skill tree and shop and a shop|Its branching is the main 'choice' that the user must make not following a story line with a dungon system|Stellaris is like giant chess where everything from forming relsonships choosing your chracter and your fleet is a bracnhing choice branching choices is the game|
+|Type of game|An RPG game orientating around a story with branching dicsions to progress|A rouge like with choices effecting how the user intreacts with enemys|a relasonship and stratgey game in which the user makes decisions that is the game all about choices|
 
 **Biblogrpathy**
 
