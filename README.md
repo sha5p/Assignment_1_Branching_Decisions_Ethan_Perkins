@@ -1,2 +1,6 @@
 # Assigment_3_Branching_Decisions
- Inital uploade test
+Documentation Branching Decisions game Assessment 1
+
+Planning 
+
+Project|Status|Notes
