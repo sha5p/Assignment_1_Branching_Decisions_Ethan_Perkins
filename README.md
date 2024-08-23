@@ -1,7 +1,7 @@
 # Assigment_3_Branching_Decisions
-<span style="font-size:0.1em;">**Documentation Branching Decisions game Assessment 1** </span> 
+###**Documentation Branching Decisions game Assessment 1** 
 
-<span style="font-size:0.5em;">**Planning** </span>
+##**Planning**
 |Project|Status|Goals|
 |:-------|:-------|:-------|
 |Week 4|Completed|Implement Modulated code|
@@ -39,8 +39,7 @@ Flow Chart
 Pictures
 |Buying Weapon UI|Evolving and Upgrading UI|
 |:---------|:---------|
-|![image](https://github.com/user-attachments/assets/c0ef7202-862a-4738-8944-a604aef2f225)|
-|![image](https://github.com/user-attachments/assets/bcf47cbf-2910-4e56-8c35-b9f5d7622181)|
+|![image](https://github.com/user-attachments/assets/c0ef7202-862a-4738-8944-a604aef2f225)||![image](https://github.com/user-attachments/assets/bcf47cbf-2910-4e56-8c35-b9f5d7622181)|
 
 Code
 
