@@ -41,7 +41,7 @@ This shop system allows the user to interact with an NPC giving them an experien
 |:---------|:---------|
 |![image](https://github.com/user-attachments/assets/c0ef7202-862a-4738-8944-a604aef2f225)||![image](https://github.com/user-attachments/assets/bcf47cbf-2910-4e56-8c35-b9f5d7622181)|
 
-### **Code**
+### **Code buying item**
  ```
 func _on_buy_pressed():
   $Shop/Label.text="Current Curcits "+str(Global.curcits)
@@ -59,6 +59,23 @@ func _on_buy_pressed():
      Global.Health[0]["HP"] +=1
      upgrade.visible=false
      print(Global.curcits)
+```
+
+**Code Upgrading and Evolving Example**
+```
+func _on_range_pressed():
+	$Shop/Label.text="Current Curcits "+str(Global.curcits)
+	if Global.upgrades[0]["Range"] !=5 and Global.curcits>24:
+		 Global.curcits-=25
+	 	Global.upgrades[0]["Range"] +=1
+	 	Global.items[currentItem]["Range"] -=50
+	 	print(Global.upgrades[0])
+ 		$"Shop/Upgrade/UpgradeUi/Range/Current Upgrade".text="Current Level: "+str(Global.upgrades[0]["Range"])
+
+func _on_range_evolve_button_pressed():
+  if Global.upgrades[0]["Range"]==5:
+    if Global.item[0]["Weapon"]=="ShotGun":
+      Global.item[0]["Weapon"]=Global.evolutions[0]["Max-Range"]
 ```
 **Analysis**
 
