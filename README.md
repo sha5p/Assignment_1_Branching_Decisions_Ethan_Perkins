@@ -1,7 +1,7 @@
 # Assigment_3_Branching_Decisions
 ## **Documentation Branching Decisions game Assessment 1** 
 
-### **Planning**
+## **Planning**
 |Project|Status|Goals|
 |:-------|:-------|:-------|
 |Week 4|Completed|Implement Modulated code|
@@ -25,16 +25,18 @@ For this game Research I will be comparing three diffrent types of branching dec
 #### **Conclusion**
 Taking all these diffrent games into account I want to design my game to take some features from all of them to give the user a varity of diffrent ways to interact and make 'choices' in the game. I want to take the idea from Fianl Fantasy XVI that choices with other chracters result in diffrent **Endings** to the game. From Soul Knight I will take its shop system to let the user choose how they want to play the game while going through these choices. Addtionally the choices not only impacting the outcome of the game but how they get to the outcome much like the relsonships in Stellaris.
 
-### **Planning & Design the Game**
+## **Planning & Design the Game**
 
 ### ***Branching choices***
+
 For branching choicies I will add two main choices one branching decisions in the story and the other the shop system. 
 
-Shop System Branching Choices
+**Shop System Branching Choices**
+
 This shop system allows the user to interact with an NPC giving them an experience of trying to figure out **MUCH LIKE STLOROS** if they should spend money on a more powerful weapon increase there health and buy and Expensive shield as they ahve already acquired a weapon and have max health. They also may choose to upgrade their weapon to evolve it into somthing more powerful. However not showing what a weapon can evolve into also makes the user hesitant to upgrade and evolve and may instead use there money to buy a new weapon restarting their progreess in hopes to find a more powerful upgrade. 
 
 ### **Flow Chart**
-![image](https://github.com/user-attachments/assets/c03d224b-a228-4f0c-a570-f5528e770ac2)
+![image](https://github.com/user-attachments/assets/827d2e58-e4a6-48b3-968f-5f854553e919)
 
 ### **Pictures**
 |Buying Weapon UI|Evolving and Upgrading UI|
@@ -61,7 +63,7 @@ func _on_buy_pressed():
      print(Global.curcits)
 ```
 
-**Code Upgrading and Evolving Example**
+**Code Upgrading and Evolving Example  ---FIX THE PRICE**
 ```
 func _on_range_pressed():
 	$Shop/Label.text="Current Curcits "+str(Global.curcits)
@@ -77,7 +79,17 @@ func _on_range_evolve_button_pressed():
 		if Global.item[0]["Weapon"]=="ShotGun":
       			Global.item[0]["Weapon"]=Global.evolutions[0]["Max-Range"]
 ```
-**Analysis**
+### **Analysis**
+
+#### Buying the weapon 
+
+**note maybe quote**
+
+This code first checks if the item is not health as its functions are run in another dictonary this was done for enemy scripts but could have been put into the same dictonary. Then it checks wheather the weapon is the current weapon or if it the shield upgrade, if it is the current weapon it wont take any curcits and re buy the weapon and the shield will be bought in the below stament. It then takes away the weapons cost and resets the upgradings punishing the player but giving them a chance to go back. This code could have also be done through a for loop but this was not done as it does not save enough lines to be worth sacrficing readiblity. 
+
+#### Upgrading and Evolving the weapon
+
+Running through a prebuilt system this 'On Button Pressed' much like the buy button allows the signal only to run on the wapon upgraded. it then changes the current range adding more to how far the bullet can go then adding and upgrade level and taking away the currency. The reason that not all these upgrades were in the same script is that each upgrade button is diffrent and for player usiblity clicking the same button for each evolution or a drop down would making it harder for the player to navigate the shop and so intead more lines were added. For evolutions this was very similar however implmenting it was much eaiser it simply checks the global upgrade is maxxed and if it is and the button is clicked it goes to the dictonary and changes the weapon. 
 
 Story Branching Choices
 
@@ -87,6 +99,8 @@ Code/Dialogue
 
 Analysis 
 
+
+Interactions and Level Design 
 
 **Biblogrpathy**
 
