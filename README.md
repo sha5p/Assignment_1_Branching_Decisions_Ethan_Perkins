@@ -44,17 +44,17 @@ This shop system allows the user to interact with an NPC giving them an experien
 ### **Code buying item**
  ```
 func _on_buy_pressed():
-  $Shop/Label.text="Current Curcits "+str(Global.curcits)
- if currentItem !=0:
-   if Global.item[0]["Weapon"] !=Global.items[currentItem]["Name"] and "Shield" !=Global.items[currentItem]["Name"]:
-     Global.item[0]["Weapon"] =Global.items[currentItem]["Name"]
-     Global.curcits-=Global.items[currentItem]["Cost"]
-     Global.upgrades[0]["FireRate"]=0
-     Global.upgrades[0]["Range"]=0
-     Global.upgrades[0]["Speed"]=0
-     if Global.items[currentItem]["Name"]==Global.item[0]["Weapon"]:
-       upgrade.visible=true
-   elif 0<Global.Health[0]["HP"] and Global.Health[0]["HP"]<8 and currentItem==0:
+	$Shop/Label.text="Current Curcits "+str(Global.curcits)
+	if currentItem !=0:
+		if Global.item[0]["Weapon"] !=Global.items[currentItem]["Name"] and "Shield" !=Global.items[currentItem]["Name"]:
+			Global.item[0]["Weapon"] =Global.items[currentItem]["Name"]
+			Global.curcits-=Global.items[currentItem]["Cost"]
+			Global.upgrades[0]["FireRate"]=0
+			Global.upgrades[0]["Range"]=0
+			Global.upgrades[0]["Speed"]=0
+		if Global.items[currentItem]["Name"]==Global.item[0]["Weapon"]:
+			upgrade.visible=true
+	elif 0<Global.Health[0]["HP"] and Global.Health[0]["HP"]<8 and currentItem==0:
      Global.curcits -= Global.Health[0]["Cost"]
      Global.Health[0]["HP"] +=1
      upgrade.visible=false
@@ -66,16 +66,16 @@ func _on_buy_pressed():
 func _on_range_pressed():
 	$Shop/Label.text="Current Curcits "+str(Global.curcits)
 	if Global.upgrades[0]["Range"] !=5 and Global.curcits>24:
-		 Global.curcits-=25
-	 	Global.upgrades[0]["Range"] +=1
-	 	Global.items[currentItem]["Range"] -=50
-	 	print(Global.upgrades[0])
- 		$"Shop/Upgrade/UpgradeUi/Range/Current Upgrade".text="Current Level: "+str(Global.upgrades[0]["Range"])
+		Global.curcits-=25
+		Global.upgrades[0]["Range"] +=1
+		Global.items[currentItem]["Range"] -=50
+		print(Global.upgrades[0])
+		$"Shop/Upgrade/UpgradeUi/Range/Current Upgrade".text="Current Level: "+str(Global.upgrades[0]["Range"])
 
 func _on_range_evolve_button_pressed():
-  if Global.upgrades[0]["Range"]==5:
-    if Global.item[0]["Weapon"]=="ShotGun":
-      Global.item[0]["Weapon"]=Global.evolutions[0]["Max-Range"]
+	if Global.upgrades[0]["Range"]==5:
+		if Global.item[0]["Weapon"]=="ShotGun":
+      			Global.item[0]["Weapon"]=Global.evolutions[0]["Max-Range"]
 ```
 **Analysis**
 
