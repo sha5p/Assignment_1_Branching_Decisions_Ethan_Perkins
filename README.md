@@ -18,7 +18,7 @@ For this game Research I will be comparing three diffrent types of branching dec
 
 |Compared|Fianl Fantasy XVI|Soul Knight|Stellaris|
 |:-----|:----|:-----|:----|
-||![image](https://github.com/user-attachments/assets/0e7ff2b8-ba09-4004-8291-a69e1f660ed8)|![image](https://github.com/user-attachments/assets/b274cc58-828d-4eab-ba2d-4cc3aa0b7b07)|![image](https://github.com/user-attachments/assets/1ae077a0-bf7f-44f2-ad34-6da55b76a1d3)|
+||![image](https://github.com/user-attachments/assets/0e7ff2b8-ba09-4004-8291-a69e1f660ed8)(GMAJ0R, 2023)|![image](https://github.com/user-attachments/assets/b274cc58-828d-4eab-ba2d-4cc3aa0b7b07)(BSRDACCT, n.d.)|![image](https://github.com/user-attachments/assets/1ae077a0-bf7f-44f2-ad34-6da55b76a1d3)(aremonmoonserpent, n.d.)|
 |Branching choices|Has 'Branching' affecting how the user interacts with the game using a skill tree and shop and a shop|Its branching is the main 'choice' that the user must make not following a story line with a dungon system|Stellaris is like giant chess where everything from forming relsonships choosing your chracter and your fleet is a bracnhing choice branching choices is the game|
 |Type of game|An RPG game orientating around a story with branching dicsions to progress|A rouge like with choices effecting how the user intreacts with enemys|a relasonship and stratgey game in which the user makes decisions that is the game all about choices|
 
@@ -27,5 +27,11 @@ For this game Research I will be comparing three diffrent types of branching dec
 **Biblogrpathy**
 
 Aaron. (2024). Season Shop. [online] Soul Knight Wiki. Available at: https://soul-knight.fandom.com/wiki/Season_Shop [Accessed 22 Aug. 2024].
+GMAJ0R (2023).A glimpse of the mid game skill tree. [online] Reddit. Available at: https://www.reddit.com/r/FFXVI/comments/1229p9y/potential_spoilers_yoship_accidentally_showed_a/ [Accessed 23 Aug. 2024].
+BSRDACCT (n.d.). Heretic Build Discussion. [online] Reddit. Available at: https://www.reddit.com/r/SoulKnightPrequel/comments/18ajbzw/heretic_build_discussion/ [Accessed 23 Aug. 2024].
+aremonmoonserpent (n.d.). The planets shop has opened. [online] Reddit. Available at: https://www.reddit.com/r/Stellaris/comments/15yfokf/the_planets_shop_has_opened/ [Accessed 23 Aug. 2024].
 
+‌
+‌
+‌
 ‌
