@@ -1,7 +1,7 @@
 # Assigment_3_Branching_Decisions
-###**Documentation Branching Decisions game Assessment 1** 
+### **Documentation Branching Decisions game Assessment 1** 
 
-##**Planning**
+## **Planning**
 |Project|Status|Goals|
 |:-------|:-------|:-------|
 |Week 4|Completed|Implement Modulated code|
