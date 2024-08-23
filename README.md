@@ -91,16 +91,33 @@ This code first checks if the item is not health as its functions are run in ano
 
 Running through a prebuilt system this 'On Button Pressed' much like the buy button allows the signal only to run on the wapon upgraded. it then changes the current range adding more to how far the bullet can go then adding and upgrade level and taking away the currency. The reason that not all these upgrades were in the same script is that each upgrade button is diffrent and for player usiblity clicking the same button for each evolution or a drop down would making it harder for the player to navigate the shop and so intead more lines were added. For evolutions this was very similar however implmenting it was much eaiser it simply checks the global upgrade is maxxed and if it is and the button is clicked it goes to the dictonary and changes the weapon. 
 
-Story Branching Choices
+**Story Branching Choices**
 
-Flow Chart
+**Flow Chart**
 
-Code/Dialogue 
+**Code/Dialogue** 
 
-Analysis 
+**Analysis**
+By using an import known as dialogic instead of creating my own dialogue system it made the interactions and sending signals much more powerful. As shown above dialogic signals and functions can connect to diffrent parts of the script this means making branching choices like the above and giving choices is much more modulated. The NPC **idk yet** gives the user going through the ship a request the request is optional and makes it a branching narritive that can occur. If the player choose to help this NPC using the signals and branching via dialogic a choice is given. Showing what is happening specfically in the import is **:O**. Analysis instead of doing this via if staments and my own dialogue system presenting it like this not only makes the interaction less junky but more powerful and costumisable like **dadad** for the player. 
+
+**Interactions and Level Design**
+
+**Imiages**-fix spelling oml
+![image](https://github.com/user-attachments/assets/9c90ba6a-a3cc-41e8-9279-a729504ccad2)
+![image](https://github.com/user-attachments/assets/ebc3f014-33d7-4d72-ba98-9ff152433822)
 
 
-Interactions and Level Design 
+**Analysis**
+
+These levels are designed as shown above to give the player destictive decisiosns that can be made as the 'options' to choose from. The telporter activating when the user completes a certain task on a level like the tutoril kill the first mob. NPC are obvious fromt their question mark and destictive chracteristics. 
+
+Features purpose
+
+## **Testing / Evaluation of Your Game**
+
+Throught the process of making this game I have made many changes important onces such as ... and..... With branching decisions impacting the story that unfolds to how the player interacts with oppenets and friendly npcs on the map. Understanding how powerful dialogic can be with its signals being sent as well as how it can call other ques is what led to this outcome understanding these branching will allow me to implemnt this in other serniors such as navigating a website through 'choices' or **example** thanks to **exmaple** i did **idea**. 
+
+If i were to do this again I would try running through more moldulatable script such **example** addtionally still using dialogic but trying to use more feature like its **exmaple** which allows for **idk**. Summary stuff done
 
 **Biblogrpathy**
 
@@ -108,10 +125,10 @@ Aaron. (2024). *Season Shop.* [online] Soul Knight Wiki. Available at: https://s
 
 aremonmoonserpent (n.d.). *The planets shop has opened.* [online] Reddit. Available at: https://www.reddit.com/r/Stellaris/comments/15yfokf/the_planets_shop_has_opened/ [Accessed 23 Aug. 2024].
 
-BSRDACCT (n.d.). *Heretic Build Discussion. [online] Reddit.* Available at: https://www.reddit.com/r/SoulKnightPrequel/comments/18ajbzw/heretic_build_discussion/ [Accessed 23 Aug. 2024].
+BSRDACCT (n.d.). *Heretic Build Discussion.* [online] Reddit.* Available at: https://www.reddit.com/r/SoulKnightPrequel/comments/18ajbzw/heretic_build_discussion/ [Accessed 23 Aug. 2024].
 
 GMAJ0R (2023). *A glimpse of the mid game skill tree.* [online] Reddit. Available at: https://www.reddit.com/r/FFXVI/comments/1229p9y/potential_spoilers_yoship_accidentally_showed_a/ [Accessed 23 Aug. 2024].
 
-www.merriam-webster.com. (n.d.). Definition of SANDBOX. [online] Available at: https://www.merriam-webster.com/dictionary/sandbox#:~:text=%3A%20a%20video%20game%20or%20part.(www.merriam-webster.com, n.d.)
+www.merriam-webster.com. (n.d.). *Definition of SANDBOX.* [online] Available at: https://www.merriam-webster.com/dictionary/sandbox#:~:text=%3A%20a%20video%20game%20or%20part.(www.merriam-webster.com, n.d.)
 
 ‌
