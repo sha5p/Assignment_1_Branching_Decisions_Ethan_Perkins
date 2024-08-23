@@ -11,6 +11,16 @@ Documentation Branching Decisions game Assessment 1
 |Week 5|Progress|Story|
 |Week 5|Progress|Cut Scence| 
 
+Part 1. Research games with branching decisions or systems that create different
+player experiences
+Before creating your game, you will need to investigate the properties and features of
+existing games which fit into this category. You need to compare these two games (or
+more).
+You need to summarise their purposes, describe the component features of these games
+and what these component features aim to do. You need to critically analyse each game
+
+based on the design principles, and show which games you are drawing inspiration from
+for your own experience.
 
 **Research Game Comparision**  -note add refrences
 
@@ -22,14 +32,15 @@ For this game Research I will be comparing three diffrent types of branching dec
 |Branching choices|Has 'Branching' affecting how the user interacts with the game using a skill tree and shop and a shop|Its branching is the main 'choice' that the user must make not following a story line with a dungon system|Stellaris is like giant chess where everything from forming relsonships choosing your chracter and your fleet is a bracnhing choice branching choices is the game|
 |Type of game|An RPG game orientating around a story with branching dicsions to progress|A rouge like with choices effecting how the user intreacts with enemys|a relasonship and stratgey game in which the user makes decisions that is the game all about choices|
 
-
+**Conclusion**
+Taking All these diffrent games into account 
 
 **Biblogrpathy**
 
-Aaron. (2024). Season Shop. [online] Soul Knight Wiki. Available at: https://soul-knight.fandom.com/wiki/Season_Shop [Accessed 22 Aug. 2024].
-GMAJ0R (2023).A glimpse of the mid game skill tree. [online] Reddit. Available at: https://www.reddit.com/r/FFXVI/comments/1229p9y/potential_spoilers_yoship_accidentally_showed_a/ [Accessed 23 Aug. 2024].
-BSRDACCT (n.d.). Heretic Build Discussion. [online] Reddit. Available at: https://www.reddit.com/r/SoulKnightPrequel/comments/18ajbzw/heretic_build_discussion/ [Accessed 23 Aug. 2024].
-aremonmoonserpent (n.d.). The planets shop has opened. [online] Reddit. Available at: https://www.reddit.com/r/Stellaris/comments/15yfokf/the_planets_shop_has_opened/ [Accessed 23 Aug. 2024].
+Aaron. (2024). *Season Shop.* [online] Soul Knight Wiki. Available at: https://soul-knight.fandom.com/wiki/Season_Shop [Accessed 22 Aug. 2024].
+GMAJ0R (2023). *A glimpse of the mid game skill tree.* [online] Reddit. Available at: https://www.reddit.com/r/FFXVI/comments/1229p9y/potential_spoilers_yoship_accidentally_showed_a/ [Accessed 23 Aug. 2024].
+BSRDACCT (n.d.). *Heretic Build Discussion. [online] Reddit.* Available at: https://www.reddit.com/r/SoulKnightPrequel/comments/18ajbzw/heretic_build_discussion/ [Accessed 23 Aug. 2024].
+aremonmoonserpent (n.d.). *The planets shop has opened.* [online] Reddit. Available at: https://www.reddit.com/r/Stellaris/comments/15yfokf/the_planets_shop_has_opened/ [Accessed 23 Aug. 2024].
 
 ‌
 ‌
