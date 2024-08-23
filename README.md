@@ -1,7 +1,7 @@
 # Assigment_3_Branching_Decisions
-Documentation Branching Decisions game Assessment 1
+<span style="font-size:0.1em;">**Documentation Branching Decisions game Assessment 1** </span> 
 
-<span style="font-size:0.2em;">**Planning** </span>
+<span style="font-size:0.5em;">**Planning** </span>
 |Project|Status|Goals|
 |:-------|:-------|:-------|
 |Week 4|Completed|Implement Modulated code|
