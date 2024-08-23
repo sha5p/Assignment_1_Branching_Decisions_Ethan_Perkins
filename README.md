@@ -1,8 +1,7 @@
 # Assigment_3_Branching_Decisions
 Documentation Branching Decisions game Assessment 1
 
-**Planning** 
-
+<span style="font-size:3em;">**Planning** </span>
 |Project|Status|Goals|
 |:-------|:-------|:-------|
 |Week 4|Completed|Implement Modulated code|
@@ -34,7 +33,7 @@ For this game Research I will be comparing three diffrent types of branching dec
 
 **Conclusion**
 Taking All these diffrent games into account 
-
+Planning & Design the Game
 **Biblogrpathy**
 
 Aaron. (2024). *Season Shop.* [online] Soul Knight Wiki. Available at: https://soul-knight.fandom.com/wiki/Season_Shop [Accessed 22 Aug. 2024].
