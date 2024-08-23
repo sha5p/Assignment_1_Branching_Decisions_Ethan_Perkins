@@ -1,7 +1,7 @@
 # Assigment_3_Branching_Decisions
-### **Documentation Branching Decisions game Assessment 1** 
+## **Documentation Branching Decisions game Assessment 1** 
 
-## **Planning**
+### **Planning**
 |Project|Status|Goals|
 |:-------|:-------|:-------|
 |Week 4|Completed|Implement Modulated code|
@@ -10,7 +10,7 @@
 |Week 5|Progress|Story|
 |Week 5|Progress|Cut Scence| 
 
-**Research Game Comparision**  
+### **Research Game Comparision**  
 
 -note add refrences
 
@@ -22,7 +22,7 @@ For this game Research I will be comparing three diffrent types of branching dec
 |Branching choices|Has 'Branching' affecting how the user interacts with the game using a skill tree and shop and a shop|Its branching is the main 'choice' that the user must make not following a story line with a dungon system|Stellaris is like giant chess where everything from forming relsonships choosing your chracter and your fleet is a bracnhing choice branching choices is the game|
 |Type of game|An RPG game orientating around a story with branching dicsions to progress|A rouge like with choices effecting how the user intreacts with enemys|a relasonship and stratgey game in which the user makes decisions that is the game all about choices|
 
-**Conclusion**
+#### **Conclusion**
 Taking all these diffrent games into account I want to design my game to take some features from all of them to give the user a varity of diffrent ways to interact and make 'choices' in the game. I want to take the idea from Fianl Fantasy XVI that choices with other chracters result in diffrent **Endings** to the game. From Soul Knight I will take its shop system to let the user choose how they want to play the game while going through these choices. Addtionally the choices not only impacting the outcome of the game but how they get to the outcome much like the relsonships in Stellaris.
 
 **Planning & Design the Game**
