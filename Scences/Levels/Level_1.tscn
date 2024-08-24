@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://b2nt05fme1eti"]
+[gd_scene load_steps=7 format=3 uid="uid://b2nt05fme1eti"]
 
 [ext_resource type="PackedScene" uid="uid://bxstgwq03msit" path="res://Scences/Layouts/MapTileSet.tscn" id="1_c5mo6"]
 [ext_resource type="PackedScene" uid="uid://djffro4dr0uc2" path="res://Scences/Player/Player.tscn" id="3_3wqyo"]
 [ext_resource type="PackedScene" uid="uid://k3w36uodlrjv" path="res://Scences/Layouts/spawner.tscn" id="4_sad3h"]
 [ext_resource type="PackedScene" uid="uid://dk57628idxoq1" path="res://Scences/Layouts/Telporter.tscn" id="5_j1g1b"]
+[ext_resource type="PackedScene" uid="uid://c8pnmocspkqvp" path="res://Scences/Chracters_Scences/npc.tscn" id="6_hbbec"]
 [ext_resource type="PackedScene" uid="uid://svt4aqbevtt0" path="res://Scences/Layouts/door.tscn" id="6_o4yfp"]
 
 [node name="Level_1" type="Node2D"]
@@ -35,3 +36,6 @@ scale = Vector2(1.7, 1.7)
 [node name="Area2D2" parent="." instance=ExtResource("5_j1g1b")]
 position = Vector2(1378, -1194)
 telporter = true
+
+[node name="NPC" parent="." instance=ExtResource("6_hbbec")]
+position = Vector2(1477, 397)

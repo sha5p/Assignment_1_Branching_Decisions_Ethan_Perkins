@@ -1,5 +1,5 @@
 extends Control
-@onready var options = $Options as setting
+@onready var options = $Options 
 @onready var Main_Pause_Screen = $ColorRect
 
 
@@ -21,6 +21,7 @@ func _on_setting_pressed():
 	options.visible=true
 
 func _on_menu_pressed():
+	Global.navcheck=true
 	get_tree().paused=false
 	get_tree().change_scene_to_file("res://Scences/Menu_Scences/main_menu.tscn")
 

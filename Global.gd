@@ -2,6 +2,11 @@ extends Node
 signal room_entered(room)
 var player: Node
 var curcits = 500
+var talking:bool=false
+var currentRoom =0
+var Level=0
+var navcheck=false
+
 var items = {
 	1:{
 		"Name":"Shield",
@@ -83,6 +88,13 @@ var Room={
 		"Enemy":2,
 	}
 }
-var talking:bool=false
-var currentRoom =0
-var Level=0
+
+func _ready():
+	upgrades[0]["FireRate"]= SaveData.g_data[0]["FireRate"]
+	upgrades[0]["Speed"]= SaveData.g_data[0]["Speed"]
+	upgrades[0]["Range"]= SaveData.g_data[0]["Range"]
+	item[0]["Weapon"]= SaveData.g_data[1]["Weapon"]
+	item[1]["Shield"]= SaveData.g_data[2]["Shield"]
+	currentRoom= SaveData.g_data[3]["Room"]
+	Level= SaveData.g_data[3]["Level"]
+	Health[0]["HP"]= SaveData.g_data[4]["HP"]

@@ -2,7 +2,7 @@ extends Control
 @onready var setting_button = $MarginContainer/HBoxContainer/VBoxContainer/Setting_Button
 @onready var options = $Options 
 @onready var margin_container = $MarginContainer
-@export var intro=preload("res://Scences/CutScences/Introduction.tscn")
+@export var choose=preload("res://Options_Game_Countiues.tscn")
 
 func _ready():
 	#_load_keybindings_from_setting()
@@ -22,4 +22,4 @@ func _on_setting_button_pressed():
 
 
 func _on_to_main_map_pressed():
-	get_tree().change_scene_to_packed(intro)
+	get_tree().change_scene_to_packed(choose)

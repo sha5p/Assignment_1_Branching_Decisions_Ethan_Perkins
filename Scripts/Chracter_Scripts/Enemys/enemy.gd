@@ -25,8 +25,10 @@ func _physics_process(delta: float) ->void:
 func _on_timer_timeout():
 	makepath()
 func makepath() ->void:
-	nav_agent.target_position = player.global_position
-
+	if !Global.navcheck:
+		nav_agent.target_position = player.global_position
+	else:
+		pass
 
 func _on_shooting_cool_down_timeout():
 		var new_bullet = BULLET.instantiate()

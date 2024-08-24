@@ -17,5 +17,12 @@ func _on_body_entered(body):
 		get_tree().change_scene_to_file("res://Scences//Levels/Level_"+str(Global.Level)+".tscn")
 		telported =true
 		Global.currentRoom=Global.currentRoom+1
+		SaveData.g_data[0]=Global.upgrades
+		SaveData.g_data[1]["Weapon"]=Global.item[0]["Weapon"] 
+		SaveData.g_data[2]["Shield"]=Global.item[1]["Shield"]
+		SaveData.g_data[3]["Room"]=Global.currentRoom
+		SaveData.g_data[3]["Level"]=Global.Level
+		SaveData.g_data[4]["HP"]=Global.Health[0]["HP"]
+		SaveData.save_data()
 	elif !telporter:
 		print("works")

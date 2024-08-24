@@ -1,4 +1,3 @@
-class_name setting
 extends Control
 
 @onready var exit = $MarginContainer/VBoxContainer/Exit
