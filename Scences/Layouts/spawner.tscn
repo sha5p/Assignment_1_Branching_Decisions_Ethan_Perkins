@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://db5a2i8taggb5" path="res://icon.svg" id="1_omfo0"]
 [ext_resource type="Script" path="res://Scripts/Map_Scripts/Spawner.gd" id="2_a2qm3"]
 
-[node name="Spawner" type="Sprite2D"]
+[node name="Spawner" type="Sprite2D" groups=["Spawner"]]
 visible = false
 texture = ExtResource("1_omfo0")
 script = ExtResource("2_a2qm3")

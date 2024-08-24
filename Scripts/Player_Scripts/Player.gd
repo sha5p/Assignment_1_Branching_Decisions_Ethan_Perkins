@@ -9,6 +9,7 @@ func _ready():
 	#$AnimatedSprite2D.play("idle")
 	health.play(str(Global.Health[0]["HP"],"HP"))
 	Global.player = self
+	Global.enemyFighting=false
 func get_input():
 	input.x=Input.get_action_strength("Right")-Input.get_action_strength("Left")
 	input.y=Input.get_action_strength("Down")-Input.get_action_strength("Up")

@@ -291,7 +291,7 @@ shape = SubResource("CircleShape2D_xpd6f")
 position = Vector2(-15, -20.5)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_gtkl3")
-animation = &"Max"
+animation = &"0HP"
 
 [connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]
 [connection signal="body_exited" from="Detection" to="." method="_on_detection_body_exited"]

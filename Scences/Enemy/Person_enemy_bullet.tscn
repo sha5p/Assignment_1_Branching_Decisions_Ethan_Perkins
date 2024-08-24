@@ -1,0 +1,87 @@
+[gd_scene load_steps=11 format=3 uid="uid://xtm4300gov2q"]
+
+[ext_resource type="Texture2D" uid="uid://dbrar35ghbe3g" path="res://Assests/Tech Dungeon Roguelite - Asset Pack (DEMO)/SpriteSheets/Sprite_Sheet_Main.png" id="1_1trvo"]
+[ext_resource type="Script" path="res://Scripts/Chracter_Scripts/Enemys/Person_enemy_bullet.gd" id="1_koolo"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ty1x1"]
+radius = 6.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dj3s"]
+atlas = ExtResource("1_1trvo")
+region = Rect2(2584, 1128, 68, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0j880"]
+atlas = ExtResource("1_1trvo")
+region = Rect2(2652, 1128, 68, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wen6"]
+atlas = ExtResource("1_1trvo")
+region = Rect2(2720, 1128, 68, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icjd6"]
+atlas = ExtResource("1_1trvo")
+region = Rect2(2788, 1128, 68, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujdld"]
+atlas = ExtResource("1_1trvo")
+region = Rect2(2598, 799, 68, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cy0s0"]
+atlas = ExtResource("1_1trvo")
+region = Rect2(2666, 799, 68, 47)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n7omo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6dj3s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0j880")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7wen6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icjd6")
+}],
+"loop": true,
+"name": &"BulletDestroyed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujdld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cy0s0")
+}],
+"loop": true,
+"name": &"bullet",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 8
+collision_mask = 10
+script = ExtResource("1_koolo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, -1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ty1x1")
+
+[node name="Bullet" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(8.5, -8.25)
+scale = Vector2(0.602941, 0.728723)
+sprite_frames = SubResource("SpriteFrames_n7omo")
+animation = &"bullet"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

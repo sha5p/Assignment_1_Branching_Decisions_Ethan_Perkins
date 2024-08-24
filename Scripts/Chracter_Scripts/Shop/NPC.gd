@@ -29,6 +29,7 @@ func _ready():
 	utlitys.play(Global.Health[currentItem]["Name"])
 	weapons.visible=false
 	upgrade.visible=false
+	Dialogic.signal_event.connect(DialogicSignal)
 func _physics_process(delta):
 	talk.play("NotTalking")
 	NPC.play("idle")
@@ -36,16 +37,18 @@ func _on_area_2d_body_entered(body):
 	if body.has_method("shop"):
 		talk.play("Talking")
 		NPC.play("talk")
-		get_tree().paused =true
-		shop_anim.play("ShopIn")
+		Global.talking=true
+		Dialogic.start("Shop")
 	else:
 		talk.play("NotTalking")
 		NPC.play("idle")
-
+func DialogicSignal(arugment: String):
+	if arugment =="End":
+		shop_anim.play("ShopIn")
 
 func _on_button_button_up():
 	shop_anim.play("shopOut")
-	get_tree().paused = false
+	Global.talking=false
 	$Area2D.disable_mode=true
 	talk.play("NotTalking")
 	NPC.play("idle")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=46 format=3 uid="uid://djffro4dr0uc2"]
 
-[ext_resource type="Script" path="res://Scences/Player/Player.gd" id="1_lg055"]
+[ext_resource type="Script" path="res://Scripts/Player_Scripts/Player.gd" id="1_uqs1j"]
 [ext_resource type="Texture2D" uid="uid://swjivgbtnmeg" path="res://Assests/Tech Dungeon Roguelite - Asset Pack (DEMO)/Players/players blue x3.png" id="2_6eirs"]
 [ext_resource type="Script" path="res://Scripts/Player_Scripts/Player_camera.gd" id="2_h7n4q"]
 [ext_resource type="Texture2D" uid="uid://ga6381gvjxgh" path="res://Assests/Tech Dungeon Roguelite - Asset Pack (DEMO)/ShootDown.png" id="3_4m3gh"]
@@ -353,7 +353,7 @@ animations = [{
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 3
-script = ExtResource("1_lg055")
+script = ExtResource("1_uqs1j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(3, -12)

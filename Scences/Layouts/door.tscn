@@ -1,10 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://svt4aqbevtt0"]
+[gd_scene load_steps=12 format=3 uid="uid://svt4aqbevtt0"]
 
 [ext_resource type="Texture2D" uid="uid://s0xf71edia4g" path="res://Assests/Tech Dungeon Roguelite - Asset Pack (DEMO)/SpriteSheets/Doors_shooter.png" id="1_gk0fy"]
 [ext_resource type="Script" path="res://Scripts/Map_Scripts/door.gd" id="1_lakos"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5inny"]
-size = Vector2(153.5, 78)
+size = Vector2(100, 55)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o7gtm"]
 atlas = ExtResource("1_gk0fy")
@@ -73,15 +73,18 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4pkwb"]
-size = Vector2(122, 65)
+size = Vector2(122, 18.5)
 
-[node name="Door" type="Area2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jookn"]
+size = Vector2(109, 45.5)
+
+[node name="Door" type="Area2D" groups=["Door"]]
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_lakos")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4.25, 23)
+position = Vector2(6, 23.5)
 shape = SubResource("RectangleShape2D_5inny")
 
 [node name="Main" type="AnimatedSprite2D" parent="."]
@@ -96,10 +99,20 @@ sprite_frames = SubResource("SpriteFrames_xxh2t")
 animation = &"opened"
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+collision_layer = 7
+collision_mask = 0
+
+[node name="Buttom" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(5, 69)
+shape = SubResource("RectangleShape2D_4pkwb")
+
+[node name="top" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(4, -20)
+shape = SubResource("RectangleShape2D_4pkwb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(3, 25.5)
-shape = SubResource("RectangleShape2D_4pkwb")
+position = Vector2(3, 23)
+shape = SubResource("RectangleShape2D_jookn")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
