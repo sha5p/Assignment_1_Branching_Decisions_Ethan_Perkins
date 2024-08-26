@@ -1,41 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://brkm04kcyqtnn"]
+[gd_scene load_steps=9 format=3 uid="uid://brkm04kcyqtnn"]
 
 [ext_resource type="Script" path="res://Scripts/Scence_Scripts/Introduction.gd" id="1_pmwpt"]
 [ext_resource type="VideoStream" path="res://Assests/Galaxy.ogv" id="3_rhqbm"]
-[ext_resource type="VideoStream" path="res://Assests/Warp-Speed.ogv" id="3_vc6qh"]
-[ext_resource type="AudioStream" uid="uid://be2hou65acuev" path="res://Audio_Managment/sound/warp-speed-6255.mp3" id="4_37rwk"]
+[ext_resource type="AudioStream" uid="uid://8lt0k31p161u" path="res://Audio_Managment/sound/Warping.wav" id="4_sn4fe"]
 [ext_resource type="AudioStream" uid="uid://c1ucurinvfeja" path="res://Audio_Managment/Intro_Story.mp3" id="5_2oyo0"]
 
 [sub_resource type="SystemFont" id="SystemFont_7ghch"]
 font_names = PackedStringArray("Engravers MT")
-
-[sub_resource type="Animation" id="Animation_rjeu7"]
-resource_name = "Camera_zoom"
-length = 25.46
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SpaceTravel:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 24, 25.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1.5, 1.5), Vector2(5, 5), Vector2(10, 10)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("SpaceTravel:size")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1920, 1088)]
-}
 
 [sub_resource type="Animation" id="Animation_eebh3"]
 length = 0.001
@@ -50,30 +21,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("SpaceTravel:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("SpaceTravel:size")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1920, 1088)]
 }
 
 [sub_resource type="Animation" id="Animation_e1pxr"]
@@ -94,7 +41,6 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g6tv7"]
 _data = {
-"Camera_zoom": SubResource("Animation_rjeu7"),
 "RESET": SubResource("Animation_eebh3"),
 "Text_Fade_In": SubResource("Animation_e1pxr")
 }
@@ -120,18 +66,6 @@ autoplay = true
 expand = true
 loop = true
 
-[node name="SpaceTravel" type="VideoStreamPlayer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 1920.0
-offset_bottom = 1088.0
-grow_horizontal = 2
-grow_vertical = 2
-stream = ExtResource("3_vc6qh")
-loop = true
-
 [node name="Label" type="Label" parent="."]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
@@ -155,11 +89,8 @@ libraries = {
 "": SubResource("AnimationLibrary_g6tv7")
 }
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(577, 325)
-
 [node name="Zoom" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_37rwk")
+stream = ExtResource("4_sn4fe")
 bus = &"SFX"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
@@ -167,8 +98,7 @@ stream = ExtResource("5_2oyo0")
 autoplay = true
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 14.5
+wait_time = 0.5
 one_shot = true
 
-[connection signal="finished" from="SpaceTravel" to="." method="_on_space_travel_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

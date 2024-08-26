@@ -38,7 +38,6 @@ func load_data():
 		file.close()
 
 func save_data():
-	print(g_data)
 	#writes to file based on varibles
 	var file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
 	file.store_var(g_data)

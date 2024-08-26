@@ -19,7 +19,6 @@ func _on_body_entered(body):
 		door_Collision_buttom.set_deferred("disabled", false)    
 	elif "top" ==direction:
 		door_Collision_top.set_deferred("disabled", false)    
-	print(Global.Room[Global.currentRoom]["Enemy"])
 	if body.has_method("_player_take_damage"):
 		if Global.Room[Global.currentRoom]["Enemy"]==0:
 			Global.enemyFighting =false
@@ -45,7 +44,6 @@ func _on_body_exited(body):
 			for i in spawner:
 				i.spawn()
 		if Global.currentRoom ==1 and Global.Room[Global.currentRoom]["Enemy"]==2 and !Global.enemyFighting:
-			print("fight")
 			Global.enemyFighting=true
 			var spawner=get_tree().get_nodes_in_group("Spawner")
 			for i in spawner:

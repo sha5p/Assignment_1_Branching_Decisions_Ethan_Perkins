@@ -1,5 +1,5 @@
 [wait time="1.0"]
-In the distant reaches of the Nefaran Cluster, two primordial races grappled—the Beffren and the Kobob. Their conflict, etched into the beggning 
+In the distant reaches of the Nefaran Cluster, two primordial races grappled—the Beffren and the Kobob. Their conflict, etched into the beggning
 Their conflict, known as the plain of nefaran
 In the midist of the war the Beffren commited a crime of the declration of excistance, they forged a new race—the Humans—genetically sculpted for warfare.
 These engineered soldiers would become the Beffren’s cosmic pawns. The Kobob lost the war and in the remains of the ruined battle field some humans fight on along with the fallen race
@@ -12,5 +12,4 @@ leave "Captian Zia"
 [wait time="0.5"]
 [wait_input]
 [signal arg="Begin"]
-[signal arg="Map"]
 [end_timeline]

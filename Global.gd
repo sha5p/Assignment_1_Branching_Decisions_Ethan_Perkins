@@ -90,6 +90,9 @@ var Room={
 }
 
 func _ready():
+	
+	await get_tree().create_timer(0.3).timeout
+			
 	upgrades[0]["FireRate"]= SaveData.g_data[0]["FireRate"]
 	upgrades[0]["Speed"]= SaveData.g_data[0]["Speed"]
 	upgrades[0]["Range"]= SaveData.g_data[0]["Range"]
@@ -98,3 +101,5 @@ func _ready():
 	currentRoom= SaveData.g_data[3]["Room"]
 	Level= SaveData.g_data[3]["Level"]
 	Health[0]["HP"]= SaveData.g_data[4]["HP"]
+	print("FireRate ",upgrades[0]["FireRate"],"Speed ",upgrades[0]["Speed"],"Speed ",upgrades[0]["Range"])
+	print("Weapon: ",item[0]["Weapon"],"Shield ",item[1]["Shield"],"Health ",Health[0]["HP"])
