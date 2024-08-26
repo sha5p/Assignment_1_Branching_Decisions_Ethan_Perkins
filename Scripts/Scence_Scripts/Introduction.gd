@@ -13,10 +13,8 @@ func DialogicSignal(arugment: String):
 	elif arugment =="Begin":
 		$Label.visible=false
 		$Timer.start()
-		print("hello")
 
 
 func _on_timer_timeout():
-	print("hello")
 	Fade.fade_in()
 	get_tree().change_scene_to_packed(level_0)

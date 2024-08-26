@@ -41,8 +41,8 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "Misson_Briefing_intro1": "res://Timelines/Misson_Briefing_intro1.dtl",
-"Shop": "res://Shop.dtl",
-"Tutorial": "res://Tutorial.dtl"
+"Shop": "res://Timelines/Shop.dtl",
+"Tutorial": "res://Timelines/Tutorial.dtl"
 }
 variables={}
 

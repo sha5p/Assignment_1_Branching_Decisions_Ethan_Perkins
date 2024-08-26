@@ -18,13 +18,13 @@ func _on_body_entered(body):
 		telported =true
 		Global.currentRoom=Global.currentRoom+1
 		print(SaveData.g_data[0]["FireRate"])
-		#SaveData.g_data[0]["Speed"]=Global.upgrades[0]["Speed"]
+		print(Global.upgrades["FireRate"])
 		#SaveData.g_data[0]["Range"]=Global.upgrades[0]["Range"]
 		#SaveData.g_data[1]["Weapon"]=Global.item[0]["Weapon"] 
 		#SaveData.g_data[2]["Shield"]=Global.item[1]["Shield"]
 		#SaveData.g_data[3]["Room"]=Global.currentRoom
 		#SaveData.g_data[3]["Level"]=Global.Level
 		#SaveData.g_data[4]["HP"]=Global.Health[0]["HP"]
-		#SaveData.save_data()
+		SaveData.save_data()
 	elif !telporter:
 		pass

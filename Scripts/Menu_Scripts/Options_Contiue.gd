@@ -35,5 +35,11 @@ func _on_new_pressed():
 	Global.Level=0
 	SaveData.g_data[4]["HP"]=8
 	Global.Health[0]["HP"]=8
+	Global.upgrades["FireRate"] =0
+	Global.upgrades["Speed"] =0
+	Global.upgrades["Range"] =0
+	SaveData.g_data[0]["FireRate"]=0
+	SaveData.g_data[0]["Speed"]=0
+	SaveData.g_data[0]["Range"]=0
 	SaveData.save_data()
 	get_tree().change_scene_to_packed(intro)
