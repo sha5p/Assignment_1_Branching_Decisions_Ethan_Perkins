@@ -12,5 +12,6 @@ func DialogicSignal(arugment: String):
 		collision_shape_2d.disabled=false
 
 func _on_body_entered(body):
-	Global.talking=true
-	Dialogic.start("Tutorial")
+	if body.has_method("shop"):
+		Dialogic.start("Tutorial")
+		Global.talking=true
