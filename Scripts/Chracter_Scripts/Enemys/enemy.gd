@@ -40,9 +40,9 @@ func take_damage():
 	elif Global.item[0]["Weapon"] =="LMG":
 		Health+=-1
 	elif Global.item[0]["Weapon"] =="ShotGun":
-		Health+=-3
+		Health+=-2
 	elif Global.item[0]["Weapon"] =="Sniper":
-		Health+=-4
+		Health+=-3
 	elif Global.item[0]["Weapon"] == "Burst Shoty":
 		Health+=-2
 	elif Global.item[0]["Weapon"] =="Laser":
@@ -51,10 +51,12 @@ func take_damage():
 		Health+=-5
 	elif Global.item[0]["Weapon"] =="Ak-47":
 		Health+=-2
+	elif Global.item[0]["Weapon"] =="Bazooka":
+		Health+=-4
 	if Health >0 and Health !=5:
 		health.play(str(Health,"HP"))
 	elif Health <=0:
-		health.play(str(Health,"HP"))
+		health.play(str(0,"HP"))
 		dead=true
 		animation.play("Death")
 		await get_tree().create_timer(0.9).timeout

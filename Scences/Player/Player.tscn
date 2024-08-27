@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://djffro4dr0uc2"]
+[gd_scene load_steps=51 format=3 uid="uid://djffro4dr0uc2"]
 
 [ext_resource type="Script" path="res://Scripts/Player_Scripts/Player.gd" id="1_uqs1j"]
 [ext_resource type="Texture2D" uid="uid://swjivgbtnmeg" path="res://Assests/Tech Dungeon Roguelite - Asset Pack (DEMO)/Players/players blue x3.png" id="2_6eirs"]
@@ -336,6 +336,45 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gwwk"]
+atlas = ExtResource("6_jggqq")
+region = Rect2(1491, 1271, 51, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tpt5"]
+atlas = ExtResource("6_jggqq")
+region = Rect2(1542, 1271, 51, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwur2"]
+atlas = ExtResource("6_jggqq")
+region = Rect2(1593, 1271, 51, 41)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ye6la"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8gwwk")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tpt5")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwur2")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_lydwb"]
 atlas = ExtResource("2_6eirs")
 region = Rect2(28, 38, 41, 60)
@@ -414,6 +453,12 @@ offset_right = 1144.0
 offset_bottom = 75.0
 theme_override_font_sizes/font_size = 120
 text = "Current Curcits: "
+
+[node name="Shields" type="AnimatedSprite2D" parent="CanvasLayer2"]
+position = Vector2(201, 628)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ye6la")
+animation = &"3"
 
 [node name="Pause" type="AnimatedSprite2D" parent="."]
 process_mode = 2

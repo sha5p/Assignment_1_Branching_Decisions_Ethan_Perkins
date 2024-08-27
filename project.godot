@@ -40,11 +40,15 @@ directories/dch_directory={
 "PlayerChracter": "res://Scences/Player/PlayerChracter.dch"
 }
 directories/dtl_directory={
+"Choice": "res://Choice.dtl",
 "Misson_Briefing_intro1": "res://Timelines/Misson_Briefing_intro1.dtl",
 "Shop": "res://Timelines/Shop.dtl",
-"Tutorial": "res://Timelines/Tutorial.dtl"
+"Tutorial": "res://Timelines/Tutorial.dtl",
+"warning": "res://warning.dtl"
 }
-variables={}
+variables={
+"Curcits": 0
+}
 
 [display]
 

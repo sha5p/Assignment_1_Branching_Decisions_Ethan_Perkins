@@ -13,6 +13,8 @@ func _ready():
 	door_Collision_top.disabled=true	
 	door_Collision.disabled = true
 	main.play("default")
+	if no_fighting:
+		door_Collision.disabled = false
 	
 func _on_body_entered(body):
 	if "buttom" ==direction:
@@ -31,6 +33,8 @@ func _on_body_entered(body):
 			await get_tree().create_timer(0.4).timeout
 			door.play("opened")
 	elif body.has_method("_player_take_damage") and no_fighting:
+			print("work")
+			door_Collision.set_deferred("disabled", true)    
 			Global.room_entered.emit(self)
 			door.play("open")
 			main.visible=false
@@ -57,7 +61,7 @@ func _on_body_exited(body):
 		for i in doors:
 			i.fight()
 		if Global.currentRoom==2:
-			pass
+			door_Collision.set_deferred("disabled", true)    
 			
 func fight():
 	door_Collision.disabled= false

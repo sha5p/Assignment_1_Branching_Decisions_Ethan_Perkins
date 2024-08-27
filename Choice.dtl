@@ -1,0 +1,11 @@
+Hello I just need help and need a few spare curcits 50 will do
+set {Curcits} = 50.1
+if {Curcits} <= 50:
+	Pity you have no curcits well Ill be on my way
+if {Curcits} >= 50:
+	Can you spre your curcits from your gun?
+	- Yes
+		none
+		Thank You!! I'll go ahead now and try and take so rominodes out for you
+	- No
+		Pity ill be on my way

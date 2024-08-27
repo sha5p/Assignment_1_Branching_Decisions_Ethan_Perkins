@@ -9,6 +9,7 @@ func _ready():
 		await get_tree().create_timer(1).timeout
 		teleport.play("Unacctive")
 func _on_body_entered(body):
+	print(Global.Room[Global.currentRoom]["Enemy"])
 	if body.has_method("_player_take_damage") and Global.Room[Global.currentRoom]["Enemy"]==0 and telporter:
 		teleport.play("Teleport")
 		await get_tree().create_timer(1).timeout

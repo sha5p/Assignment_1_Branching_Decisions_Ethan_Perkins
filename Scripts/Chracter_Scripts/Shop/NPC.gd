@@ -35,9 +35,8 @@ func _physics_process(delta):
 	NPC.play("idle")
 func _on_area_2d_body_entered(body):
 	if body.has_method("shop"):
-		Global.talking=true
 		Dialogic.start("Shop")
-		
+		Global.talking=true
 	else:
 		talk.play("NotTalking")
 		NPC.play("idle")
@@ -87,6 +86,9 @@ func _on_buy_pressed():
 			Global.upgrades[0]["Speed"]=0
 			if Global.items[currentItem]["Name"]==Global.item[0]["Weapon"]:
 				upgrade.visible=true
+		elif  "Shield" ==Global.items[currentItem]["Name"] and Global.item[1]["Shield"]!=3:
+			Global.curcits-=50
+			Global.item[1]["Shield"]+=1
 	elif 0<Global.Health[0]["HP"] and Global.Health[0]["HP"]<8 and currentItem==0:
 		Global.curcits -= Global.Health[0]["Cost"]
 		Global.Health[0]["HP"] +=1

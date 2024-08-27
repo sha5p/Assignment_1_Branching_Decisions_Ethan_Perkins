@@ -43,7 +43,7 @@ func take_damage():
 	if Health >0 and Health !=3:
 		health.play(str(Health,"HP"))
 	elif Health <=0:
-		health.play(str(Health,"HP"))
+		health.play(str(0,"HP"))
 		dead=true
 		animation.play("Death")
 		await get_tree().create_timer(0.9).timeout
