@@ -2,7 +2,7 @@ extends Area2D
 @onready var main = $Main
 @onready var door = $Door
 @onready var door_Collision = $CharacterBody2D/CollisionShape2D
-
+@export var no_fighting=false
 @onready var door_Collision_buttom = $CharacterBody2D/Buttom
 @onready var door_Collision_top = $CharacterBody2D/top
 @export var direction = ""
@@ -19,7 +19,7 @@ func _on_body_entered(body):
 		door_Collision_buttom.set_deferred("disabled", false)    
 	elif "top" ==direction:
 		door_Collision_top.set_deferred("disabled", false)    
-	if body.has_method("_player_take_damage"):
+	if body.has_method("_player_take_damage") and !no_fighting:
 		if Global.Room[Global.currentRoom]["Enemy"]==0:
 			Global.enemyFighting =false
 			door_Collision.set_deferred("disabled", true)    
@@ -27,13 +27,18 @@ func _on_body_entered(body):
 			Global.room_entered.emit(self)
 			door.play("open")
 			main.visible=false
-			Global.curcits +=100
+			door.visible= true
+			await get_tree().create_timer(0.4).timeout
+			door.play("opened")
+	elif body.has_method("_player_take_damage") and no_fighting:
+			Global.room_entered.emit(self)
+			door.play("open")
+			main.visible=false
 			door.visible= true
 			await get_tree().create_timer(0.4).timeout
 			door.play("opened")
 func _on_body_exited(body):
 	if body.has_method("_player_take_damage"):
-		Global.curcits +=100
 		door.play("close")
 		await get_tree().create_timer(0.4).timeout
 		main.visible=true
@@ -51,6 +56,9 @@ func _on_body_exited(body):
 		var doors= get_tree().get_nodes_in_group("Door")
 		for i in doors:
 			i.fight()
+		if Global.currentRoom==2:
+			pass
+			
 func fight():
 	door_Collision.disabled= false
 

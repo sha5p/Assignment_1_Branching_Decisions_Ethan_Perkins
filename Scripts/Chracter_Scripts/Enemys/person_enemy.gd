@@ -26,10 +26,23 @@ func makepath() ->void:
 	nav_agent.target_position = player.global_position		
 		
 func take_damage():
-	Health+=-1
+	if Global.item[0]["Weapon"] =="Defualt":
+		Health+=-1
+	elif Global.item[0]["Weapon"] =="ShotGun":
+		Health+=-3
+	elif Global.item[0]["Weapon"] =="Sniper":
+		Health+=-4
+	elif Global.item[0]["Weapon"] == "Burst Shoty":
+		Health+=-2
+	elif Global.item[0]["Weapon"] =="Laser":
+		Health+=-1
+	elif Global.item[0]["Weapon"] =="RailGun":
+		Health+=-5
+	elif Global.item[0]["Weapon"] =="Ak-47":
+		Health+=-2
 	if Health >0 and Health !=3:
 		health.play(str(Health,"HP"))
-	elif Health ==0:
+	elif Health <=0:
 		health.play(str(Health,"HP"))
 		dead=true
 		animation.play("Death")

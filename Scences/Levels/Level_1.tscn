@@ -15,9 +15,6 @@ layer_0/tile_data = PackedInt32Array(-1, 13369345, 10, 65535, 13369345, 11, 1310
 [node name="Area2D" parent="." instance=ExtResource("5_j1g1b")]
 position = Vector2(63, 33)
 
-[node name="Player" parent="." instance=ExtResource("3_3wqyo")]
-position = Vector2(57, 49)
-
 [node name="Spawner" parent="." instance=ExtResource("4_sad3h")]
 position = Vector2(1034, -686)
 
@@ -39,3 +36,6 @@ telporter = true
 
 [node name="NPC" parent="." instance=ExtResource("6_hbbec")]
 position = Vector2(1477, 397)
+
+[node name="Player" parent="." instance=ExtResource("3_3wqyo")]
+position = Vector2(57, 49)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://djffro4dr0uc2"]
+[gd_scene load_steps=47 format=3 uid="uid://djffro4dr0uc2"]
 
 [ext_resource type="Script" path="res://Scripts/Player_Scripts/Player.gd" id="1_uqs1j"]
 [ext_resource type="Texture2D" uid="uid://swjivgbtnmeg" path="res://Assests/Tech Dungeon Roguelite - Asset Pack (DEMO)/Players/players blue x3.png" id="2_6eirs"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://1r5h23nlxob8" path="res://Scences/Player/Pause_Menu.tscn" id="3_ysiol"]
 [ext_resource type="PackedScene" uid="uid://b4h63wsi5bxvn" path="res://Scences/Player/Weapon.tscn" id="5_epfer"]
 [ext_resource type="Texture2D" uid="uid://dbrar35ghbe3g" path="res://Assests/Tech Dungeon Roguelite - Asset Pack (DEMO)/SpriteSheets/Sprite_Sheet_Main.png" id="6_jggqq"]
+[ext_resource type="Texture2D" uid="uid://cuhgsrrb33xsm" path="res://Assests/Circuit_Board.webp" id="8_6w5j1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4mja0"]
 radius = 14.0
@@ -400,6 +401,19 @@ position = Vector2(78, 608)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_udgcw")
 animation = &"8HP"
+
+[node name="CircuitBoard" type="Sprite2D" parent="CanvasLayer2"]
+position = Vector2(1011, 18)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_6w5j1")
+
+[node name="Label" type="Label" parent="CanvasLayer2/CircuitBoard"]
+offset_left = 200.0
+offset_top = -90.0
+offset_right = 1144.0
+offset_bottom = 75.0
+theme_override_font_sizes/font_size = 120
+text = "Current Curcits: "
 
 [node name="Pause" type="AnimatedSprite2D" parent="."]
 process_mode = 2

@@ -1,7 +1,7 @@
 extends Node
 signal room_entered(room)
 var player: Node
-var curcits = 500
+var curcits = 0
 var talking:bool=false
 var currentRoom =0
 var Level=0
@@ -12,6 +12,7 @@ var items = {
 		"Name":"Shield",
 		"Des":"Shields protect your hearts",
 		"Cost": 50,
+		"Damage":1,
 	},
 	2:{
 		"Name":"ShotGun",
@@ -20,6 +21,7 @@ var items = {
 		"FireRate":1.2,
 		"Speed":250,
 		"Range": 600,
+		"Damage":3,
 	},
 	3:{
 		"Name":"Sniper",
@@ -28,6 +30,7 @@ var items = {
 		"FireRate":1.5,
 		"Speed":400,
 		"Range": 0,
+		"Damage":4,
 	},
 	4:{
 		"Name":"LMG",
@@ -36,6 +39,7 @@ var items = {
 		"FireRate":0.7,
 		"Speed":300,
 		"Range": 400,
+		"Damage":1,
 	}
 }
 var Health={
@@ -86,6 +90,9 @@ var Room={
 	},
 	1: {
 		"Enemy":2,
+	},
+	2:{
+		"Enemy":1,
 	}
 }
 
@@ -101,5 +108,5 @@ func _ready():
 	currentRoom= SaveData.g_data[3]["Room"]
 	Level= SaveData.g_data[3]["Level"]
 	Health[0]["HP"]= SaveData.g_data[4]["HP"]
-	print("FireRate ",upgrades[0]["FireRate"],"Speed ",upgrades[0]["Speed"],"Speed ",upgrades[0]["Range"])
-	print("Weapon: ",item[0]["Weapon"],"Shield ",item[1]["Shield"],"Health ",Health[0]["HP"])
+	curcits=SaveData.g_data[5]["curcits"]
+

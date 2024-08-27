@@ -1,6 +1,6 @@
 [gd_scene load_steps=29 format=3 uid="uid://413yv0w3bsn5"]
 
-[ext_resource type="Script" path="res://Scripts/Chracter_Scripts/person_enemy.gd" id="1_0rhp3"]
+[ext_resource type="Script" path="res://Scripts/Chracter_Scripts/Enemys/person_enemy.gd" id="1_0rhp3"]
 [ext_resource type="Texture2D" uid="uid://dbrar35ghbe3g" path="res://Assests/Tech Dungeon Roguelite - Asset Pack (DEMO)/SpriteSheets/Sprite_Sheet_Main.png" id="2_qnlw0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v2ymc"]

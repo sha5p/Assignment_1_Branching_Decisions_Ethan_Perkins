@@ -6,7 +6,7 @@ extends CharacterBody2D
 @onready var main =get_tree().get_root().get_node("Level_"+str(Global.Level))
 @onready var BULLET = load("res://Scences/Enemy/Enemy_Bullet.tscn")
 @onready var health = $Health
-
+@onready var CURCITS = load("res://Scences/Player/curcits.tscn")
 
 var shooting =false
 var ACCEL = 50
@@ -14,7 +14,7 @@ var SPEED =100
 var dead=false
 var Health =5
 func _ready():
-	pass
+	health.play("Max")
 func _physics_process(delta: float) ->void:
 	if !shooting and !dead:
 		var dir=to_local(nav_agent.get_next_path_position()).normalized()
@@ -35,16 +35,34 @@ func _on_shooting_cool_down_timeout():
 		new_bullet.position =$".".global_position
 		main.add_child.call_deferred(new_bullet)
 func take_damage():
-	Health+=-1
+	if Global.item[0]["Weapon"] =="Defualt":
+		Health+=-1
+	elif Global.item[0]["Weapon"] =="LMG":
+		Health+=-1
+	elif Global.item[0]["Weapon"] =="ShotGun":
+		Health+=-3
+	elif Global.item[0]["Weapon"] =="Sniper":
+		Health+=-4
+	elif Global.item[0]["Weapon"] == "Burst Shoty":
+		Health+=-2
+	elif Global.item[0]["Weapon"] =="Laser":
+		Health+=-1
+	elif Global.item[0]["Weapon"] =="RailGun":
+		Health+=-5
+	elif Global.item[0]["Weapon"] =="Ak-47":
+		Health+=-2
 	if Health >0 and Health !=5:
 		health.play(str(Health,"HP"))
-	elif Health ==0:
+	elif Health <=0:
 		health.play(str(Health,"HP"))
 		dead=true
 		animation.play("Death")
 		await get_tree().create_timer(0.9).timeout
 		print(Global.Room[Global.currentRoom]["Enemy"])
 		Global.Room[Global.currentRoom]["Enemy"]-=1
+		var curcit = CURCITS.instantiate()
+		curcit.position =$".".global_position
+		main.add_child.call_deferred(curcit)
 		queue_free()
 
 

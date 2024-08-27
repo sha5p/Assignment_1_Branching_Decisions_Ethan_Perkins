@@ -4,6 +4,9 @@ var input: Vector2
 @export var SPEED =300
 @export var ACCEL =5
 @onready var health = $CanvasLayer2/Health
+@onready var curcits = $CanvasLayer2/CircuitBoard/Label
+
+
 var pause =false
 func _ready():
 	#$AnimatedSprite2D.play("idle")
@@ -11,10 +14,12 @@ func _ready():
 	Global.player = self
 	Global.enemyFighting=false
 func get_input():
+	curcits.visible=true
 	input.x=Input.get_action_strength("Right")-Input.get_action_strength("Left")
 	input.y=Input.get_action_strength("Down")-Input.get_action_strength("Up")
 	return input.normalized()
 func _process(delta):
+	curcits.text="Current Curcits: "+str(Global.curcits)
 	var playerInput=get_input()
 	if Global.Health[0]["HP"] >0 and !Global.talking:
 		if velocity.x != 0:
@@ -42,6 +47,7 @@ func _player_take_damage():
 		$AnimatedSprite2D.play("Death")
 		health.play("Dead")
 func shop():
+	$CanvasLayer2/CircuitBoard/Label.visible=false
 	pause=true
 	$Pause.visible=true
 		

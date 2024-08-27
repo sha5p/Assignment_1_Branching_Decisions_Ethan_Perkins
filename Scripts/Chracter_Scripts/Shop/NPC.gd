@@ -35,10 +35,9 @@ func _physics_process(delta):
 	NPC.play("idle")
 func _on_area_2d_body_entered(body):
 	if body.has_method("shop"):
-		talk.play("Talking")
-		NPC.play("talk")
 		Global.talking=true
 		Dialogic.start("Shop")
+		
 	else:
 		talk.play("NotTalking")
 		NPC.play("idle")
