@@ -8,7 +8,6 @@ var lerpFactor = 0.05
 #var initialDirection= player.global_position
 func _ready():
 	look_at(Global.player.global_position)
-	print(initialDirection)
 	bullet.play("bullet")
 func _physics_process(delta):
 	position = position.move_toward(initialDirection, delta * speed)

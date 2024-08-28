@@ -23,6 +23,11 @@ var g_data = {
 	},
 	5:{
 		"curcits":0,
+	},
+	6:{
+		"FireRate":0,
+		"Speed":0,
+		"Range": 0,
 	}
 }
 func _ready():

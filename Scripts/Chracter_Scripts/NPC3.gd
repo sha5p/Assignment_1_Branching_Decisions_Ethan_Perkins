@@ -18,6 +18,6 @@ func _on_area_2d_body_entered(body):
 	if body.has_method("shop") and Global.Level ==2:
 		Dialogic.start("warning")
 		Global.talking=true
-	if body.has_method("shop") and Global.Level ==1:
+	if body.has_method("shop") and Global.Level ==3:
 		Dialogic.start("choice")
 		Global.talking=true

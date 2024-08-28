@@ -28,6 +28,8 @@ func makepath() ->void:
 func take_damage():
 	if Global.item[0]["Weapon"] =="Defualt":
 		Health+=-1
+	elif Global.item[0]["Weapon"] =="LMG":
+		Health+=-1
 	elif Global.item[0]["Weapon"] =="ShotGun":
 		Health+=-3
 	elif Global.item[0]["Weapon"] =="Sniper":
@@ -47,7 +49,6 @@ func take_damage():
 		dead=true
 		animation.play("Death")
 		await get_tree().create_timer(0.9).timeout
-		print(Global.Room[Global.currentRoom]["Enemy"])
 		Global.Room[Global.currentRoom]["Enemy"]-=1
 		queue_free()
 

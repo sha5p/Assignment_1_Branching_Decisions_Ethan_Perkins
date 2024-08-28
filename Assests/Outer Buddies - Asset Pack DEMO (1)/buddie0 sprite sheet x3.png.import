@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dkvdf6pd4k26l"
+path="res://.godot/imported/buddie0 sprite sheet x3.png-585df360c8131dd41a1c46a85a3c83ce.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assests/Outer Buddies - Asset Pack DEMO (1)/buddie0 sprite sheet x3.png"
+dest_files=["res://.godot/imported/buddie0 sprite sheet x3.png-585df360c8131dd41a1c46a85a3c83ce.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

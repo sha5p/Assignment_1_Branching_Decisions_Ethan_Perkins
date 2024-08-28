@@ -92,7 +92,10 @@ var Room={
 		"Enemy":2,
 	},
 	2:{
-		"Enemy":1,
+		"Enemy":2,
+	},
+	3:{
+		"Enemy":0,
 	}
 }
 
@@ -109,4 +112,16 @@ func _ready():
 	Level= SaveData.g_data[3]["Level"]
 	Health[0]["HP"]= SaveData.g_data[4]["HP"]
 	curcits=SaveData.g_data[5]["curcits"]
+	if item[0]["Weapon"] =="LMG":
+		items[4]["FireRate"]=SaveData.g_data[6]["FireRate"]
+		items[4]["Speed"]=SaveData.g_data[6]["Speed"]
+		items[4]["Range"]=SaveData.g_data[6]["Range"]
+	elif item[0]["Weapon"]=="ShotGun":
+		items[2]["FireRate"]=SaveData.g_data[6]["FireRate"]
+		items[2]["Speed"]=SaveData.g_data[6]["Speed"]
+		items[2]["Range"]=SaveData.g_data[6]["Range"]
+	elif item[0]["Weapon"]=="Sniper":
+		items[3]["FireRate"]=SaveData.g_data[6]["FireRate"]
+		items[3]["Speed"]=SaveData.g_data[6]["Speed"]
+		items[3]["Range"]=SaveData.g_data[6]["Range"]
 
