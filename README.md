@@ -127,8 +127,27 @@ aremonmoonserpent (n.d.). *The planets shop has opened.* [online] Reddit. Availa
 
 BSRDACCT (n.d.). *Heretic Build Discussion.* [online] Reddit.* Available at: https://www.reddit.com/r/SoulKnightPrequel/comments/18ajbzw/heretic_build_discussion/ [Accessed 23 Aug. 2024].
 
+‌Eduard_M (2024). Seamless loop of interstellar travel through a blue and red wormhole filled with stars. Space journey through time continuum. Warp in science fiction black hole vortex hyperspace tunnel. [online] Storyblocks.com. Available at: https://www.storyblocks.com/video/stock/seamless-loop-of-interstellar-travel-through-a-blue-and-red-wormhole-filled-with-stars-space-journey-through-time-continuum-warp-in-science-fiction-black-hole-vortex-hyperspace-tunnel-b0gi4eorfjh7j1ovx?preview=1 [Accessed 28 Aug. 2024].
+
+itch.io. (n.d.). Tech Dungeon: Roguelite - Asset Pack by Pupkin. [online] Available at: https://trevor-pupkin.itch.io/tech-dungeon-roguelite.
+
+‌itch.io. (2024). Heart beta. [online] Available at: https://cup-coffee.itch.io/pixel-hearts [Accessed 12 Aug. 2024].
+
+‌itch.io. (2024). The Ultimate Weapons Pack. [online] Available at: https://jestan.itch.io/weapons-pack [Accessed 10 Aug. 2024].
+
+‌itch.io. (2024). GUNS + RELOADS. [online] Available at: https://c1aymor3.itch.io/guns-reloads [Accessed 20 Aug. 2024].
+
+‌itch.io. (2024). Teleport-in animation. [online] Available at: https://bybibo.itch.io/teleport-in-animation [Accessed 28 Aug. 2024].
 GMAJ0R (2023). *A glimpse of the mid game skill tree.* [online] Reddit. Available at: https://www.reddit.com/r/FFXVI/comments/1229p9y/potential_spoilers_yoship_accidentally_showed_a/ [Accessed 23 Aug. 2024].
 
-www.merriam-webster.com. (n.d.). *Definition of SANDBOX.* [online] Available at: https://www.merriam-webster.com/dictionary/sandbox#:~:text=%3A%20a%20video%20game%20or%20part.(www.merriam-webster.com, n.d.)
+Promptbase.com. (2024). Sci-fi RPG Character Portraits Midjourney Prompt | PromptBase. [online] Available at: https://promptbase.com/prompt/digital-dinosaur-portraits [Accessed 20 Aug. 2024].
+
+‌soreCactus (2017). Justin Nichol’s sci-fi portraits- png, psd, transparency. [online] OpenGameArt.org. Available at: https://opengameart.org/content/justin-nichols-sci-fi-portraits-png-psd-transparency.
+
+www.merriam-webster.com. (n.d.). *Definition of SANDBOX.* [online] Available at: https://www.merriam-webster.com/dictionary/sandbox#:~:text=%3A%20a%20video%20game%20or%20part.(www.merriam-webster.com, n.d.)[Accessed 9 Aug. 2024].
+
+‌https://www.vecteezy.com/video/7079117-4k-60-fps-looping-space-travel-with-hyper-speed-a-beam-of-stars-in-the-universe-while-moving-at-the-speed-of-light-abstract-creative-cosmic-background-hyper-jump-into-another-galaxy-3d-rendering
+‌
+
 
 ‌
