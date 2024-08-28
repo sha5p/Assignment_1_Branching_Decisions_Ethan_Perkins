@@ -36,5 +36,10 @@ func _on_new_pressed():
 	SaveData.g_data[0]["Range"]=0
 	SaveData.g_data[5]["curcits"]=0
 	Global.curcits=0
+	SaveData.g_data[6]["FireRate"]=1
+	SaveData.g_data[6]["Speed"]=300
+	SaveData.g_data[6]["Range"]=0
 	SaveData.save_data()
+	SaveData.end=false
+	SaveData.ending()
 	get_tree().change_scene_to_packed(intro)

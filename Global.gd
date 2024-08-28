@@ -6,7 +6,7 @@ var talking:bool=false
 var currentRoom =0
 var Level=0
 var navcheck=false
-
+var cantalk=false
 var items = {
 	1:{
 		"Name":"Shield",
@@ -96,6 +96,9 @@ var Room={
 	},
 	3:{
 		"Enemy":0,
+	},
+	4:{
+		"Enemy":3,
 	}
 }
 

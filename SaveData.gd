@@ -1,6 +1,7 @@
 extends Node
 #makes const so file cant be broken somehow
 const SAVE_FILE = "user://save_file.save"
+const ENDING="user://end.save"
 var g_data = {
 	0: {
 		"FireRate":0,
@@ -30,6 +31,7 @@ var g_data = {
 		"Range": 0,
 	}
 }
+var end=false
 func _ready():
 	load_data()
 func load_data():
@@ -41,10 +43,20 @@ func load_data():
 		file.open(SAVE_FILE, FileAccess.READ)
 		g_data = file.get_var()
 		file.close()
-
+	if not FileAccess.file_exists(ENDING):
+		ending()  # Save the initial g_data to the file
+	else:
+		# If the file exists, load the data
+		var file = FileAccess.open(ENDING, FileAccess.READ)
+		file.open(ENDING, FileAccess.READ)
+		end = file.get_var()
+		file.close()
 func save_data():
 	#writes to file based on varibles
 	var file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
 	file.store_var(g_data)
 	file.close()
-
+func ending():
+	var file = FileAccess.open(ENDING, FileAccess.WRITE)
+	file.store_var(end)
+	file.close()

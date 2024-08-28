@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bfnnq33ag5hv0" path="res://Scences/Layouts/Deco.tscn" id="5_b06kc"]
 [ext_resource type="PackedScene" uid="uid://svt4aqbevtt0" path="res://Scences/Layouts/door.tscn" id="6_3y83g"]
 [ext_resource type="PackedScene" uid="uid://k3w36uodlrjv" path="res://Scences/Layouts/spawner.tscn" id="7_h8178"]
-[ext_resource type="PackedScene" uid="uid://57c7fcg0x2l8" path="res://Scences/Chracters_Scences/NPC2.tscn" id="7_ky51c"]
+[ext_resource type="PackedScene" uid="uid://dbh8jtvhb0wkr" path="res://Scences/Chracters_Scences/npc_1.tscn" id="8_oxagx"]
 
 [node name="Level_0" type="Node2D"]
 
@@ -18,7 +18,7 @@ position = Vector2(7, 139)
 telporter = true
 
 [node name="Player" parent="." instance=ExtResource("2_nc58a")]
-position = Vector2(-313, -424)
+position = Vector2(-183, -489)
 
 [node name="TileMap2" parent="." instance=ExtResource("5_b06kc")]
 layer_0/tile_data = PackedInt32Array(1114127, 2883585, 29, 1179663, 2883585, 30, 1114128, 2949121, 29, 1179664, 2949121, 30, 1114123, 2883585, 29, 1179659, 2883585, 30, 1114124, 2949121, 29, 1179660, 2949121, 30, 1114119, 2883585, 29, 1179655, 2883585, 30, 1114120, 2949121, 29, 1179656, 2949121, 30, 1114115, 2883585, 29, 1179651, 2883585, 30, 1114116, 2949121, 29, 1179652, 2949121, 30)
@@ -34,5 +34,6 @@ direction = "top"
 [node name="Spawner" parent="." instance=ExtResource("7_h8178")]
 position = Vector2(109, 125)
 
-[node name="Area2D2" parent="." instance=ExtResource("7_ky51c")]
-position = Vector2(-137, -653)
+[node name="NPC1" parent="." instance=ExtResource("8_oxagx")]
+position = Vector2(-132, -643)
+scale = Vector2(5, 5)

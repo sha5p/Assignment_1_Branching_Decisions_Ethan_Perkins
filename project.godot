@@ -36,19 +36,24 @@ directories/dch_directory={
 "AIBot": "res://Chracters/AIBot.dch",
 "Captian Zia": "res://Chracters/Captian Zia.dch",
 "Clueless Sam": "res://Chracters/Clueless Sam.dch",
+"Clueless Sams cousin ": "res://Chracters/Clueless Sams cousin .dch",
 "General_Kobob": "res://Chracters/General_Kobob.dch",
 "PlayerChracter": "res://Scences/Player/PlayerChracter.dch"
 }
 directories/dtl_directory={
-"Choice": "res://Choice.dtl",
-"Final": "res://Final.dtl",
+"Choice": "res://Timelines/Choice.dtl",
+"Final": "res://Timelines/Final.dtl",
 "Misson_Briefing_intro1": "res://Timelines/Misson_Briefing_intro1.dtl",
 "Shop": "res://Timelines/Shop.dtl",
 "Tutorial": "res://Timelines/Tutorial.dtl",
-"warning": "res://warning.dtl"
+"kobob_saved_bad": "res://Chracters/kobob_saved_bad.dtl",
+"kobob_saved_good": "res://Chracters/kobob_saved_good.dtl",
+"test": "res://Timelines/test.dtl",
+"warning": "res://Timelines/warning.dtl"
 }
 variables={
-"Curcits": 0
+"Curcits": 0,
+"Fake": false
 }
 
 [display]
@@ -102,6 +107,11 @@ dialogic_default_action={
 Shoot={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":89,"key_label":0,"unicode":121,"echo":false,"script":null)
+]
+}
+Talk={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"echo":false,"script":null)
 ]
 }
 

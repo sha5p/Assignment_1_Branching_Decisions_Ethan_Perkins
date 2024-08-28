@@ -22,6 +22,8 @@ func set_label():
 			label.text="Move Down"
 		"Pause":
 			label.text="Pause"
+		"Talk":
+			label.text="Talk"
 func changing():
 	#Changes the button to the input
 	var action_events = InputMap.action_get_events(action_name)

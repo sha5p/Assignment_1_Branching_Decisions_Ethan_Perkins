@@ -18,5 +18,13 @@ shape = SubResource("CircleShape2D_e4tkv")
 position = Vector2(1, -4)
 texture = ExtResource("2_ckbp5")
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[node name="Label" type="Label" parent="."]
+offset_left = -56.0
+offset_top = -118.0
+offset_right = 53.0
+offset_bottom = -95.0
+text = "
+"
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

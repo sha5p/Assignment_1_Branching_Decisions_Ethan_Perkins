@@ -25,7 +25,7 @@ var currentItem=0
 
 func _ready():
 	item.text=Global.Health[currentItem]["Name"]
-	des.text=Global.Health[currentItem]["Des"]+"\n Cost "+str(Global.Health[currentItem]["Cost"])+"$"
+	des.text=Global.Health[currentItem]["Des"]+"\n Cost "+"$"+str(Global.Health[currentItem]["Cost"])
 	utlitys.play(Global.Health[currentItem]["Name"])
 	weapons.visible=false
 	upgrade.visible=false
@@ -63,7 +63,7 @@ func switchItem(select):
 			utlitys.visible=false
 			weapons.visible=true
 			item.text=Global.items[currentItem]["Name"]
-			des.text=Global.items[currentItem]["Des"]+"\n Cost "+str(Global.items[currentItem]["Cost"])+"$"
+			des.text=Global.items[currentItem]["Des"]+"\n Cost "+"$"+str(Global.items[currentItem]["Cost"])
 			if Global.items[currentItem]["Name"]==Global.item[0]["Weapon"]:
 				print("wprks")
 				upgrade.visible=true
@@ -73,10 +73,9 @@ func switchItem(select):
 			weapons.visible=false
 			utlitys.visible=true
 			item.text=Global.Health[currentItem]["Name"]
-			des.text=Global.Health[currentItem]["Des"]+"\n Cost "+str(Global.Health[currentItem]["Cost"])+"$"
+			des.text=Global.Health[currentItem]["Des"]+"\n Cost "+"$"+str(Global.Health[currentItem]["Cost"])
 			upgrade.visible=false
 func _on_buy_pressed():
-	$Shop/Label.text="Current Curcits "+str(Global.curcits)
 	if currentItem !=0:
 		if Global.item[0]["Weapon"] !=Global.items[currentItem]["Name"] and "Shield" !=Global.items[currentItem]["Name"]:
 			Global.item[0]["Weapon"] =Global.items[currentItem]["Name"]
@@ -95,12 +94,10 @@ func _on_buy_pressed():
 		upgrade.visible=false
 	print(Global.curcits)
 func _on_next_pressed():
-	$Shop/Label.text="Current Curcits "+str(Global.curcits)
 	if currentItem !=4:
 		upgrade.visible=false
 	switchItem(currentItem+1)
 func _on_prev_pressed():
-	$Shop/Label.text="Current Curcits "+str(Global.curcits)
 	upgrade.visible=false
 	switchItem(currentItem-1)
 
@@ -145,7 +142,6 @@ func _on_evolve_pressed():
 
 
 func _on_firerate_pressed():
-	$Shop/Label.text="Current Curcits "+str(Global.curcits)
 	print("why")
 	if Global.upgrades[0]["FireRate"]  !=5 and Global.curcits>24:
 		Global.curcits-=25
@@ -153,7 +149,6 @@ func _on_firerate_pressed():
 		Global.items[currentItem]["FireRate"] -=0.1
 		$"Shop/Upgrade/UpgradeUi/Firerate/Current Upgrade".text="Current Level: "+str(Global.upgrades[0]["FireRate"])
 func _on_speed_pressed():
-	$Shop/Label.text="Current Curcits "+str(Global.curcits)
 	if Global.upgrades[0]["Speed"]  !=5 and Global.curcits>24:
 		Global.curcits-=25
 		Global.upgrades[0]["Speed"] +=1
@@ -161,7 +156,6 @@ func _on_speed_pressed():
 		print(Global.upgrades[0])
 		$"Shop/Upgrade/UpgradeUi/Speed/Current Upgrade".text="Current Level: "+str(Global.upgrades[0]["Speed"])
 func _on_range_pressed():
-	$Shop/Label.text="Current Curcits "+str(Global.curcits)
 	if Global.upgrades[0]["Range"] !=5 and Global.curcits>24:
 		Global.curcits-=25
 		Global.upgrades[0]["Range"] +=1

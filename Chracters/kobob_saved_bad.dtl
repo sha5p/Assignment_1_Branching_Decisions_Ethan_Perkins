@@ -1,0 +1,4 @@
+- Lets get off this ship
+	General_Kobob: Yes lets go
+	[signal arg="Bad Ending"]
+	[end_timeline]

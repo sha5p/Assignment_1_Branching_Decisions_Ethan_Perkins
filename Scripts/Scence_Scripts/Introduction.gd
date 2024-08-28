@@ -17,4 +17,4 @@ func DialogicSignal(arugment: String):
 
 func _on_timer_timeout():
 	Fade.fade_in()
-	get_tree().change_scene_to_packed(level_0)
+	get_tree().change_scene_to_packed.call_deferred(level_0)

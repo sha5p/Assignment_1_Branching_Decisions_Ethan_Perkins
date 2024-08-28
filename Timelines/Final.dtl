@@ -1,0 +1,7 @@
+General_Kobob: Ahhhh HELP have you come to rescue me?
+- Yes
+	[signal arg="Camera"]
+	These robots are interfering with my telporter once you kill them I can escape 
+	General_Kobob: Good Luck these robots are strong 
+	[signal arg="End"]
+	[end_timeline]

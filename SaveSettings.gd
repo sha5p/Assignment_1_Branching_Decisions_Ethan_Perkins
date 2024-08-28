@@ -10,7 +10,7 @@ func _ready():
 		config.set_value("keybinding","Up","W")
 		config.set_value("keybinding","Down","S")
 		config.set_value("keybinding","Pause","Escape")
-		config.set_value("keybinding","Shoot","Y")
+		config.set_value("keybinding","Talk","E")
 		
 		config.set_value("audio","Master",1.0)
 		config.set_value("audio","Music",1.0)

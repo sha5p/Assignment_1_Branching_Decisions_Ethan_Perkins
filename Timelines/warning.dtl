@@ -1,0 +1,20 @@
+- Are you Okay? Your Bleeding
+	Ah Fvs no ahh I've been ahh hit they shot me when I saw General Kobob was a fake
+	- Your Lying
+		Well If you think so AHH goodbye
+		Well If you think so AHH goodbye
+		[signal arg="Good"]
+		[signal arg="End"]
+		[end_timeline]
+	- A Fake!?
+		Yes Ahhh ive been hit I wont last long good long rember dont trust kabob
+		[signal arg="Good"]
+		[signal arg="End"]
+		[end_timeline]
+- Clueless Sam is that you?
+	No I'm his Ahh cous Ahh cousin
+	I've been shot I wont last long
+	Yes I saw I I...
+	[signal arg="Bad"]
+	[signal arg="End"]
+	[end_timeline]
