@@ -7,9 +7,9 @@
 |Week 4|Completed|Implement Modulated code|
 |Week 4|Completed|Inital Game Concept/Design| 
 |Week 5|Completed|Inital Shop Branching/Enemys|  
-|Week 5|Progress|Story|
-|Week 5|Progress|Cut Scence| 
-
+|Week 5|Completed|Story|
+|Week 5|Completed|Cut Scence| 
+|Week 6|not done|Documentation| 
 ### **Research Game Comparision**  
 
 
