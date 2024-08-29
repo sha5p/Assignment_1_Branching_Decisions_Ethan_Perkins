@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://cfaeqhxsiinwl"]
+[gd_scene load_steps=42 format=3 uid="uid://cfaeqhxsiinwl"]
 
 [ext_resource type="Script" path="res://Scripts/Scence_Scripts/level_4.gd" id="1_nssem"]
 [ext_resource type="PackedScene" uid="uid://bxstgwq03msit" path="res://Scences/Layouts/MapTileSet.tscn" id="1_rmwff"]
@@ -84,6 +84,33 @@ tracks/5/keys = {
 "values": [true, false]
 }
 
+[sub_resource type="Animation" id="Animation_abcop"]
+resource_name = "Ending"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3, 3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(492, 71)]
+}
+
 [sub_resource type="Animation" id="Animation_e45rc"]
 length = 0.001
 tracks/0/type = "value"
@@ -158,10 +185,35 @@ tracks/5/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Camera2D:zoom")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3, 3)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Camera2D:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(492, 71)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g1nyy"]
 _data = {
 "Cut Scence": SubResource("Animation_071nv"),
+"Ending": SubResource("Animation_abcop"),
 "RESET": SubResource("Animation_e45rc")
 }
 
@@ -407,6 +459,35 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_fp10e"]
+atlas = ExtResource("4_tjtvv")
+region = Rect2(2530, 1408, 76, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkjib"]
+atlas = ExtResource("4_tjtvv")
+region = Rect2(2606, 1408, 86, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1e080"]
+atlas = ExtResource("4_tjtvv")
+region = Rect2(2692, 1408, 86, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_thvw1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fp10e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vkjib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1e080")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Level_4" type="Node2D"]
 script = ExtResource("1_nssem")
 
@@ -433,7 +514,6 @@ offset_bottom = 5.0
 position = Vector2(533, 38)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_ulq3o")
-frame_progress = 0.395778
 
 [node name="Area2D" type="Area2D" parent="Kobob"]
 collision_layer = 0
@@ -486,6 +566,11 @@ zoom = Vector2(3, 3)
 
 [node name="Player" parent="." instance=ExtResource("6_vj8we")]
 position = Vector2(-11, 447)
+
+[node name="Boom" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(533, 30)
+sprite_frames = SubResource("SpriteFrames_thvw1")
 
 [connection signal="body_entered" from="Kobob/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Kobob/Area2D" to="." method="_on_area_2d_body_exited"]

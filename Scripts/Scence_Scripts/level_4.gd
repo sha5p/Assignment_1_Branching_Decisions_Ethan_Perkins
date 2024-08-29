@@ -8,6 +8,10 @@ var PLAYER = load("res://Scences/Player/Player.tscn")
 @onready var main =get_tree().get_root().get_node("Level_4")
 @onready var camera_2d = $Camera2D
 @onready var label = $Label
+@onready var boom = $Boom
+@onready var kobob = $Kobob
+
+
 
 func _ready():
 	Global.enemyFighting =true
@@ -31,8 +35,14 @@ func DialogicSignal(arugment: String):
 		camera_2d.enabled=false
 	if arugment =="Bad Ending":
 		get_tree().change_scene_to_file("res://Scences/Levels/bad_ending.tscn")
-	if arugment =="Good Ending":
+	if arugment =="Boom":
+		camera_2d.enabled=true
+		kobob.visible=false
+		boom.visible=true
+		boom.play("default")
+		await get_tree().create_timer(1).timeout
 		get_tree().change_scene_to_file("res://Scences/Levels/good_ending.tscn")
+
 		
 func _unhandled_input(event: InputEvent):
 	if event.is_action_pressed("Talk") and Global.cantalk:
@@ -51,3 +61,6 @@ func _on_area_2d_body_entered(body):
 func _on_area_2d_body_exited(body):
 	label.visible=false
 	Global.cantalk=false
+
+
+
