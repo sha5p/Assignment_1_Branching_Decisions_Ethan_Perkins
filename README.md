@@ -21,7 +21,7 @@
 |Type of game|An RPG game orientating around a story with branching dicsions to progress|A rouge like with choices effecting how the user intreacts with enemys|a relasonship and stratgey game in which the user makes decisions that is the game all about choices(Aaron, 2024)|
 
 #### **Conclusion**
-Taking all these diffrent games into account I want to design my game to take some features from all of them to give the user a varity of diffrent ways to interact and make 'choices' in the game. I want to take the idea from Fianl Fantasy XVI that choices with other chracters result in diffrent **Endings** to the game. From Soul Knight I will take its shop system to let the user choose how they want to play the game while going through these choices. Addtionally the choices not only impacting the outcome of the game but how they get to the outcome much like the relsonships in Stellaris.
+Taking all these diffrent games into account I will design my game to that give the user a varity of diffrent ways to interact and make 'choices' in the game. From diffrent **Endings** to the game to how the player will interact with the diffrent levels. This leaded me into having a shop system and a branching dialogue.
 
 ## **Planning & Design the Game**
 
