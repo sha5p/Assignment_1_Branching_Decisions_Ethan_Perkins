@@ -160,18 +160,24 @@ By using an import known as dialogic instead of creating my own dialogue system 
 |:---------|
 |![image](https://github.com/user-attachments/assets/9c90ba6a-a3cc-41e8-9279-a729504ccad2)![image](https://github.com/user-attachments/assets/ebc3f014-33d7-4d72-ba98-9ff152433822)|
 
-
 **Analysis**
 
-These levels are designed as shown above to give the player destictive decisiosns that can be made as the 'options' to choose from. The telporter activating when the user completes a certain task on a level like the tutoril kill the first mob. NPC are obvious fromt their question mark and destictive chracteristics. 
+This branching game is designed to make the next destination for the player very apprant with labels for diffrent parts of the levels for navigation and an NPC interaction to explain the game.  Distinctive designs like similar doors and telporters for each of the sections allow for the navigation to be further inhanced with the addtion to the instructions. From the feedback evident is apparant from the players that this narritive was indeed navigatble. 
+![image](https://github.com/user-attachments/assets/d6c09872-ab67-4a85-901c-72c02f0ad42e)
 
-Features purpose
 
 
 
 ## **Testing / Evaluation of Your Game**
 
-Throught the process of making this game I have made many changes important onces such as ... and..... With branching decisions impacting the story that unfolds to how the player interacts with oppenets and friendly npcs on the map. Understanding how powerful dialogic can be with its signals being sent as well as how it can call other ques is what led to this outcome understanding these branching will allow me to implemnt this in other serniors such as navigating a website through 'choices' or **example** thanks to **exmaple** i did **idea**. 
+
+
+Having branching decisions from the story line to the dialogue that the player can make effecting how the user interacts if each level and how they finish the game. I have made few dialogue choices but they are important effecting the narritive ending as a whole and a Shop system for the player to interact with the levels diffrently depending on their item choices. When running a shop system in later games as lots of the code is modelable it will allow me to easily add it much like my save states added from last assigment. The branching is apparant and taking feedback from the user to 
+
+""
+I did it  
+
+If i where to do this assigment again I would probaly adijaowdjaoijdaoijwdo
 
 If i were to do this again I would try running through more moldulatable script such **example** addtionally still using dialogic but trying to use more feature like its **exmaple** which allows for **idk**. Summary stuff done
 
