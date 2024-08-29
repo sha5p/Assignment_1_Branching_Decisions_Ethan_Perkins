@@ -31,20 +31,18 @@ Drawing inspiration from these games I planned to design a game based on Soul Kn
 
 ## **Shop System Branching Choices**
 
-The shop system allows the user to interact with an NPC giving them an experience of trying to figure out **MUCH LIKE STLOROS** if they should spend money on a more powerful weapon increase there health and buy and Expensive shield as they ahve already acquired a weapon and have max health. They also may choose to upgrade their weapon to evolve it into somthing more powerful. However not showing what a weapon can evolve into also makes the user hesitant to upgrade and evolve and may instead use there money to buy a new weapon restarting their progreess in hopes to find a more powerful upgrade. 
+The shop system allows the user to interact with an NPC giving that with enough circuita the NPC can 'hack' into the systen and can acquire powerful weapons, increase their current weapons power and aquire health and shields. They also may choose to upgrade their weapon to evolve it into a more powerful or less powerful weapon depending on how much they have upgraded their current one. This evolution not shown to the player so that the player will have to branch out and go back to get the best weapon prefrence. 
 
 ### **Flow Chart**
 ![image](https://github.com/user-attachments/assets/827d2e58-e4a6-48b3-968f-5f854553e919)
 
-### **Pictures**
 |Buying Weapon UI|Evolving and Upgrading UI|
 |:---------|:---------|
 |![image](https://github.com/user-attachments/assets/c0ef7202-862a-4738-8944-a604aef2f225)|![image](https://github.com/user-attachments/assets/bcf47cbf-2910-4e56-8c35-b9f5d7622181)|
 
 ### **Code buying item**
  ```
-func _on_buy_pressed(): #runs through a checks current values if not maxed and enough money buy 
-	$Shop/Label.text="Current Curcits "+str(Global.curcits)
+func _on_buy_pressed(): #When pressed checks if the weapon is the current weapon or if shield and health max if is not buy else dont
 	if currentItem !=0:
 		if Global.item[0]["Weapon"] !=Global.items[currentItem]["Name"] and "Shield" !=Global.items[currentItem]["Name"]:
 			Global.item[0]["Weapon"] =Global.items[currentItem]["Name"]
@@ -52,19 +50,21 @@ func _on_buy_pressed(): #runs through a checks current values if not maxed and e
 			Global.upgrades[0]["FireRate"]=0
 			Global.upgrades[0]["Range"]=0
 			Global.upgrades[0]["Speed"]=0
-		if Global.items[currentItem]["Name"]==Global.item[0]["Weapon"]:
-			upgrade.visible=true
+			if Global.items[currentItem]["Name"]==Global.item[0]["Weapon"]:
+				upgrade.visible=true
+		elif  "Shield" ==Global.items[currentItem]["Name"] and Global.item[1]["Shield"]!=3:
+			Global.curcits-=50
+			Global.item[1]["Shield"]+=1
 	elif 0<Global.Health[0]["HP"] and Global.Health[0]["HP"]<8 and currentItem==0:
-     Global.curcits -= Global.Health[0]["Cost"]
-     Global.Health[0]["HP"] +=1
-     upgrade.visible=false
-     print(Global.curcits)
+		Global.curcits -= Global.Health[0]["Cost"]
+		Global.Health[0]["HP"] +=1
+		upgrade.visible=false
 ```
 ### **Analysis**
 
 #### Buying the weapon 
 
-This code first checks if the item is not health as its functions are run in another dictonary this was done for enemy scripts but could have been put into the same dictonary. Then it checks wheather the weapon is the current weapon or if it the shield upgrade, if it is the current weapon it wont take any curcits and re buy the weapon and the shield will be bought in the below stament. It then takes away the weapons cost and resets the upgradings punishing the player but giving them a chance to go back. This code could have also be done through a for loop but this was not done as it does not save enough lines to be worth sacrficing readiblity. 
+This code checks if the item is not bought and maxed and . Then it checks wheather the weapon is the current weapon or if it the shield upgrade, if it is the current weapon it wont take any curcits and re buy the weapon and the shield will be bought in the below stament. It then takes away the weapons cost and resets the upgradings punishing the player but giving them a chance to go back. This code could have also be done through a for loop but this was not done as it does not save enough lines to be worth sacrficing readiblity. 
 
 
 **Code Upgrading and Evolving Example**
@@ -110,6 +110,9 @@ By using an import known as dialogic instead of creating my own dialogue system 
 These levels are designed as shown above to give the player destictive decisiosns that can be made as the 'options' to choose from. The telporter activating when the user completes a certain task on a level like the tutoril kill the first mob. NPC are obvious fromt their question mark and destictive chracteristics. 
 
 Features purpose
+
+DEBUGGIN PROBLEM AND SOLUTION
+
 
 ## **Testing / Evaluation of Your Game**
 
