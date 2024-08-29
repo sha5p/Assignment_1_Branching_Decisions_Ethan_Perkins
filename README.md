@@ -96,7 +96,7 @@ Running through a prebuilt system  'On Button Pressed' will only be functional o
  |Dialogue logic|Scence display|
  |:---------|:---------|:---------|
  |![image](https://github.com/user-attachments/assets/c078f1d2-a62d-4fc4-b9aa-2da6b53eff78)|![image](https://github.com/user-attachments/assets/6cf2962b-bb4a-42a0-83bb-f36c3a3611b9)
- ![image(https://github.com/user-attachments/assets/96be63ce-3fa0-481e-b581-8f653b73939d)![image](https://github.com/user-attachments/assets/7820852d-3b40-4aba-bb71-7f22da0f07c4)|
+ ![image](https://github.com/user-attachments/assets/96be63ce-3fa0-481e-b581-8f653b73939d)![image](https://github.com/user-attachments/assets/7820852d-3b40-4aba-bb71-7f22da0f07c4)|
 **Code/Dialogue** 
 ```extends Node2D
 @onready var collision_shape_2d = $Area2D/CollisionShape2D
@@ -147,7 +147,7 @@ By using an import known as dialogic instead of creating my own dialogue system 
 
 **Interactions and Level Design**
 
-**Images**-fix spelling oml
+**Images**
 ![image](https://github.com/user-attachments/assets/9c90ba6a-a3cc-41e8-9279-a729504ccad2)
 ![image](https://github.com/user-attachments/assets/ebc3f014-33d7-4d72-ba98-9ff152433822)
 
