@@ -95,8 +95,10 @@ Running through a prebuilt system  'On Button Pressed' will only be functional o
  
  |Dialogue logic|Code Logic|Scence display|
  |:---------|:---------|:---------|
- |![image](https://github.com/user-attachments/assets/c078f1d2-a62d-4fc4-b9aa-2da6b53eff78)
- |```extends Node2D
+ |![image](https://github.com/user-attachments/assets/c078f1d2-a62d-4fc4-b9aa-2da6b53eff78)|![image](https://github.com/user-attachments/assets/6cf2962b-bb4a-42a0-83bb-f36c3a3611b9)![image(https://github.com/user-attachments/assets/96be63ce-3fa0-481e-b581-8f653b73939d)
+![image](https://github.com/user-attachments/assets/7820852d-3b40-4aba-bb71-7f22da0f07c4)|
+**Code/Dialogue** 
+```extends Node2D
 @onready var collision_shape_2d = $Area2D/CollisionShape2D
 @onready var label = $Label
 @onready var animation_player = $AnimationPlayer
@@ -138,11 +140,7 @@ func _on_area_2d_body_entered(body):
 func _on_area_2d_body_exited(body):
 	label.visible=false
 	Global.cantalk=false
-```|
-|![image](https://github.com/user-attachments/assets/6cf2962b-bb4a-42a0-83bb-f36c3a3611b9)
-![image](https://github.com/user-attachments/assets/96be63ce-3fa0-481e-b581-8f653b73939d)
-![image](https://github.com/user-attachments/assets/7820852d-3b40-4aba-bb71-7f22da0f07c4)|
-**Code/Dialogue** 
+```
 
 **Analysis**
 By using an import known as dialogic instead of creating my own dialogue system it made the interactions and sending signals much more powerful. As shown above dialogic signals and functions can connect to diffrent parts of the script this means making branching choices like the above and giving choices is much more modulated. The NPC **idk yet** gives the user going through the ship a request the request is optional and makes it a branching narritive that can occur. If the player choose to help this NPC using the signals and branching via dialogic a choice is given. Showing what is happening specfically in the import is **:O**. Analysis instead of doing this via if staments and my own dialogue system presenting it like this not only makes the interaction less junky but more powerful and costumisable like **dadad** for the player. 
