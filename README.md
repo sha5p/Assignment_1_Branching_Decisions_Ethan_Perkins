@@ -1,18 +1,7 @@
 # Assigment_3_Branching_Decisions
 ## **Documentation Branching Decisions game Assessment 1** 
 
-## **Planning**
-|Project|Status|Goals|
-|:-------|:-------|:-------|
-|Week 4|Completed|Implement Modulated code|
-|Week 4|Completed|Inital Game Concept/Design| 
-|Week 5|Completed|Inital Shop Branching/Enemys|  
-|Week 5|Completed|Story|
-|Week 5|Completed|Cut Scence| 
-|Week 6|not done|Documentation| 
-### **Research Game Comparision**  
-
-
+## **Research Game Comparision**  
 
 |Compared|Fianl Fantasy XVI|Soul Knight|Stellaris|
 |:-----|:----|:-----|:----|
@@ -27,9 +16,18 @@ Drawing inspiration from these games I planned to design a game based on Soul Kn
 
 ## **Planning & Design the Game**
 
+|Project|Status|Goals|
+|:-------|:-------|:-------|
+|Week 4|Completed|Implement Modulated code|
+|Week 4|Completed|Inital Game Concept/Design| 
+|Week 5|Completed|Inital Shop Branching/Enemys|  
+|Week 5|Completed|Story|
+|Week 5|Completed|Cut Scence| 
+|Week 6|not done|Documentation| 
+
 ## ***Branching choices***
 
-## **Shop System Branching Choices**
+### **Shop System Branching Choices**
 
 The shop system allows the user to interact with an NPC giving that with enough circuita the NPC can 'hack' into the systen and can acquire powerful weapons, increase their current weapons power and aquire health and shields. They also may choose to upgrade their weapon to evolve it into a more powerful or less powerful weapon depending on how much they have upgraded their current one. This evolution not shown to the player so that the player will have to branch out and go back to get the best weapon prefrence. 
 
@@ -67,7 +65,7 @@ func _on_buy_pressed(): #When pressed checks if the weapon is the current weapon
 This code checks if the item is not bought and maxed and if it is the NPC wont take any curcits. If it isnt bought or maxed it takes the dictonary value of the price and then deducts that many circuits from the players current amount if there is not eenough curcits nothing will happen as well. The reason that the health is in a diffrent dictonary is due to animation sizes for the sprites. Prefrabley these diffrent items would be in the same dictonary or instead a list which then would loop through to deduct prices. Alternativly the shop system could have run through signals that would add items to a list and when the signal is activated other items in the list could have been altered but this was not done due to time constraints. 
 
 
-**Code Upgrading and Evolving Example**
+### **Code Upgrading and Evolving Example**
 ```
 func _on_range_pressed(): #evolves if requirment met (maxed) to desired weapon
 	$Shop/Label.text="Current Curcits "+str(Global.curcits)
