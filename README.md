@@ -62,14 +62,14 @@ func _on_buy_pressed(): #When pressed checks if the weapon is the current weapon
 ```
 ### **Analysis**
 
-#### Buying the weapon 
+#### Buying items 
 
-This code checks if the item is not bought and maxed and . Then it checks wheather the weapon is the current weapon or if it the shield upgrade, if it is the current weapon it wont take any curcits and re buy the weapon and the shield will be bought in the below stament. It then takes away the weapons cost and resets the upgradings punishing the player but giving them a chance to go back. This code could have also be done through a for loop but this was not done as it does not save enough lines to be worth sacrficing readiblity. 
+This code checks if the item is not bought and maxed and if it is the NPC wont take any curcits. If it isnt bought or maxed it takes the dictonary value of the price and then deducts that many circuits from the players current amount if there is not eenough curcits nothing will happen as well. The reason that the health is in a diffrent dictonary is due to animation sizes for the sprites. Prefrabley these diffrent items would be in the same dictonary or instead a list which then would loop through to deduct prices. Alternativly the shop system could have run through signals that would add items to a list and when the signal is activated other items in the list could have been altered but this was not done due to time constraints. 
 
 
 **Code Upgrading and Evolving Example**
 ```
-func _on_range_pressed():
+func _on_range_pressed(): #evolves if requirment met (maxed) to desired weapon
 	$Shop/Label.text="Current Curcits "+str(Global.curcits)
 	if Global.upgrades[0]["Range"] !=5 and Global.curcits>24:
 		Global.curcits-=25
@@ -78,7 +78,7 @@ func _on_range_pressed():
 		print(Global.upgrades[0])
 		$"Shop/Upgrade/UpgradeUi/Range/Current Upgrade".text="Current Level: "+str(Global.upgrades[0]["Range"])
 
-func _on_range_evolve_button_pressed():
+func _on_range_evolve_button_pressed(): #evolves if requirment met (maxed) to desired weapon
 	if Global.upgrades[0]["Range"]==5:
 		if Global.item[0]["Weapon"]=="ShotGun":
       			Global.item[0]["Weapon"]=Global.evolutions[0]["Max-Range"]
@@ -87,12 +87,62 @@ func _on_range_evolve_button_pressed():
 
 #### Upgrading and Evolving the weapon
 
-Running through a prebuilt system this 'On Button Pressed' much like the buy button allows the signal only to run on the wapon upgraded. it then changes the current range adding more to how far the bullet can go then adding and upgrade level and taking away the currency. The reason that not all these upgrades were in the same script is that each upgrade button is diffrent and for player usiblity clicking the same button for each evolution or a drop down would making it harder for the player to navigate the shop and so intead more lines were added. For evolutions this was very similar however implmenting it was much eaiser it simply checks the global upgrade is maxxed and if it is and the button is clicked it goes to the dictonary and changes the weapon. 
+Running through a prebuilt system  'On Button Pressed' will only be functional on the current weapon. Taking the current dictonary values then changing the the values for the upgrade and its current level as well as deducting circuits. The reason that not all these upgrades were in the same script was for useriblty for the player. Evolutions running  simlilar but instead checks the upgrade level and if applicable then evolves the weapon. This could have been implmented instead by using a varity of varibles and changing the current weapon to the varible though this improves readiblity it would require much more lines of code for the same effect. These evolutions and powerups branch throughout the diffrent upgrades and give diffrent weapons letting the player fight against the mobs in diffrent ways from closer to further to more risky. 
 
 **Story Branching Choices**
 
-**Flow Chart**
+**Dialogue Photos**
+ 
+ |Dialogue logic|Code Logic|Scence display|
+ |:---------|:---------|:---------|
+ |![image](https://github.com/user-attachments/assets/c078f1d2-a62d-4fc4-b9aa-2da6b53eff78)|
+ ```
+extends Node2D
+@onready var collision_shape_2d = $Area2D/CollisionShape2D
+@onready var label = $Label
+@onready var animation_player = $AnimationPlayer
+#if colliding if the npc and the talk button is pressed start the dialogue 
+func _ready():
+	animation_player.play("Defualt")
+	Dialogic.signal_event.connect(DialogicSignal)
+	
+func DialogicSignal(arugment: String): #Connects signals to dialogic 
+	print("Received argument:", arugment)
+	if arugment =="End":
+		print("Global.talking=false")
+		Global.talking=false
+		collision_shape_2d.disabled=true
+		await get_tree().create_timer(1).timeout
+		collision_shape_2d.disabled=false
+		queue_free()
+	if arugment =="Good":
+		SaveData.end=true
+		SaveData.ending()
+	if arugment =="Bad":
+		SaveData.end=false
+		SaveData.ending()
+func _unhandled_input(event: InputEvent):
+	if event.is_action_pressed("Talk"):
+		print("debug")
+		print(Global.cantalk)
+	if event.is_action_pressed("Talk") and Global.cantalk:
+		Dialogic.start("warning")
+		Global.talking=true
 
+func _on_area_2d_body_entered(body):
+	var talk = SaveSettings.config.get_value("keybinding", "Talk")
+	label.visible=true
+	label.text= "Cick: %s to talk" % [talk]
+	Global.cantalk=true
+	
+
+func _on_area_2d_body_exited(body):
+	label.visible=false
+	Global.cantalk=false
+```
+|![image](https://github.com/user-attachments/assets/6cf2962b-bb4a-42a0-83bb-f36c3a3611b9)
+![image](https://github.com/user-attachments/assets/96be63ce-3fa0-481e-b581-8f653b73939d)
+![image](https://github.com/user-attachments/assets/7820852d-3b40-4aba-bb71-7f22da0f07c4)|
 **Code/Dialogue** 
 
 **Analysis**
