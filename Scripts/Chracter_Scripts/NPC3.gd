@@ -2,7 +2,7 @@ extends Node2D
 @onready var collision_shape_2d = $Area2D/CollisionShape2D
 @onready var label = $Label
 @onready var animation_player = $AnimationPlayer
-
+#if colliding if the npc and the talk button is pressed start the dialogue 
 func _ready():
 	animation_player.play("Defualt")
 	Dialogic.signal_event.connect(DialogicSignal)

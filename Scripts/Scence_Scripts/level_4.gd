@@ -12,9 +12,11 @@ var PLAYER = load("res://Scences/Player/Player.tscn")
 @onready var kobob = $Kobob
 @onready var audio_stream_player_2d = $AudioStreamPlayer2D
 
-
+#sets values
 
 func _ready():
+	#makes sure you can only talk when all enemys killed and resets values via 
+	Global.final=0
 	Global.enemyFighting =true
 	Dialogic.signal_event.connect(DialogicSignal)
 	animation_player.play("Cut Scence")
@@ -46,7 +48,7 @@ func DialogicSignal(arugment: String):
 
 		
 func _unhandled_input(event: InputEvent):
-	if event.is_action_pressed("Talk") and Global.cantalk:
+	if event.is_action_pressed("Talk") and Global.cantalk and Global.final==3:
 		print(SaveData.end)
 		Global.talking=true
 		if SaveData.end==true:

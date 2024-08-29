@@ -22,7 +22,7 @@ var currentItem=0
 @onready var speed_button_evolve = $Shop/Upgrade/Evolve/Evolve_Ui/VBoxContainer/Speed_evolve_button
 @onready var range_button_evolve = $Shop/Upgrade/Evolve/Evolve_Ui/VBoxContainer/Range_evolve_button
 
-
+#sets the shops values
 func _ready():
 	item.text=Global.Health[currentItem]["Name"]
 	des.text=Global.Health[currentItem]["Des"]+"\n Cost "+"$"+str(Global.Health[currentItem]["Cost"])
@@ -30,22 +30,23 @@ func _ready():
 	weapons.visible=false
 	upgrade.visible=false
 	Dialogic.signal_event.connect(DialogicSignal)
+	#sets amounts to global
 func _physics_process(delta):
-	talk.play("NotTalking")
+	talk.play("NotTalking") #play nothing when not in the shop
 	NPC.play("idle")
 func _on_area_2d_body_entered(body):
-	if body.has_method("shop"):
+	if body.has_method("shop"): #start the shop
 		Dialogic.start("Shop")
 		Global.talking=true
 	else:
 		talk.play("NotTalking")
 		NPC.play("idle")
 func DialogicSignal(arugment: String):
-	if arugment =="End":
+	if arugment =="End": #start the shop dialogue
 		shop_anim.play("ShopIn")
 
 func _on_button_button_up():
-	shop_anim.play("shopOut")
+	shop_anim.play("shopOut")  #leave the shop
 	Global.talking=false
 	$Area2D.disable_mode=true
 	talk.play("NotTalking")
@@ -55,7 +56,7 @@ func _on_button_button_up():
 
 func _on_timer_timeout():
 		$Area2D.disable_mode=false
-func switchItem(select):
+func switchItem(select):   #setting the text and animation for the shop item via for loops and elifs
 	for i in range(5):
 		if select==i and select!=0:
 			currentItem=select
@@ -75,7 +76,7 @@ func switchItem(select):
 			item.text=Global.Health[currentItem]["Name"]
 			des.text=Global.Health[currentItem]["Des"]+"\n Cost "+"$"+str(Global.Health[currentItem]["Cost"])
 			upgrade.visible=false
-func _on_buy_pressed():
+func _on_buy_pressed(): #When pressed checks if the weapon is the current weapon or if shield and health max if is not buy else dont
 	if currentItem !=0:
 		if Global.item[0]["Weapon"] !=Global.items[currentItem]["Name"] and "Shield" !=Global.items[currentItem]["Name"]:
 			Global.item[0]["Weapon"] =Global.items[currentItem]["Name"]
@@ -93,16 +94,16 @@ func _on_buy_pressed():
 		Global.Health[0]["HP"] +=1
 		upgrade.visible=false
 	print(Global.curcits)
-func _on_next_pressed():
+func _on_next_pressed(): #Goes to next unless last
 	if currentItem !=4:
 		upgrade.visible=false
 	switchItem(currentItem+1)
 func _on_prev_pressed():
-	upgrade.visible=false
+	upgrade.visible=false #goes to previous unlesss first
 	switchItem(currentItem-1)
 
 
-func _on_upgrade_pressed():
+func _on_upgrade_pressed(): #when upgrades clicked make options visible
 	upgrade_ui.visible=true
 	shop_buy.visible=false
 	$Shop/Button.visible=false
@@ -111,14 +112,14 @@ func _on_upgrade_pressed():
 	$"Shop/Upgrade/UpgradeUi/Range/Current Upgrade".text="Current Level:"+str(Global.upgrades[0]["Range"])
 	$"Shop/Upgrade/UpgradeUi/Speed/Current Upgrade".text="Current Level:"+str(Global.upgrades[0]["Speed"])
 	$"Shop/Upgrade/UpgradeUi/Firerate/Current Upgrade".text="Current Level:"+str(Global.upgrades[0]["FireRate"])
-func _on_back_to_main_shop_pressed():
+func _on_back_to_main_shop_pressed(): #goes back to main shop not upgradeds
 	upgrade_ui.visible=false
 	shop_buy.visible=true
 	evolve.visible=false
 	$Shop/Button.visible=true
 	evolve_ui.visible=false
 
-func _on_evolve_pressed():
+func _on_evolve_pressed(): #evolvus baseed on weapon
 	print("Works")
 	evolve_ui.visible=true
 	if Global.item[0]["Weapon"]==Global.evolutions[0]["Name"]:
@@ -141,21 +142,20 @@ func _on_evolve_pressed():
 		speed_evolve.text=Global.evolutions[2]["Max-Speed"]
 
 
-func _on_firerate_pressed():
-	print("why")
+func _on_firerate_pressed(): #upgrades firerate if enough money and not maxed
 	if Global.upgrades[0]["FireRate"]  !=5 and Global.curcits>24:
 		Global.curcits-=25
 		Global.upgrades[0]["FireRate"] +=1
 		Global.items[currentItem]["FireRate"] -=0.1
 		$"Shop/Upgrade/UpgradeUi/Firerate/Current Upgrade".text="Current Level: "+str(Global.upgrades[0]["FireRate"])
-func _on_speed_pressed():
+func _on_speed_pressed(): #upgrades speed if enough money and not maxed
 	if Global.upgrades[0]["Speed"]  !=5 and Global.curcits>24:
 		Global.curcits-=25
 		Global.upgrades[0]["Speed"] +=1
 		Global.items[currentItem]["Speed"] +=50
 		print(Global.upgrades[0])
 		$"Shop/Upgrade/UpgradeUi/Speed/Current Upgrade".text="Current Level: "+str(Global.upgrades[0]["Speed"])
-func _on_range_pressed():
+func _on_range_pressed(): #upgrades range if enough money and not maxed
 	if Global.upgrades[0]["Range"] !=5 and Global.curcits>24:
 		Global.curcits-=25
 		Global.upgrades[0]["Range"] +=1
@@ -164,7 +164,7 @@ func _on_range_pressed():
 		$"Shop/Upgrade/UpgradeUi/Range/Current Upgrade".text="Current Level: "+str(Global.upgrades[0]["Range"])
 
 
-func _on_firerate_evolve_button_pressed():
+func _on_firerate_evolve_button_pressed(): #evolves if requirment met (maxefd) to desired weapon
 	if Global.upgrades[0]["FireRate"]==5:
 		if Global.item[0]["Weapon"]=="ShotGun":
 			Global.item[0]["Weapon"]=Global.evolutions[0]["Max-FireRate"]
@@ -172,11 +172,11 @@ func _on_firerate_evolve_button_pressed():
 			Global.item[0]["Weapon"]=Global.evolutions[2]["Max-FireRate"]
 		if Global.item[0]["Weapon"]=="Sniper" and Global.upgrades[0]["Range"]==5 and Global.upgrades[0]["Speed"]==5:
 			Global.item[0]["Weapon"]=Global.evolutions[1]["Max-All"]
-func _on_speed_evolve_button_pressed():
+func _on_speed_evolve_button_pressed(): #evolves if requirment met (maxefd) to desired weapon
 	if Global.upgrades[0]["Speed"]==5:
 		if Global.item[0]["Weapon"]=="LMG":
 			Global.item[0]["Weapon"]=Global.evolutions[2]["Max-Speed"]
-func _on_range_evolve_button_pressed():
+func _on_range_evolve_button_pressed(): #evolves if requirment met (maxefd) to desired weapon
 	if Global.upgrades[0]["Range"]==5:
 		if Global.item[0]["Weapon"]=="ShotGun":
 			Global.item[0]["Weapon"]=Global.evolutions[0]["Max-Range"]

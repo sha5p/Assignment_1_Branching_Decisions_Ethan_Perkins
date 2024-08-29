@@ -2,13 +2,14 @@ extends Area2D
 @onready var teleport = $Teleport
 @export var telporter=false
 var telported =false
+#if telporter is a next level telporter it will telport when the mob count is zero and save values via save states
 func _ready():
 	teleport.play("Unacctive")
 	if !telporter:
 		teleport.play("Teleport")
 		await get_tree().create_timer(1).timeout
 		teleport.play("Unacctive")
-func _on_body_entered(body):
+func _on_body_entered(body): #saves values when telporting to the enxt level
 	print(Global.upgrades)
 	print(Global.Room[Global.currentRoom]["Enemy"])
 	if body.has_method("_player_take_damage") and Global.Room[Global.currentRoom]["Enemy"]==0 and telporter:

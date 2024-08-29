@@ -7,6 +7,8 @@ var distance=200
 @onready var auto_aim = $CollisionShape2D/Bazoka/AutoAim/CollisionPolygon2D
 var target=null
 @export var bullet_speed=200
+
+#The bullet propities are altered by the weapon and the upgrade 
 func _ready():
 	if Global.item[0]["Weapon"] !="Defualt":
 		if Global.item[0]["Weapon"] =="LMG":
@@ -66,7 +68,7 @@ func defualt_vis():
 	laser.visible=false
 	shot_gun.visible=false
 	$CollisionShape2D.scale=Vector2(1,1)
-func _physics_process(delta):
+func _physics_process(delta): #distance equal to save states for weapon 
 
 	if distance <700:
 		var direction=Vector2.RIGHT.rotated(rotation)
@@ -79,9 +81,9 @@ func _physics_process(delta):
 		$AnimationPlayer.play("BulletDestroyed")
 		await get_tree().create_timer(1).timeout
 		queue_free()
-
 	
-func _on_body_entered(body):
+	
+func _on_body_entered(body):   #when the bullet enters an enemy deal damage if it hits anything else destroy bit of delay gains perce
 	defualt_vis()
 	
 	$AnimationPlayer.play("BulletDestroyed")

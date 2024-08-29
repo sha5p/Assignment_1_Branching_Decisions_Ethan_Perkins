@@ -20,8 +20,8 @@ func get_input():
 	input.x=Input.get_action_strength("Right")-Input.get_action_strength("Left")
 	input.y=Input.get_action_strength("Down")-Input.get_action_strength("Up")
 	return input.normalized()
-func _process(delta):
-	curcits.text="Current Curcits: "+str(Global.curcits)
+func _process(delta): #changes the cu
+	curcits.text="Current Circuits: "+str(Global.curcits)
 	var playerInput=get_input()
 	if Global.item[1]["Shield"] >0:
 		shields.visible=true
@@ -46,7 +46,7 @@ func _process(delta):
 	health.play(str(Global.Health[0]["HP"],"HP"))
 func _on_timer_timeout():
 	$AnimatedSprite2D.stop()
-func _player_take_damage():
+func _player_take_damage(): #takes damage based on gloal values
 	if Global.item[1]["Shield"] ==0:
 		Global.Health[0]["HP"]+=-1
 	elif Global.item[1]["Shield"] >0:

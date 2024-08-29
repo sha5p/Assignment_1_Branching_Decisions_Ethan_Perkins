@@ -7,6 +7,11 @@ var currentRoom =0
 var Level=0
 var navcheck=false
 var cantalk=false
+var final=0
+
+#SETS AUTOLOAD VALUES THAT RUN NO MATTER WHAT
+
+
 var items = {
 	1:{
 		"Name":"Shield",

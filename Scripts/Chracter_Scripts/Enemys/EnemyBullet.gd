@@ -7,17 +7,17 @@ var distance=0
 func _ready():
 	$AnimatedSprite2D.play("Bullet")
 func _physics_process(delta):
-		var dir=to_local(nav_agent.get_next_path_position()).normalized()
+		var dir=to_local(nav_agent.get_next_path_position()).normalized() #Gets the path equal to nav agent which is player
 		position+=dir*bullet_speed*delta
 func _on_timer_timeout():
-	makepath()
+	makepath() #changes path every 0.1 second
 func makepath() ->void:
 	nav_agent.target_position = Global.player.global_position
 
 
 
-
-func _on_body_entered(body):
+#if entered somthing destory if player take damage
+func _on_body_entered(body): 
 	bullet.play("BulletDestroyed")
 	await get_tree().create_timer(0.3).timeout
 	queue_free()

@@ -1,7 +1,7 @@
 extends Sprite2D
 @onready var Enemy = load("res://Scences/Enemy/enemy.tscn")
 @onready var spawner = $"."
-
+#if fighting is true then spawn a mob enemy note this could have also checked type of enemy but was not needed
 func _ready():
 	pass
 

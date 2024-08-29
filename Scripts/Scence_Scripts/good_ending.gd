@@ -2,7 +2,7 @@ extends Node2D
 var MAIN_MENU = load("res://Scences/Menu_Scences/main_menu.tscn")
 @onready var animation_player = $AnimationPlayer
 @onready var audio_stream_player_2d = $AudioStreamPlayer2D
-
+#Same as bad ending resets values when clicked after dialogic ends 
 func _ready():
 	$Label.text="Circuits not spend: "+ str(Global.curcits)
 	Fade.fade_in()

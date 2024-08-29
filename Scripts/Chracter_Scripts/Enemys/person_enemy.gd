@@ -4,28 +4,29 @@ extends CharacterBody2D
 @onready var shooting_cool_down = $ShootingCoolDown
 @onready var  animation = $AnimatedSprite2D
 @onready var main =get_tree().get_root().get_node("Level_"+str(2))
-@onready var BULLET = load("res://Scences/Enemy/Person_enemy_bullet.tscn")
+@onready var BULLET = load("res://Scences/Enemy/Person_enemy_bullet.tscn") 
 @onready var health = $Health
 var shooting =false
 var ACCEL = 50
 var SPEED =100
 var dead=false
-var Health =3
+var Health =3  
+#Sets inital values
 func _ready():
 	health.play("Max")
 func _physics_process(delta: float) ->void:
 	if !shooting and !dead:
-		var dir=to_local(nav_agent.get_next_path_position()).normalized()
-		velocity=velocity.lerp(dir*SPEED,ACCEL*delta)
+		var dir=to_local(nav_agent.get_next_path_position()).normalized() #Makes a path to the player
+		velocity=velocity.lerp(dir*SPEED,ACCEL*delta)  #sets movent to player location
 		animation.play("Run")
 		animation.flip_h = velocity.x < 0
 		move_and_slide()
 func _on_nav_timeout():
 	makepath()
 func makepath() ->void:
-	nav_agent.target_position = player.global_position		
+	nav_agent.target_position = player.global_position		#makes path to player
 		
-func take_damage():
+func take_damage(): #changes damage based on weapon
 	if Global.item[0]["Weapon"] =="Defualt":
 		Health+=-1
 	elif Global.item[0]["Weapon"] =="LMG":
@@ -45,26 +46,26 @@ func take_damage():
 	if Health >0 and Health !=3:
 		health.play(str(Health,"HP"))
 	elif Health <=0:
-		health.play(str(0,"HP"))
+		health.play(str(0,"HP"))  #kills and change enemy amount
 		dead=true
 		animation.play("Death")
 		await get_tree().create_timer(0.9).timeout
 		Global.Room[Global.currentRoom]["Enemy"]-=1
 		queue_free()
 
-func _on_shooting_cool_down_timeout():
+func _on_shooting_cool_down_timeout(): #on shooting timeout add bullet
 		var new_bullet = BULLET.instantiate()
 		new_bullet.position =$".".global_position
 		main.add_child.call_deferred(new_bullet)
 
 
 
-func _on_detection_body_entered(body):
+func _on_detection_body_entered(body): # if detect shoot player
 	if body.has_method("_player_take_damage") and !dead:
 		animation.play("Shoot")
 		shooting =true
 		shooting_cool_down.start()
-func _on_detection_body_exited(body):
+func _on_detection_body_exited(body): #leaves player turn off shooting
 	if body.has_method("_player_take_damage"):
 		shooting_cool_down.stop()
 		shooting=false

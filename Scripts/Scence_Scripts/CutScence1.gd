@@ -5,7 +5,7 @@ var shaking:bool=true
 var rng= RandomNumberGenerator.new()
 @export var level_0=preload("res://Scences/Levels/Level_0.tscn")
 var shake_strength: float =0.0
-
+#shack this code was not used but as its modualble it is here for later assigments
 func apply_shake():
 	shake_strength= ShakeRandom
 func _process(delta):

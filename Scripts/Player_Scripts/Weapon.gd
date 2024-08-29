@@ -18,9 +18,9 @@ var velocity=Vector2(1,0)
 
 @onready var burst_shot_gun = $WeaponPivot/BurstShotGun
 @onready var burst_shot_gun_2 = $WeaponPivot/BurstShotGun2
+#sets values
 
-
-
+#changes the values of the weapon bassicaly just firerate and visiblity based on the weapon type
 @onready var timer = $Timer
 func _physics_process(delta):
 	look_at(get_global_mouse_position())
@@ -117,7 +117,7 @@ func _physics_process(delta):
 	else:
 		timer.wait_time=1
 		pistol.visible=true
-func shoot():
+func shoot(): #Shoot just adds a bullet and if its burst shoty it shoots two
 	audio_stream_player_2d.play()
 	var new_bullet = BULLET.instantiate()
 	new_bullet.position =bullet_spawn.global_position

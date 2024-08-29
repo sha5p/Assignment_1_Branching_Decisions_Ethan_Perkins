@@ -23,7 +23,7 @@ func connections(): #connecyts a signal for visbiblity change
 
 func _on_button_button_down():
 	get_tree().change_scene_to_packed(choose)
-
+#changes visiblity depending on the settings choosen
 
 func _on_button_pressed():
 	margin_container.visible = false

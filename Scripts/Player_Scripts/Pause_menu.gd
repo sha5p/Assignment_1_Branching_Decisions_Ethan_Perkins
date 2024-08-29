@@ -2,7 +2,7 @@ extends Control
 @onready var options = $Options 
 @onready var Main_Pause_Screen = $ColorRect
 
-
+#sets pasued when pasue button is clicked and if menu then go to the menu 
 var paused: bool =false:
 	set=set_paused
 func _ready():	

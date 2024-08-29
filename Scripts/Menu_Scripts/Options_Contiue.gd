@@ -3,7 +3,7 @@ extends Control
 @onready var countiue = $MarginContainer/VBoxContainer/Countiue
 @onready var audio_stream_player_2d_2 = $AudioStreamPlayer2D2
 
-
+#contiue button is visible if the level is greater then 1 and if countiue next scence
 func _ready():
 	if Global.Level ==0:
 		countiue.visible=false
@@ -13,7 +13,7 @@ func _on_countiue_pressed():
 	if Global.Level >0:
 		get_tree().change_scene_to_file("res://Scences//Levels/Level_"+str(Global.Level)+".tscn")
 		
-
+#If instead a new game is chosen then reset all of the save state values
 func _on_new_pressed():
 	SaveData.g_data[1]["Weapon"]="Defualt"
 	Global.item[0]["Weapon"] ="Defualt"

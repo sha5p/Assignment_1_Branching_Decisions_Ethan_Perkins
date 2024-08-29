@@ -6,9 +6,11 @@ extends Area2D
 @onready var door_Collision_buttom = $CharacterBody2D/Buttom
 @onready var door_Collision_top = $CharacterBody2D/top
 @export var direction = ""
+#sets values the dirrection is for which way the dooor is 
+
 
 var opened:bool=false
-func _ready():
+func _ready():  #on ready disabled colllisions so player can go through door
 	door_Collision_buttom.disabled=true
 	door_Collision_top.disabled=true	
 	door_Collision.disabled = true
@@ -16,7 +18,7 @@ func _ready():
 	if no_fighting:
 		door_Collision.disabled = false
 	
-func _on_body_entered(body):
+func _on_body_entered(body): #does not let the player leave once entering the door and will do the open animation
 	if "buttom" ==direction:
 		door_Collision_buttom.set_deferred("disabled", false)    
 	elif "top" ==direction:
@@ -41,7 +43,7 @@ func _on_body_entered(body):
 			door.visible= true
 			await get_tree().create_timer(0.4).timeout
 			door.play("opened")
-func _on_body_exited(body):
+func _on_body_exited(body): #spawns mobs using a spawner scence nod and getting the ones in the group and calling the spawn function
 	if body.has_method("_player_take_damage"):
 		door.play("close")
 		await get_tree().create_timer(0.4).timeout
@@ -60,9 +62,9 @@ func _on_body_exited(body):
 		var doors= get_tree().get_nodes_in_group("Door")
 		for i in doors:
 			i.fight()
-		if Global.currentRoom==2:
+		if Global.currentRoom==2: #if the room is 2 no spawning is not needed
 			door_Collision.set_deferred("disabled", true)    
-			
+			#no doors on last levels
 func fight():
 	door_Collision.disabled= false
 

@@ -1,6 +1,6 @@
 extends Area2D
 @onready var collision_shape_2d = $CollisionShape2D
-
+#if colliding if the npc and the talk button is pressed start the dialogue 
 var count = 0
 @onready var label = $Label
 func _ready():

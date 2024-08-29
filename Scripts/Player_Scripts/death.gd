@@ -1,6 +1,6 @@
 extends Node2D
 var MAIN_MENU = load("res://Scences/Menu_Scences/main_menu.tscn")
-
+#on death reset values when reload
 func _on_button_pressed():
 		SaveData.g_data[1]["Weapon"]="Defualt"
 		Global.item[0]["Weapon"] ="Defualt"

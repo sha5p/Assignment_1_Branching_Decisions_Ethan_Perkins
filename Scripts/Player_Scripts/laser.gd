@@ -5,7 +5,7 @@ const maxrange=1500
 var base_width=24
 var widthy=base_width
 @onready var collision = $Line2D/DamageArea/CollisionShape2D
-
+#add laser to wherever the raycast
 func _ready():
 	pass
 func _physics_process(delta):

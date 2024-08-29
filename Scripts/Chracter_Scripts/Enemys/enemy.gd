@@ -10,31 +10,34 @@ extends CharacterBody2D
 
 var shooting =false
 var ACCEL = 50
-var SPEED =100
+var SPEED =100 #Sets the values for movment and states
 var dead=false
 var Health =5
 func _ready():
 	health.play("Max")
 func _physics_process(delta: float) ->void:
 	if !shooting and !dead:
+		#If the robot is out of the player range it will get the nav agent node to find a path towhere navagnet 
+		#nav agent gets player posistion 
 		var dir=to_local(nav_agent.get_next_path_position()).normalized()
-		velocity=velocity.lerp(dir*SPEED,ACCEL*delta)
+		velocity=velocity.lerp(dir*SPEED,ACCEL*delta) 
 		animation.play("walk")
 		animation.flip_h = velocity.x < 0
 		move_and_slide()
 func _on_timer_timeout():
-	makepath()
+	makepath() #every 0.1 seconds find the players posistion
 func makepath() ->void:
+	
 	if !Global.navcheck:
-		nav_agent.target_position = player.global_position
+		nav_agent.target_position = player.global_position #Makes a path to the player
 	else:
-		pass
+		pass #can get rid of
 
-func _on_shooting_cool_down_timeout():
+func _on_shooting_cool_down_timeout(): #When the timer cool down ends add a bullet to the scence
 		var new_bullet = BULLET.instantiate()
 		new_bullet.position =$".".global_position
 		main.add_child.call_deferred(new_bullet)
-func take_damage():
+func take_damage(): #change the damage taken depending on gun
 	if Global.item[0]["Weapon"] =="Defualt":
 		Health+=-1
 	elif Global.item[0]["Weapon"] =="LMG":
@@ -53,9 +56,9 @@ func take_damage():
 		Health+=-2
 	elif Global.item[0]["Weapon"] =="Bazooka":
 		Health+=-4
-	if Health >0 and Health !=5:
+	if Health >0 and Health !=5: #kill the robot
 		health.play(str(Health,"HP"))
-	elif Health <=0:
+	elif Health <=0: #change states and add a circuit 
 		health.play(str(0,"HP"))
 		dead=true
 		animation.play("Death")
@@ -65,6 +68,7 @@ func take_damage():
 		var curcit = CURCITS.instantiate()
 		curcit.position =$".".global_position
 		main.add_child.call_deferred(curcit)
+		Global.final+=1
 		queue_free()
 
 
