@@ -156,9 +156,9 @@ By using an import known as dialogic instead of creating my own dialogue system 
 
 **Interactions and Level Design**
 
-**Images**
-![image](https://github.com/user-attachments/assets/9c90ba6a-a3cc-41e8-9279-a729504ccad2)
-![image](https://github.com/user-attachments/assets/ebc3f014-33d7-4d72-ba98-9ff152433822)
+|Images|
+|:---------|
+|![image](https://github.com/user-attachments/assets/9c90ba6a-a3cc-41e8-9279-a729504ccad2)![image](https://github.com/user-attachments/assets/ebc3f014-33d7-4d72-ba98-9ff152433822)|
 
 
 **Analysis**
@@ -175,7 +175,9 @@ Throught the process of making this game I have made many changes important once
 
 If i were to do this again I would try running through more moldulatable script such **example** addtionally still using dialogic but trying to use more feature like its **exmaple** which allows for **idk**. Summary stuff done
 
-**Biblogrpathy**
+
+
+## **Biblogrpathy**
 
 Aaron. (2024). *Season Shop.* [online] Soul Knight Wiki. Available at: https://soul-knight.fandom.com/wiki/Season_Shop [Accessed 22 Aug. 2024].
 
