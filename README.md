@@ -144,7 +144,15 @@ func _on_area_2d_body_exited(body):
 ```
 
 **Analysis**
+
 By using an import known as dialogic instead of creating my own dialogue system it made the interactions and sending signals much more powerful. As shown above dialogic signals and functions can connect to diffrent parts of the script this means making branching choices like the above and giving choices is much more modulated. The NPC **idk yet** gives the user going through the ship a request the request is optional and makes it a branching narritive that can occur. If the player choose to help this NPC using the signals and branching via dialogic a choice is given. Showing what is happening specfically in the import is **:O**. Analysis instead of doing this via if staments and my own dialogue system presenting it like this not only makes the interaction less junky but more powerful and costumisable like **dadad** for the player. 
+
+|Dialogic Probelmm|Solution|
+|:---|:----|
+|The Dialogue would constantly break constantly after the first timeline was played|The issue did not stem from a code error nor a signal sending error but a inbuilt function in dialogic known as the wait|
+
+![image](https://github.com/user-attachments/assets/7820852d-3b40-4aba-bb71-7f22da0f07c4)
+
 
 **Interactions and Level Design**
 
@@ -159,7 +167,6 @@ These levels are designed as shown above to give the player destictive decisiosn
 
 Features purpose
 
-DEBUGGIN PROBLEM AND SOLUTION
 
 
 ## **Testing / Evaluation of Your Game**
