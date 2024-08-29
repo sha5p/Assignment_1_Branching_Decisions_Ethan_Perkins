@@ -16,20 +16,20 @@
 
 |Compared|Fianl Fantasy XVI|Soul Knight|Stellaris|
 |:-----|:----|:-----|:----|
-||![image](https://github.com/user-attachments/assets/0e7ff2b8-ba09-4004-8291-a69e1f660ed8)(GMAJ0R, 2023)|![image](https://github.com/user-attachments/assets/b274cc58-828d-4eab-ba2d-4cc3aa0b7b07)(BSRDACCT, n.d.)|![image](https://github.com/user-attachments/assets/1ae077a0-bf7f-44f2-ad34-6da55b76a1d3)(aremonmoonserpent, n.d.)|
-|Branching choices|Has 'Branching' affecting how the user interacts with the game using a skill tree and shop and a shop|Its branching is the main 'choice' that the user must make not following a story line with a dungon system|Stellaris is like giant chess where everything from forming relsonships choosing your chracter and your fleet is a bracnhing choice branching choices is the game|
-|Type of game|An RPG game orientating around a story with branching dicsions to progress|A rouge like with choices effecting how the user intreacts with enemys|a relasonship and stratgey game in which the user makes decisions that is the game all about choices(Aaron, 2024)|
+|Branching Images|![image](https://github.com/user-attachments/assets/0e7ff2b8-ba09-4004-8291-a69e1f660ed8)(GMAJ0R, 2023)|![image](https://github.com/user-attachments/assets/b274cc58-828d-4eab-ba2d-4cc3aa0b7b07)(BSRDACCT, n.d.)|![image](https://github.com/user-attachments/assets/1ae077a0-bf7f-44f2-ad34-6da55b76a1d3)(aremonmoonserpent, n.d.)|
+|Branching choices|Final Fantasy XVI is a narrative Focus game and through few but impactful choices the player is left to choose narritive choices. Along with cutscences to the narritive Final Fantasy XVI sets is designed to give the player an emotional experience.|Soul Knight gives the player diffrent branching decisions through a skill tree and a shop system (Aaron, 2024) this makes the game feel more open world to the player in which they can choose exactly how to progress through their playthrough|Stellaris is a game heavily based on interactions with other emperies from npcs to online players. Its gameplay based on decisions like negotiate treaties, alliances, and trade deals which set the player |
+|Purposes|An RPG game orientating around a story with branching decisions to progress the player based on their choices|A rouge like with choices effecting how the user intreacts with enemys|A stratgey game in which the user makes decisions through  exploration, empire-building, negotiate treaties, alliances, and trade deals through dialogue .|
 
-#### **Conclusion**
-Taking all these diffrent games into account I will design my game to that give the user a varity of diffrent ways to interact and make 'choices' in the game. From diffrent **Endings** to the game to how the player will interact with the diffrent levels. This leaded me into having a shop system and a branching dialogue.
+
+
+### **Conclusion**
+Taking all these diffrent games into account I will design my game to that give the user a varity of diffrent ways to interact and make 'choices' in the game. From diffrent **Endings** to the game to how the player will interact with the diffrent levels. This leaded me into having a shop system and a branching dialogue. 
 
 ## **Planning & Design the Game**
 
 ### ***Branching choices***
 
-For branching choicies I will add two main choices one branching decisions in the story and the other the shop system. 
-
-**Shop System Branching Choices**
+## **Shop System Branching Choices**
 
 The shop system allows the user to interact with an NPC giving them an experience of trying to figure out **MUCH LIKE STLOROS** if they should spend money on a more powerful weapon increase there health and buy and Expensive shield as they ahve already acquired a weapon and have max health. They also may choose to upgrade their weapon to evolve it into somthing more powerful. However not showing what a weapon can evolve into also makes the user hesitant to upgrade and evolve and may instead use there money to buy a new weapon restarting their progreess in hopes to find a more powerful upgrade. 
 
@@ -43,7 +43,7 @@ The shop system allows the user to interact with an NPC giving them an experienc
 
 ### **Code buying item**
  ```
-func _on_buy_pressed():
+func _on_buy_pressed(): #runs through a checks current values if not maxed and enough money buy 
 	$Shop/Label.text="Current Curcits "+str(Global.curcits)
 	if currentItem !=0:
 		if Global.item[0]["Weapon"] !=Global.items[currentItem]["Name"] and "Shield" !=Global.items[currentItem]["Name"]:
