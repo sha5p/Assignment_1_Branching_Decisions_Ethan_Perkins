@@ -89,17 +89,19 @@ Running through a prebuilt system  'On Button Pressed' will only be functional o
 
 ### **Story Branching Choices**
 
-**Dialogue Photos**
+#### **Dialogue Photos**
 |Dialogue logic|
 |:---------|
 |![image](https://github.com/user-attachments/assets/c078f1d2-a62d-4fc4-b9aa-2da6b53eff78)|
 |Scence display|
 |![image](https://github.com/user-attachments/assets/6cf2962b-bb4a-42a0-83bb-f36c3a3611b9)![image](https://github.com/user-attachments/assets/96be63ce-3fa0-481e-b581-8f653b73939d)![image](https://github.com/user-attachments/assets/7820852d-3b40-4aba-bb71-7f22da0f07c4)|
-
+#### **Flow Chart**
+![image](https://github.com/user-attachments/assets/9ff801a1-d4c7-4ea4-b1c4-73209258ee93)
 
 #### **Code/Dialogue** 
 
-```extends Node2D
+```
+extends Node2D
 @onready var collision_shape_2d = $Area2D/CollisionShape2D
 @onready var label = $Label
 @onready var animation_player = $AnimationPlayer
@@ -145,11 +147,83 @@ func _on_area_2d_body_exited(body):
 
 #### **Analysis**
 
-By using an import known as dialogic instead of creating my own dialogue system it made the interactions and sending signals much more powerful. While instead I could have modulated a code that reads through txt files and print dialogue the code would be much more jankey and sending signals and other information during the dialogue much more blocky. The dialogic timeline above uses the choice function to alter the timeline based on what the user inputs from 'Your lying' to 'A fake?' these branching choices then emit diffrent signals recived in the scripts. The script connecting to dialogic and changing the values of certain signals which will allow diffrent dialogue to play later on. These change in values could have been done via save states but was avoided due to bugs inside dialogics functions like the below. 
+By using an import known as dialogic instead of creating my own dialogue system it made the interactions and sending signals much more powerful. Instead of using a dialogic based system modulated code could have been used alternativly which reads through txt files and print dialogue. However this code would be much more jankey when sending signals as many if and else staments would have to be run when reading files to look for key words. Which is why a dialogic timeline was used taking in diffrent choices to alter the timeline based on what the user inputs from 'Your lying' to 'A fake?'. These diffrent branching choices then emit diffrent signals recived in the scripts. The script connecting to dialogic and changing the values of certain signals which will allow diffrent dialogue to play later on. These change in values could have been done via save states but was avoided due to bugs inside dialogics functions like the below. 
 
 |Dialogic Probelmm|Solution|
 |:---|:----|
 |The Dialogue would constantly break constantly after the first timeline was played|The issue did not stem from a code error nor a signal sending error but a inbuilt function in dialogic known as the wait for 'time' which would then cause dialogue to wait indefinitely|
+
+#### **Dialogic to game cutscence**
+
+```
+extends Node2D
+@onready var animation_player = $AnimationPlayer
+@onready var camera = $Camera
+var PLAYER = load("res://Scences/Player/Player.tscn")
+@onready var _66x_66x_31 = $"66x66x31"
+@onready var _66x_66x_32 = $"66x66x32"
+@onready var _66x_66x_30 = $"66x66x30"
+@onready var main =get_tree().get_root().get_node("Level_4")
+@onready var camera_2d = $Camera2D
+@onready var label = $Label
+@onready var boom = $Boom
+@onready var kobob = $Kobob
+@onready var audio_stream_player_2d = $AudioStreamPlayer2D
+
+#sets values
+
+func _ready():
+	#makes sure you can only talk when all enemys killed and resets values via 
+	Global.final=0
+	Global.enemyFighting =true
+	Dialogic.signal_event.connect(DialogicSignal)
+	animation_player.play("Cut Scence")
+	Dialogic.start("Final")
+	Global.talking=true
+
+func DialogicSignal(arugment: String):
+	if arugment =="Camera":
+		camera.play("Camera")
+	if arugment =="End":
+		var spawner=get_tree().get_nodes_in_group("Spawner")
+		_66x_66x_30.visible=false
+		_66x_66x_31.visible=false
+		_66x_66x_32.visible=false
+		for i in spawner:
+			print(i)
+			i.spawn()
+		Global.talking=false
+		camera_2d.enabled=false
+	if arugment =="Bad Ending":
+		get_tree().change_scene_to_file("res://Scences/Levels/bad_ending.tscn")
+	if arugment =="Boom":
+		camera_2d.enabled=true
+		kobob.visible=false
+		boom.visible=true
+		boom.play("default")
+		await get_tree().create_timer(1).timeout
+		get_tree().change_scene_to_file("res://Scences/Levels/good_ending.tscn")
+
+		
+func _unhandled_input(event: InputEvent):
+	if event.is_action_pressed("Talk") and Global.cantalk and Global.final==3:
+		print(SaveData.end)
+		Global.talking=true
+		if SaveData.end==true:
+			Dialogic.start("kobob_saved_good")
+		if SaveData.end==false:
+			Dialogic.start("kobob_saved_bad")
+func _on_area_2d_body_entered(body):
+	var talk = SaveSettings.config.get_value("keybinding", "Talk")
+	label.visible=true
+	label.text= "Cick: %s to talk" % [talk]
+	Global.cantalk=true
+
+func _on_area_2d_body_exited(body):
+	label.visible=false
+	Global.cantalk=false
+```
+The ending of the game based on savedata values is checked when general kobob is rescued. And so depending on the signals that are emmited a diffrent dialogic timeline will start and a diffrent ending scence. This was done through script as well as dialogic instead of plainly using dialogic due to bugs such as the above that would render parts of the dialogue system usless as no system is perfect. 
 
 
 ### **Interactions and Level Design**
