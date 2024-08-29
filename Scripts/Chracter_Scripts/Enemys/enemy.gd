@@ -27,7 +27,6 @@ func _physics_process(delta: float) ->void:
 func _on_timer_timeout():
 	makepath() #every 0.1 seconds find the players posistion
 func makepath() ->void:
-	
 	if !Global.navcheck:
 		nav_agent.target_position = player.global_position #Makes a path to the player
 	else:

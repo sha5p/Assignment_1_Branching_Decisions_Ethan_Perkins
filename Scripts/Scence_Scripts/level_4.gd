@@ -61,7 +61,7 @@ func _on_area_2d_body_entered(body):
 	label.text= "Cick: %s to talk" % [talk]
 	Global.cantalk=true
 
-func _on_area_2d_body_exited(body):
+func _on_area_2d_body_exited(body): #allows talking
 	label.visible=false
 	Global.cantalk=false
 
@@ -69,5 +69,5 @@ func _on_area_2d_body_exited(body):
 
 
 
-func _on_audio_stream_player_2d_finished():
+func _on_audio_stream_player_2d_finished(): #loops through music
 	audio_stream_player_2d.play()

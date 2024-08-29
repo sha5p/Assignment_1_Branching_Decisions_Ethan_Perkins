@@ -271,7 +271,7 @@ _data = {
 "RESET": SubResource("Animation_62dqm")
 }
 
-[node name="Player_Bullet" type="Area2D"]
+[node name="Player_Bullet" type="Area2D" groups=["bullet"]]
 collision_layer = 9
 collision_mask = 13
 script = ExtResource("1_sj7gx")

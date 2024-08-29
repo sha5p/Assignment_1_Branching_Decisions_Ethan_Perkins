@@ -60,7 +60,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Area2D" type="Area2D"]
+[node name="Area2D" type="Area2D" groups=["bullet"]]
 collision_layer = 8
 collision_mask = 10
 script = ExtResource("1_ja5ih")

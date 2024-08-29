@@ -164,7 +164,7 @@ func _on_range_pressed(): #upgrades range if enough money and not maxed
 		$"Shop/Upgrade/UpgradeUi/Range/Current Upgrade".text="Current Level: "+str(Global.upgrades[0]["Range"])
 
 
-func _on_firerate_evolve_button_pressed(): #evolves if requirment met (maxefd) to desired weapon
+func _on_firerate_evolve_button_pressed(): #evolves if requirment met (maxeed) to desired weapon
 	if Global.upgrades[0]["FireRate"]==5:
 		if Global.item[0]["Weapon"]=="ShotGun":
 			Global.item[0]["Weapon"]=Global.evolutions[0]["Max-FireRate"]
@@ -172,11 +172,11 @@ func _on_firerate_evolve_button_pressed(): #evolves if requirment met (maxefd) t
 			Global.item[0]["Weapon"]=Global.evolutions[2]["Max-FireRate"]
 		if Global.item[0]["Weapon"]=="Sniper" and Global.upgrades[0]["Range"]==5 and Global.upgrades[0]["Speed"]==5:
 			Global.item[0]["Weapon"]=Global.evolutions[1]["Max-All"]
-func _on_speed_evolve_button_pressed(): #evolves if requirment met (maxefd) to desired weapon
+func _on_speed_evolve_button_pressed(): #evolves if requirment met (maxeed) to desired weapon
 	if Global.upgrades[0]["Speed"]==5:
 		if Global.item[0]["Weapon"]=="LMG":
 			Global.item[0]["Weapon"]=Global.evolutions[2]["Max-Speed"]
-func _on_range_evolve_button_pressed(): #evolves if requirment met (maxefd) to desired weapon
+func _on_range_evolve_button_pressed(): #evolves if requirment met (maxeed) to desired weapon
 	if Global.upgrades[0]["Range"]==5:
 		if Global.item[0]["Weapon"]=="ShotGun":
 			Global.item[0]["Weapon"]=Global.evolutions[0]["Max-Range"]

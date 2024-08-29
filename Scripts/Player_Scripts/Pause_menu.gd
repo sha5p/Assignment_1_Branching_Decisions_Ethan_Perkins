@@ -21,6 +21,10 @@ func _on_setting_pressed():
 	options.visible=true
 
 func _on_menu_pressed():
+	var bullet=get_tree().get_nodes_in_group("bullet")
+	for i in bullet:
+		print(i)
+		i.queue_free()
 	Global.navcheck=true
 	get_tree().paused=false
 	get_tree().change_scene_to_file("res://Scences/Menu_Scences/main_menu.tscn")
