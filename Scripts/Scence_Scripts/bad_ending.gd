@@ -4,6 +4,7 @@ var MAIN_MENU = load("res://Scences/Menu_Scences/main_menu.tscn")
 @onready var audio_stream_player_2d = $AudioStreamPlayer2D
 
 func _ready():
+	$Label.text="Circuits not spend: "+ str(Global.curcits)
 	Fade.fade_in()
 	Dialogic.signal_event.connect(DialogicSignal)
 	animation_player.play("End")

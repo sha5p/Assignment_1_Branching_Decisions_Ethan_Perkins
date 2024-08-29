@@ -453,7 +453,7 @@ offset_top = -90.0
 offset_right = 1144.0
 offset_bottom = 75.0
 theme_override_font_sizes/font_size = 120
-text = "Current Curcits: "
+text = "Current Circuits: "
 
 [node name="Shields" type="AnimatedSprite2D" parent="CanvasLayer2"]
 position = Vector2(201, 628)

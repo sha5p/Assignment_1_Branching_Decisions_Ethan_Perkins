@@ -4,7 +4,7 @@ join "Clueless Sam" 1
 join AIBot 1
 [wait time="1.0"]
 leave AIBot
-"Clueless Sam": But we need curcits from the Beffren-Robots to let us hack in the more we have the more power we can put into the hack
+"Clueless Sam": But we need circuits from the Beffren-Robots to let us hack in the more we have the more power we can put into the hack
 leave "Clueless Sam"
 [signal arg="End"]
 [end_timeline]

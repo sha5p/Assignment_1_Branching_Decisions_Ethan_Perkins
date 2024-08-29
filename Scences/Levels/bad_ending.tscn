@@ -1,7 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://boutlt0vhrah7"]
+[gd_scene load_steps=10 format=3 uid="uid://boutlt0vhrah7"]
 
 [ext_resource type="Script" path="res://Scripts/Scence_Scripts/bad_ending.gd" id="1_l25oc"]
 [ext_resource type="AudioStream" uid="uid://onlj0q2auwxb" path="res://Audio_Managment/mystery-music-loop-226835.mp3" id="2_3lhs8"]
+[ext_resource type="Texture2D" uid="uid://cuhgsrrb33xsm" path="res://Assests/Circuit_Board.webp" id="3_r6ngf"]
+
+[sub_resource type="SystemFont" id="SystemFont_vg1rf"]
+font_names = PackedStringArray("Calisto MT")
+
+[sub_resource type="SystemFont" id="SystemFont_1nckg"]
+font_names = PackedStringArray("Calisto MT")
 
 [sub_resource type="Animation" id="Animation_b7txy"]
 resource_name = "End"
@@ -64,6 +71,9 @@ _data = {
 "RESET": SubResource("Animation_lhjfp")
 }
 
+[sub_resource type="SystemFont" id="SystemFont_ophw2"]
+font_names = PackedStringArray("Calisto MT")
+
 [node name="BadEnding" type="Node2D"]
 script = ExtResource("1_l25oc")
 
@@ -86,6 +96,7 @@ offset_right = 201.0
 offset_bottom = 21.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_vg1rf")
 theme_override_font_sizes/font_size = 30
 text = "The End ..."
 horizontal_alignment = 1
@@ -105,6 +116,7 @@ offset_right = 201.0
 offset_bottom = 21.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_1nckg")
 theme_override_font_sizes/font_size = 30
 text = "Click to main menu"
 horizontal_alignment = 1
@@ -118,5 +130,21 @@ libraries = {
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_3lhs8")
 autoplay = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 146.0
+offset_top = 48.0
+offset_right = 395.0
+offset_bottom = 83.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_ophw2")
+theme_override_font_sizes/font_size = 30
+text = "Circuits not spend: "
+
+[node name="CircuitBoard" type="Sprite2D" parent="Label"]
+position = Vector2(-60, 18)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_r6ngf")
 
 [connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]
