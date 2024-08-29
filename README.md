@@ -15,7 +15,7 @@
 Drawing inspiration from these games I planned to design a game based on Soul Knight for its core game play in which the player will go through diffrent levels and choose to change their ablity to fight the enemys. Then allowing the player if they so choose to interact with 'npcs' in the game informing the player of certain information and giving them certain choices like Stellaris. These 'npcs' will fit a narritive for the game as Final Fantasy XVI does for its and the players choices when interacing with the narritive effecting the narritive of the game.
 
 ## **Planning & Design the Game**
-
+### **Plan**
 |Project|Status|Goals|
 |:-------|:-------|:-------|
 |Week 4|Completed|Implement Modulated code|
@@ -23,22 +23,22 @@ Drawing inspiration from these games I planned to design a game based on Soul Kn
 |Week 5|Completed|Inital Shop Branching/Enemys|  
 |Week 5|Completed|Story|
 |Week 5|Completed|Cut Scence| 
-|Week 6|not done|Documentation| 
+|Week 6|Completed|Documentation| 
 
-## ***Branching choices***
+### ***Branching choices***
 
 ### **Shop System Branching Choices**
 
 The shop system allows the user to interact with an NPC giving that with enough circuita the NPC can 'hack' into the systen and can acquire powerful weapons, increase their current weapons power and aquire health and shields. They also may choose to upgrade their weapon to evolve it into a more powerful or less powerful weapon depending on how much they have upgraded their current one. This evolution not shown to the player so that the player will have to branch out and go back to get the best weapon prefrence. 
 
-### **Flow Chart**
+#### **Flow Chart**
 ![image](https://github.com/user-attachments/assets/827d2e58-e4a6-48b3-968f-5f854553e919)
 
 |Buying Weapon UI|Evolving and Upgrading UI|
 |:---------|:---------|
 |![image](https://github.com/user-attachments/assets/c0ef7202-862a-4738-8944-a604aef2f225)|![image](https://github.com/user-attachments/assets/bcf47cbf-2910-4e56-8c35-b9f5d7622181)|
 
-### **Code buying item**
+#### **Code buying item**
  ```
 func _on_buy_pressed(): #When pressed checks if the weapon is the current weapon or if shield and health max if is not buy else dont
 	if currentItem !=0:
@@ -58,14 +58,14 @@ func _on_buy_pressed(): #When pressed checks if the weapon is the current weapon
 		Global.Health[0]["HP"] +=1
 		upgrade.visible=false
 ```
-### **Analysis**
+#### **Analysis**
 
-#### Buying items 
+##### Buying items 
 
 This code checks if the item is not bought and maxed and if it is the NPC wont take any curcits. If it isnt bought or maxed it takes the dictonary value of the price and then deducts that many circuits from the players current amount if there is not eenough curcits nothing will happen as well. The reason that the health is in a diffrent dictonary is due to animation sizes for the sprites. Prefrabley these diffrent items would be in the same dictonary or instead a list which then would loop through to deduct prices. Alternativly the shop system could have run through signals that would add items to a list and when the signal is activated other items in the list could have been altered but this was not done due to time constraints. 
 
 
-### **Code Upgrading and Evolving Example**
+#### **Code Upgrading and Evolving Example**
 ```
 func _on_range_pressed(): #evolves if requirment met (maxed) to desired weapon
 	$Shop/Label.text="Current Curcits "+str(Global.curcits)
@@ -81,13 +81,13 @@ func _on_range_evolve_button_pressed(): #evolves if requirment met (maxed) to de
 		if Global.item[0]["Weapon"]=="ShotGun":
       			Global.item[0]["Weapon"]=Global.evolutions[0]["Max-Range"]
 ```
-### **Analysis**
+#### **Analysis**
 
-#### Upgrading and Evolving the weapon
+##### Upgrading and Evolving the weapon
 
 Running through a prebuilt system  'On Button Pressed' will only be functional on the current weapon. Taking the current dictonary values then changing the the values for the upgrade and its current level as well as deducting circuits. The reason that not all these upgrades were in the same script was for useriblty for the player. Evolutions running  simlilar but instead checks the upgrade level and if applicable then evolves the weapon. This could have been implmented instead by using a varity of varibles and changing the current weapon to the varible though this improves readiblity it would require much more lines of code for the same effect. These evolutions and powerups branch throughout the diffrent upgrades and give diffrent weapons letting the player fight against the mobs in diffrent ways from closer to further to more risky. 
 
-**Story Branching Choices**
+### **Story Branching Choices**
 
 **Dialogue Photos**
 |Dialogue logic|
@@ -97,7 +97,7 @@ Running through a prebuilt system  'On Button Pressed' will only be functional o
 |![image](https://github.com/user-attachments/assets/6cf2962b-bb4a-42a0-83bb-f36c3a3611b9)![image](https://github.com/user-attachments/assets/96be63ce-3fa0-481e-b581-8f653b73939d)![image](https://github.com/user-attachments/assets/7820852d-3b40-4aba-bb71-7f22da0f07c4)|
 
 
-**Code/Dialogue** 
+#### **Code/Dialogue** 
 
 ```extends Node2D
 @onready var collision_shape_2d = $Area2D/CollisionShape2D
@@ -143,7 +143,7 @@ func _on_area_2d_body_exited(body):
 	Global.cantalk=false
 ```
 
-**Analysis**
+#### **Analysis**
 
 By using an import known as dialogic instead of creating my own dialogue system it made the interactions and sending signals much more powerful. While instead I could have modulated a code that reads through txt files and print dialogue the code would be much more jankey and sending signals and other information during the dialogue much more blocky. The dialogic timeline above uses the choice function to alter the timeline based on what the user inputs from 'Your lying' to 'A fake?' these branching choices then emit diffrent signals recived in the scripts. The script connecting to dialogic and changing the values of certain signals which will allow diffrent dialogue to play later on. These change in values could have been done via save states but was avoided due to bugs inside dialogics functions like the below. 
 
@@ -152,13 +152,13 @@ By using an import known as dialogic instead of creating my own dialogue system 
 |The Dialogue would constantly break constantly after the first timeline was played|The issue did not stem from a code error nor a signal sending error but a inbuilt function in dialogic known as the wait for 'time' which would then cause dialogue to wait indefinitely|
 
 
-**Interactions and Level Design**
+### **Interactions and Level Design**
 
 |Images|
 |:---------|
 |![image](https://github.com/user-attachments/assets/9c90ba6a-a3cc-41e8-9279-a729504ccad2)![image](https://github.com/user-attachments/assets/ebc3f014-33d7-4d72-ba98-9ff152433822)|
 
-**Analysis**
+#### **Analysis**
 
 This branching game is designed to make the next destination for the player very apprant with labels for diffrent parts of the levels for navigation and an NPC interaction to explain the game.  Distinctive designs like similar doors and telporters for each of the sections allow for the navigation to be further inhanced with the addtion to the instructions. From the feedback evident is apparant from the players that this narritive was indeed navigatble. 
 ![image](https://github.com/user-attachments/assets/d6c09872-ab67-4a85-901c-72c02f0ad42e)
