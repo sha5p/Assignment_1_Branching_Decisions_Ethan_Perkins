@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://be8kwlv4otl6"]
+[gd_scene load_steps=4 format=3 uid="uid://be8kwlv4otl6"]
 
 [ext_resource type="Script" path="res://Scripts/Menu_Scripts/Options_Contiue.gd" id="1_5haxj"]
+[ext_resource type="Texture2D" uid="uid://c4qudosw60u1m" path="res://Assests/background_branching.webp" id="2_au8vi"]
+[ext_resource type="AudioStream" uid="uid://diocabj1exta5" path="res://Audio_Managment/muffled-party-music-183774.mp3" id="3_bioj6"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -10,6 +12,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5haxj")
+
+[node name="BackgroundBranching" type="Sprite2D" parent="."]
+position = Vector2(568, 319)
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("2_au8vi")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -40,5 +47,11 @@ layout_mode = 2
 layout_mode = 2
 text = "New"
 
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_bioj6")
+autoplay = true
+bus = &"Music"
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Countiue" to="." method="_on_countiue_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/New" to="." method="_on_new_pressed"]
+[connection signal="finished" from="AudioStreamPlayer2D2" to="." method="_on_audio_stream_player_2d_2_finished"]

@@ -1,6 +1,7 @@
 extends Node2D
 var MAIN_MENU = load("res://Scences/Menu_Scences/main_menu.tscn")
 @onready var animation_player = $AnimationPlayer
+@onready var audio_stream_player_2d = $AudioStreamPlayer2D
 
 func _ready():
 	Fade.fade_in()
@@ -38,3 +39,7 @@ func DialogicSignal(arugment: String):
 		SaveData.end=false
 		SaveData.ending()
 		get_tree().change_scene_to_packed(MAIN_MENU)
+
+
+func _on_audio_stream_player_2d_finished():
+	audio_stream_player_2d.play()

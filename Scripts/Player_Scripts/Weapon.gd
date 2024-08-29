@@ -14,6 +14,7 @@ var velocity=Vector2(1,0)
 @onready var rail_gun = $RailGun
 @onready var burst_shoty = $"Burst Shoty"
 @onready var bazoka = $Bazoka
+@onready var audio_stream_player_2d = $AudioStreamPlayer2D
 
 @onready var burst_shot_gun = $WeaponPivot/BurstShotGun
 @onready var burst_shot_gun_2 = $WeaponPivot/BurstShotGun2
@@ -117,6 +118,7 @@ func _physics_process(delta):
 		timer.wait_time=1
 		pistol.visible=true
 func shoot():
+	audio_stream_player_2d.play()
 	var new_bullet = BULLET.instantiate()
 	new_bullet.position =bullet_spawn.global_position
 	new_bullet.rotation =bullet_spawn.global_rotation

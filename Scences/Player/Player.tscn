@@ -410,7 +410,8 @@ texture_filter = 1
 position = Vector2(6, -25)
 scale = Vector2(1.0047, 1)
 sprite_frames = SubResource("SpriteFrames_vxg8m")
-animation = &"idle"
+animation = &"Death"
+frame_progress = 0.0131238
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

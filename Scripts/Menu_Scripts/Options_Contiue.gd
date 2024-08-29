@@ -1,6 +1,7 @@
 extends Control
 @export var intro=preload("res://Scences/CutScences/Introduction.tscn")
 @onready var countiue = $MarginContainer/VBoxContainer/Countiue
+@onready var audio_stream_player_2d_2 = $AudioStreamPlayer2D2
 
 
 func _ready():
@@ -14,8 +15,6 @@ func _on_countiue_pressed():
 		
 
 func _on_new_pressed():
-	Global.navcheck=false
-	
 	SaveData.g_data[1]["Weapon"]="Defualt"
 	Global.item[0]["Weapon"] ="Defualt"
 	SaveData.g_data[2]["Shield"] =0
@@ -43,3 +42,7 @@ func _on_new_pressed():
 	SaveData.end=false
 	SaveData.ending()
 	get_tree().change_scene_to_packed(intro)
+
+
+func _on_audio_stream_player_2d_2_finished():
+	audio_stream_player_2d_2.play()

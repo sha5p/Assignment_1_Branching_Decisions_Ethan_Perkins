@@ -10,6 +10,7 @@ var PLAYER = load("res://Scences/Player/Player.tscn")
 @onready var label = $Label
 @onready var boom = $Boom
 @onready var kobob = $Kobob
+@onready var audio_stream_player_2d = $AudioStreamPlayer2D
 
 
 
@@ -64,3 +65,7 @@ func _on_area_2d_body_exited(body):
 
 
 
+
+
+func _on_audio_stream_player_2d_finished():
+	audio_stream_player_2d.play()

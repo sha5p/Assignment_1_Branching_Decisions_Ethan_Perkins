@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://1r5h23nlxob8"]
+[gd_scene load_steps=4 format=3 uid="uid://1r5h23nlxob8"]
 
 [ext_resource type="Script" path="res://Scripts/Player_Scripts/Pause_menu.gd" id="1_2y1b5"]
+[ext_resource type="Texture2D" uid="uid://4ooauwiaj3am" path="res://Assests/UI/Level_Menu/Window.png" id="2_ffnn7"]
 [ext_resource type="PackedScene" uid="uid://ps2w6o2mwdtk" path="res://Scences/Menu_Scences/Settings/Options.tscn" id="2_gio5l"]
 
 [node name="Pause" type="Control"]
@@ -21,6 +22,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 1, 0.423529)
+
+[node name="Window" type="Sprite2D" parent="ColorRect"]
+position = Vector2(571, 321.5)
+scale = Vector2(1.23617, 0.593518)
+texture = ExtResource("2_ffnn7")
 
 [node name="GridContainer" type="GridContainer" parent="ColorRect"]
 layout_mode = 1

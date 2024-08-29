@@ -6,7 +6,7 @@ var input: Vector2
 @onready var health = $CanvasLayer2/Health
 @onready var curcits = $CanvasLayer2/CircuitBoard/Label
 @onready var shields = $CanvasLayer2/Shields
-
+var DEATH = load("res://Scences/Player/death.tscn")
 
 var pause =false
 func _ready():
@@ -57,6 +57,8 @@ func _player_take_damage():
 	else:
 		$AnimatedSprite2D.play("Death")
 		health.play("Dead")
+		Global.navcheck=true
+		get_tree().change_scene_to_packed(DEATH)
 func shop():
 	$CanvasLayer2/CircuitBoard/Label.visible=false
 	pause=true

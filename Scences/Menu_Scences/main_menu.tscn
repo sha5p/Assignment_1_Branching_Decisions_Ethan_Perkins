@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://chc7jcji6irs5"]
+[gd_scene load_steps=9 format=3 uid="uid://chc7jcji6irs5"]
 
 [ext_resource type="Script" path="res://Scripts/Menu_Scripts/Main_Menu_Script.gd" id="1_x524k"]
 [ext_resource type="PackedScene" uid="uid://ps2w6o2mwdtk" path="res://Scences/Menu_Scences/Settings/Options.tscn" id="2_l0pii"]
+[ext_resource type="Texture2D" uid="uid://c4qudosw60u1m" path="res://Assests/background_branching.webp" id="2_x2o8c"]
+[ext_resource type="Texture2D" uid="uid://dwa1jw3jyxbep" path="res://Assests/UI/Pause/Table.png" id="3_mkoht"]
+[ext_resource type="Texture2D" uid="uid://bwevyn2jhx4jl" path="res://Assests/UI/Hangar/Forward_BTN.png" id="4_n4pok"]
+[ext_resource type="Texture2D" uid="uid://b7mjjk6i5hk1b" path="res://Assests/UI/Pause/Settings_BTN.png" id="5_qxns0"]
+[ext_resource type="Texture2D" uid="uid://cboteygqtpq3i" path="res://Assests/UI/Main_Menu/Exit_BTN.png" id="6_jitno"]
+[ext_resource type="AudioStream" uid="uid://diocabj1exta5" path="res://Audio_Managment/muffled-party-music-183774.mp3" id="8_d4ypk"]
 
 [node name="Main_menu" type="Control"]
 layout_mode = 3
@@ -11,6 +17,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_x524k")
+
+[node name="BackgroundBranching" type="Sprite2D" parent="."]
+position = Vector2(568, 319)
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("2_x2o8c")
+
+[node name="Table" type="Sprite2D" parent="."]
+position = Vector2(570, 107)
+scale = Vector2(1.14266, 1)
+texture = ExtResource("3_mkoht")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 2
@@ -41,7 +57,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
-text = "Game Title"
+text = "Mission Rescue 101"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -76,5 +92,50 @@ layout_mode = 1
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 scale = Vector2(1.29974, -2.95119)
 
+[node name="ForwardBtn" type="Sprite2D" parent="."]
+position = Vector2(572, 282)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_n4pok")
+
+[node name="Button" type="Button" parent="ForwardBtn"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -107.0
+offset_top = -110.0
+offset_right = 110.0
+offset_bottom = 107.0
+
+[node name="SettingsBtn" type="Sprite2D" parent="."]
+position = Vector2(572, 364)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_qxns0")
+
+[node name="Button" type="Button" parent="SettingsBtn"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -113.0
+offset_top = -123.0
+offset_right = 123.0
+offset_bottom = 110.0
+
+[node name="ExitBtn" type="Sprite2D" parent="."]
+position = Vector2(575, 603)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_jitno")
+
+[node name="Exit" type="Button" parent="ExitBtn"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -200.0
+offset_top = -63.3333
+offset_right = 203.0
+offset_bottom = 46.6667
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_d4ypk")
+autoplay = true
+bus = &"Music"
+
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/ToMainMap" to="." method="_on_to_main_map_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Setting_Button" to="." method="_on_setting_button_pressed"]
+[connection signal="button_down" from="ForwardBtn/Button" to="." method="_on_button_button_down"]
+[connection signal="pressed" from="SettingsBtn/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ExitBtn/Exit" to="." method="_on_exit_pressed"]
+[connection signal="finished" from="AudioStreamPlayer2D2" to="." method="_on_audio_stream_player_2d_2_finished"]

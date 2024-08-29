@@ -42,8 +42,8 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "Choice": "res://Timelines/Choice.dtl",
-"Ending_bad": "res://Ending_bad.dtl",
-"Ending_good": "res://Ending_good.dtl",
+"Ending_bad": "res://Timelines/Ending_bad.dtl",
+"Ending_good": "res://Timelines/Ending_good.dtl",
 "Final": "res://Timelines/Final.dtl",
 "Misson_Briefing_intro1": "res://Timelines/Misson_Briefing_intro1.dtl",
 "Shop": "res://Timelines/Shop.dtl",

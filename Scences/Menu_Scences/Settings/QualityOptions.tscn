@@ -21,7 +21,7 @@ theme_override_constants/separation = 160
 custom_minimum_size = Vector2(264, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
-text = "Resolution
+text = "     Resolution
 "
 
 [node name="VSeparator" type="VSeparator" parent="HBoxContainer"]

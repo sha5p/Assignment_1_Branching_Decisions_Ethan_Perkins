@@ -13,17 +13,17 @@ func set_label():
 	label.text="Unassigned"
 	match action_name: 
 		"Left":
-			label.text = "Move Left"
+			label.text = "    Move Left"
 		"Right":
-			label.text ="Move Right"
+			label.text ="    Move Right"
 		"Up":
-			label.text="Move Up"
+			label.text="    Move Up"
 		"Down":
-			label.text="Move Down"
+			label.text="    Move Down"
 		"Pause":
-			label.text="Pause"
+			label.text="    Pause"
 		"Talk":
-			label.text="Talk"
+			label.text="    Talk"
 func changing():
 	#Changes the button to the input
 	var action_events = InputMap.action_get_events(action_name)
@@ -46,7 +46,7 @@ func check_keybind_match(action_name, action_event):
 		#print("The keybind for action '%s' matches the configuration." % action_name)
 		return true
 	else:
-		button.text =config_keybind
+		button.text ="    "+config_keybind
 		print("The keybind for action '%s' does not match the configuration." % action_name)
 		return false
 	

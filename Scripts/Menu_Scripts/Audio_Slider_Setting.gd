@@ -20,7 +20,7 @@ func _ready():
 	if bus_name in audio_save:
 		h_slider.value = (saved_volume_db*100)
 func set_audio_name():
-	label.text =str(bus_name)+" Volume"
+	label.text ="   "+str(bus_name)+" Volume"
 	
 func on_value_changed(value: float):
 	AudioServer.set_bus_volume_db(bus_index, linear_to_db(value))

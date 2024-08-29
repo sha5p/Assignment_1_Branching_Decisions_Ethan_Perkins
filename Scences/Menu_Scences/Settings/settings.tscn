@@ -1,7 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://8xvalyodq53v"]
+[gd_scene load_steps=14 format=3 uid="uid://8xvalyodq53v"]
 
 [ext_resource type="PackedScene" uid="uid://twceaywxwjne" path="res://Scences/Menu_Scences/Settings/audio_slider_setting.tscn" id="1_nurjj"]
+[ext_resource type="Texture2D" uid="uid://6p5ds30jvcn4" path="res://Assests/UI/Setting/Window.png" id="1_x10yg"]
 [ext_resource type="PackedScene" uid="uid://c7pq7nj2gnfiu" path="res://Scences/Menu_Scences/Settings/hotkey.tscn" id="2_4n17r"]
+[ext_resource type="Texture2D" uid="uid://dshgb4mwquhys" path="res://Assests/UI/Pause/Window.png" id="2_biw7t"]
 [ext_resource type="PackedScene" uid="uid://dmsep4a3vnejk" path="res://Scences/Menu_Scences/Settings/Window Options.tscn" id="3_ary28"]
 [ext_resource type="PackedScene" uid="uid://cgyrclf04v5xb" path="res://Scences/Menu_Scences/Settings/FPSOptions.tscn" id="4_ihit0"]
 [ext_resource type="PackedScene" uid="uid://do7tusmdnebws" path="res://Scences/Menu_Scences/Settings/QualityOptions.tscn" id="5_x7t1h"]
@@ -10,9 +12,15 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_drefu"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rjetp"]
+texture = ExtResource("2_biw7t")
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xj2ma"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dm7po"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mk2sa"]
+texture = ExtResource("1_x10yg")
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -28,13 +36,11 @@ anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 100.0
-offset_top = 50.0
+offset_top = 69.0
 offset_right = -100.0
-offset_bottom = -100.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_bottom = -81.0
 tab_alignment = 1
-current_tab = 1
+current_tab = 2
 
 [node name="Sound" type="TabBar" parent="TabContainer"]
 visible = false
@@ -47,6 +53,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Window" type="Sprite2D" parent="TabContainer/Sound/MarginContainer"]
+position = Vector2(474, 229.5)
+scale = Vector2(1.01702, 0.330714)
+texture = ExtResource("1_x10yg")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Sound/MarginContainer"]
 layout_mode = 2
@@ -75,6 +86,7 @@ theme_override_constants/separation = 32
 theme_override_styles/separator = SubResource("StyleBoxEmpty_drefu")
 
 [node name="Controls" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/Controls"]
@@ -87,6 +99,7 @@ grow_vertical = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Controls/MarginContainer"]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_rjetp")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Controls/MarginContainer/ScrollContainer"]
 layout_mode = 2
@@ -127,7 +140,6 @@ theme_override_constants/separation = 32
 theme_override_styles/separator = SubResource("StyleBoxEmpty_dm7po")
 
 [node name="Graphics" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/Graphics"]
@@ -140,6 +152,7 @@ grow_vertical = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Graphics/MarginContainer"]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_mk2sa")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Graphics/MarginContainer/ScrollContainer"]
 layout_mode = 2

@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://cfaeqhxsiinwl"]
+[gd_scene load_steps=43 format=3 uid="uid://cfaeqhxsiinwl"]
 
 [ext_resource type="Script" path="res://Scripts/Scence_Scripts/level_4.gd" id="1_nssem"]
 [ext_resource type="PackedScene" uid="uid://bxstgwq03msit" path="res://Scences/Layouts/MapTileSet.tscn" id="1_rmwff"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dbrar35ghbe3g" path="res://Assests/Tech Dungeon Roguelite - Asset Pack (DEMO)/SpriteSheets/Sprite_Sheet_Main.png" id="4_tjtvv"]
 [ext_resource type="PackedScene" uid="uid://k3w36uodlrjv" path="res://Scences/Layouts/spawner.tscn" id="5_7qgo3"]
 [ext_resource type="PackedScene" uid="uid://djffro4dr0uc2" path="res://Scences/Player/Player.tscn" id="6_vj8we"]
+[ext_resource type="AudioStream" uid="uid://dy7pxgqtwtpr5" path="res://Audio_Managment/chill-drum-loop-6887.mp3" id="7_uvxuc"]
 
 [sub_resource type="Animation" id="Animation_071nv"]
 resource_name = "Cut Scence"
@@ -572,5 +573,10 @@ visible = false
 position = Vector2(533, 30)
 sprite_frames = SubResource("SpriteFrames_thvw1")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_uvxuc")
+autoplay = true
+
 [connection signal="body_entered" from="Kobob/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Kobob/Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]
