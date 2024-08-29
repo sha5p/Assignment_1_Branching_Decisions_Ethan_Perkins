@@ -31,7 +31,7 @@ For branching choicies I will add two main choices one branching decisions in th
 
 **Shop System Branching Choices**
 
-This shop system allows the user to interact with an NPC giving them an experience of trying to figure out **MUCH LIKE STLOROS** if they should spend money on a more powerful weapon increase there health and buy and Expensive shield as they ahve already acquired a weapon and have max health. They also may choose to upgrade their weapon to evolve it into somthing more powerful. However not showing what a weapon can evolve into also makes the user hesitant to upgrade and evolve and may instead use there money to buy a new weapon restarting their progreess in hopes to find a more powerful upgrade. 
+The shop system allows the user to interact with an NPC giving them an experience of trying to figure out **MUCH LIKE STLOROS** if they should spend money on a more powerful weapon increase there health and buy and Expensive shield as they ahve already acquired a weapon and have max health. They also may choose to upgrade their weapon to evolve it into somthing more powerful. However not showing what a weapon can evolve into also makes the user hesitant to upgrade and evolve and may instead use there money to buy a new weapon restarting their progreess in hopes to find a more powerful upgrade. 
 
 ### **Flow Chart**
 ![image](https://github.com/user-attachments/assets/827d2e58-e4a6-48b3-968f-5f854553e919)
@@ -125,6 +125,8 @@ aremonmoonserpent (n.d.). *The planets shop has opened.* [online] Reddit. Availa
 
 BSRDACCT (n.d.). *Heretic Build Discussion.* [online] Reddit.* Available at: https://www.reddit.com/r/SoulKnightPrequel/comments/18ajbzw/heretic_build_discussion/ [Accessed 23 Aug. 2024].
 
+DziiTen (n.d.). mystery music loop. [online] Pixabay. Available at: https://pixabay.com/sound-effects/mystery-music-loop-226835/ [Accessed 29 Aug. 2024].
+
 ‌Eduard_M (2024). Seamless loop of interstellar travel through a blue and red wormhole filled with stars. Space journey through time continuum. Warp in science fiction black hole vortex hyperspace tunnel. [online] Storyblocks.com. Available at: https://www.storyblocks.com/video/stock/seamless-loop-of-interstellar-travel-through-a-blue-and-red-wormhole-filled-with-stars-space-journey-through-time-continuum-warp-in-science-fiction-black-hole-vortex-hyperspace-tunnel-b0gi4eorfjh7j1ovx?preview=1 [Accessed 28 Aug. 2024].
 
 itch.io. (n.d.). Tech Dungeon: Roguelite - Asset Pack by Pupkin. [online] Available at: https://trevor-pupkin.itch.io/tech-dungeon-roguelite.
@@ -135,16 +137,28 @@ itch.io. (n.d.). Tech Dungeon: Roguelite - Asset Pack by Pupkin. [online] Availa
 
 ‌itch.io. (2024). GUNS + RELOADS. [online] Available at: https://c1aymor3.itch.io/guns-reloads [Accessed 20 Aug. 2024].
 
+itch.io. (n.d.). Free Space Shooter Game User Interface by Free Game Assets (GUI, Sprite, Tilesets). [online] Available at: https://free-game-assets.itch.io/free-space-shooter-game-user-interface.
+
 ‌itch.io. (2024). Teleport-in animation. [online] Available at: https://bybibo.itch.io/teleport-in-animation [Accessed 28 Aug. 2024].
 GMAJ0R (2023). *A glimpse of the mid game skill tree.* [online] Reddit. Available at: https://www.reddit.com/r/FFXVI/comments/1229p9y/potential_spoilers_yoship_accidentally_showed_a/ [Accessed 23 Aug. 2024].
 
+McCrunchy (n.d.). Muffled Party Music. [online] Pixabay. Available at: https://pixabay.com/sound-effects/muffled-party-music-183774/ [Accessed 29 Aug. 2024].
+
+n.a (n.d.). [online] Craiyon . Available at: https://www.craiyon.com/image/PGFOY9CuSEqB9BtdbWbTMQ [Accessed 29 Aug. 2024].
+
 Promptbase.com. (2024). Sci-fi RPG Character Portraits Midjourney Prompt | PromptBase. [online] Available at: https://promptbase.com/prompt/digital-dinosaur-portraits [Accessed 20 Aug. 2024].
 
-‌soreCactus (2017). Justin Nichol’s sci-fi portraits- png, psd, transparency. [online] OpenGameArt.org. Available at: https://opengameart.org/content/justin-nichols-sci-fi-portraits-png-psd-transparency.
+Pixabay (n.d.). shoot 1. [online] Available at: https://pixabay.com/sound-effects/shoot-1-81135/ [Accessed 29 Aug. 2024].
+
+‌Pixabay (n.d.). Game Over. [online] Pixabay. Available at: https://pixabay.com/sound-effects/game-over-38511/ [Accessed 29 Aug. 2024].
+
+‌Pixabay (n.d.). Chill Drum Loop. [online] Pixabay. Available at: https://pixabay.com/sound-effects/chill-drum-loop-6887/ [Accessed 29 Aug. 2024].
+‌
+‌soreCactus (2017). Justin Nichol’s sci-fi portraits- png, psd, transparency. [online] OpenGameArt.org. Available at: https://opengameart.org/content/justin-nichols-sci-fi-portraits-png-psd-transparency.[Accessed 19 Aug. 2024].
 
 www.merriam-webster.com. (n.d.). *Definition of SANDBOX.* [online] Available at: https://www.merriam-webster.com/dictionary/sandbox#:~:text=%3A%20a%20video%20game%20or%20part.(www.merriam-webster.com, n.d.)[Accessed 9 Aug. 2024].
 
-‌https://www.vecteezy.com/video/7079117-4k-60-fps-looping-space-travel-with-hyper-speed-a-beam-of-stars-in-the-universe-while-moving-at-the-speed-of-light-abstract-creative-cosmic-background-hyper-jump-into-another-galaxy-3d-rendering
+‌https://www.vecteezy.com/video/7079117-4k-60-fps-looping-space-travel-with-hyper-speed-a-beam-of-stars-in-the-universe-while-moving-at-the-speed-of-light-abstract-creative-cosmic-background-hyper-jump-into-another-galaxy-3d-rendering[Accessed 20 Aug. 2024].
 ‌
 
 
