@@ -23,11 +23,11 @@
 
 
 ### **Conclusion**
-Taking all these diffrent games into account I will design my game to that give the user a varity of diffrent ways to interact and make 'choices' in the game. From diffrent **Endings** to the game to how the player will interact with the diffrent levels. This leaded me into having a shop system and a branching dialogue. 
+Drawing inspiration from these games I planned to design a game based on Soul Knight for its core game play in which the player will go through diffrent levels and choose to change their ablity to fight the enemys. Then allowing the player if they so choose to interact with 'npcs' in the game informing the player of certain information and giving them certain choices like Stellaris. These 'npcs' will fit a narritive for the game as Final Fantasy XVI does for its and the players choices when interacing with the narritive effecting the narritive of the game.
 
 ## **Planning & Design the Game**
 
-### ***Branching choices***
+## ***Branching choices***
 
 ## **Shop System Branching Choices**
 
@@ -60,8 +60,14 @@ func _on_buy_pressed(): #runs through a checks current values if not maxed and e
      upgrade.visible=false
      print(Global.curcits)
 ```
+### **Analysis**
 
-**Code Upgrading and Evolving Example  ---FIX THE PRICE**
+#### Buying the weapon 
+
+This code first checks if the item is not health as its functions are run in another dictonary this was done for enemy scripts but could have been put into the same dictonary. Then it checks wheather the weapon is the current weapon or if it the shield upgrade, if it is the current weapon it wont take any curcits and re buy the weapon and the shield will be bought in the below stament. It then takes away the weapons cost and resets the upgradings punishing the player but giving them a chance to go back. This code could have also be done through a for loop but this was not done as it does not save enough lines to be worth sacrficing readiblity. 
+
+
+**Code Upgrading and Evolving Example**
 ```
 func _on_range_pressed():
 	$Shop/Label.text="Current Curcits "+str(Global.curcits)
@@ -79,12 +85,6 @@ func _on_range_evolve_button_pressed():
 ```
 ### **Analysis**
 
-#### Buying the weapon 
-
-**note maybe quote**
-
-This code first checks if the item is not health as its functions are run in another dictonary this was done for enemy scripts but could have been put into the same dictonary. Then it checks wheather the weapon is the current weapon or if it the shield upgrade, if it is the current weapon it wont take any curcits and re buy the weapon and the shield will be bought in the below stament. It then takes away the weapons cost and resets the upgradings punishing the player but giving them a chance to go back. This code could have also be done through a for loop but this was not done as it does not save enough lines to be worth sacrficing readiblity. 
-
 #### Upgrading and Evolving the weapon
 
 Running through a prebuilt system this 'On Button Pressed' much like the buy button allows the signal only to run on the wapon upgraded. it then changes the current range adding more to how far the bullet can go then adding and upgrade level and taking away the currency. The reason that not all these upgrades were in the same script is that each upgrade button is diffrent and for player usiblity clicking the same button for each evolution or a drop down would making it harder for the player to navigate the shop and so intead more lines were added. For evolutions this was very similar however implmenting it was much eaiser it simply checks the global upgrade is maxxed and if it is and the button is clicked it goes to the dictonary and changes the weapon. 
@@ -100,7 +100,7 @@ By using an import known as dialogic instead of creating my own dialogue system 
 
 **Interactions and Level Design**
 
-**Imiages**-fix spelling oml
+**Images**-fix spelling oml
 ![image](https://github.com/user-attachments/assets/9c90ba6a-a3cc-41e8-9279-a729504ccad2)
 ![image](https://github.com/user-attachments/assets/ebc3f014-33d7-4d72-ba98-9ff152433822)
 
