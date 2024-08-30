@@ -203,8 +203,15 @@ func DialogicSignal(arugment: String):
 		boom.play("default")
 		await get_tree().create_timer(1).timeout
 		get_tree().change_scene_to_file("res://Scences/Levels/good_ending.tscn")
+```
+First the connecting save values the script and the 
 
-		
+**FIXX**
+The ending of the game based on savedata values is checked when general kobob is rescued. And so depending on the signals that are emmited a diffrent dialogic timeline will start and a diffrent ending scence. This was done through script as well as dialogic instead of plainly using dialogic due to bugs such as the above that would render parts of the dialogue system usless as no system is perfect. 
+
+
+
+```		
 func _unhandled_input(event: InputEvent):
 	if event.is_action_pressed("Talk") and Global.cantalk and Global.final==3:
 		print(SaveData.end)
@@ -223,9 +230,6 @@ func _on_area_2d_body_exited(body):
 	label.visible=false
 	Global.cantalk=false
 ```
-The ending of the game based on savedata values is checked when general kobob is rescued. And so depending on the signals that are emmited a diffrent dialogic timeline will start and a diffrent ending scence. This was done through script as well as dialogic instead of plainly using dialogic due to bugs such as the above that would render parts of the dialogue system usless as no system is perfect. 
-
-
 ### **Interactions and Level Design**
 
 |Images|
