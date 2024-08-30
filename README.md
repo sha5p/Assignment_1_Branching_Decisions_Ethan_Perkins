@@ -36,10 +36,10 @@ Drawing inspiration from these games I planned to design a game based on Soul Kn
 
 The shop system allows the user to interact with an NPC given that with enough circuits the NPC can 'hack' into the system and can acquire powerful weapons, increase the power of their current weapons and acquire health and shields. They also may choose to upgrade their weapon to evolve it into a more powerful or less powerful weapon depending on how much they have upgraded their current one. This evolution is not shown to the player so the player will have to branch out and go back to get the best weapon preference.
 
-	#### **Flow Chart**
-	![image](https://github.com/user-attachments/assets/827d2e58-e4a6-48b3-968f-5f854553e919)
+#### **Flow Chart**
+![image](https://github.com/user-attachments/assets/827d2e58-e4a6-48b3-968f-5f854553e919)
 	
-	|Buying Weapon UI|Evolving and Upgrading UI|
+|Buying Weapon UI|Evolving and Upgrading UI|
 |:---------|:---------|
 |![image](https://github.com/user-attachments/assets/c0ef7202-862a-4738-8944-a604aef2f225)|![image](https://github.com/user-attachments/assets/bcf47cbf-2910-4e56-8c35-b9f5d7622181)|
 
