@@ -119,9 +119,9 @@ func switchItem(select):   #setting the text and animation for the shop item via
 
 ##### Switching through shop items
 
-To change through the different branching decisions this function is called when clicking the two side buttons 
 ![image](https://github.com/user-attachments/assets/257f6670-6d41-4968-b83b-8524545f4380)
-then selecting is set to the current item. The system's distinctive side buttons the game telling the user 'These are your options' making the branching 'choices' that they can make clear. The code takes the 'select' or the number for which item and then goes through a global dictionary. This dictionary looks for a key 'number' to set the description of the item its name and the animation of the item. Without this navigation being clear the player may struggle to find where they can make choices to impact their game options
+
+To change through the different branching decisions this function is called when clicking the two side buttons then selecting is set to the current item. The system's distinctive side buttons the game telling the user 'These are your options' making the branching 'choices' that they can make clear. The code takes the 'select' or the number for which item and then goes through a global dictionary. This dictionary looks for a key 'number' to set the description of the item its name and the animation of the item. Without this navigation being clear the player may struggle to find where they can make choices to impact their game options
 
 
 ### **Story Branching Choices**
