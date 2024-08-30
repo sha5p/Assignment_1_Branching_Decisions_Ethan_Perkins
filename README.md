@@ -3,16 +3,17 @@
 
 ## **Research Game Comparision**  
 
-|Compared|Fianl Fantasy XVI|Soul Knight|Stellaris|
+|Compared|Fianl Fantasy XIV|Soul Knight|Stellaris|
 |:-----|:----|:-----|:----|
 |Branching Images|![image](https://github.com/user-attachments/assets/0e7ff2b8-ba09-4004-8291-a69e1f660ed8)(GMAJ0R, 2023)|![image](https://github.com/user-attachments/assets/b274cc58-828d-4eab-ba2d-4cc3aa0b7b07)(BSRDACCT, n.d.)|![image](https://github.com/user-attachments/assets/1ae077a0-bf7f-44f2-ad34-6da55b76a1d3)(aremonmoonserpent, n.d.)|
-|Branching choices|Final Fantasy XVI is a narrative Focus game and through few but impactful choices the player is left to choose narritive choices. Along with cutscences to the narritive Final Fantasy XVI sets is designed to give the player an emotional experience.|Soul Knight gives the player diffrent branching decisions through a skill tree and a shop system (Aaron, 2024) this makes the game feel more open world to the player in which they can choose exactly how to progress through their playthrough|Stellaris is a game heavily based on interactions with other emperies from npcs to online players. Its gameplay based on decisions like negotiate treaties, alliances, and trade deals which set the player |
-|Purposes|An RPG game orientating around a story with branching decisions to progress the player based on their choices|A rouge like with choices effecting how the user intreacts with enemys|A stratgey game in which the user makes decisions through  exploration, empire-building, negotiate treaties, alliances, and trade deals through dialogue .|
+|Branching choices|Final Fantasy XIV is a narrative Focus game and through few but impactful choices the player is left to make via narrative decisions. Along with cutscenes to the narrative, Final Fantasy XIV sets are designed to give the player an emotional experience.|Soul Knight gives the player different branching decisions through a skill tree and a shop system (Aaron, 2024) this makes the game feel more open world to the player in which they can choose exactly how to progress through their playthrough.|Stellaris is a game heavily based on interactions with other empires from NPCs to online players. Its gameplay relying on decisions by the player from negotiating treaties, alliances, and trade deals.|
+|Purposes|An RPG game orientating around a story with branching decisions to progress the player based on their choices.|A rouge-like with choices affecting how the user interacts with enemies. |A strategy game in which the user makes decisions through exploration, empire-building, negotiating treaties, alliances, and trade deals through dialogue.|
 
 
 
 ### **Conclusion**
-Drawing inspiration from these games I planned to design a game based on Soul Knight for its core game play in which the player will go through diffrent levels and choose to change their ablity to fight the enemys. Then allowing the player if they so choose to interact with 'npcs' in the game informing the player of certain information and giving them certain choices like Stellaris. These 'npcs' will fit a narritive for the game as Final Fantasy XVI does for its and the players choices when interacing with the narritive effecting the narritive of the game.
+
+Drawing inspiration from these games I planned to design a game based on Soul Knight for its core game play in which the player will go through diffrent levels and choose to change their ablity to fight the enemies. Then allowing the player if they so choose to interact with 'npcs' in the game informing the player of certain information and giving them certain choices like Stellaris. These 'npcs' will fit a narritive for the game as Final Fantasy XIV does for its and the players choices when interacing with the narritive effecting the narritive of the game.
 
 ## **Planning & Design the Game**
 ### **Plan**
@@ -20,7 +21,7 @@ Drawing inspiration from these games I planned to design a game based on Soul Kn
 |:-------|:-------|:-------|
 |Week 4|Completed|Implement Modulated code|
 |Week 4|Completed|Inital Game Concept/Design| 
-|Week 5|Completed|Inital Shop Branching/Enemys|  
+|Week 5|Completed|Inital Shop Branching/enemies|  
 |Week 5|Completed|Story|
 |Week 5|Completed|Cut Scence| 
 |Week 6|Completed|Documentation| 
