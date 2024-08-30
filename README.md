@@ -1,4 +1,4 @@
-*# Assigment_3_Branching_Decisions
+# Assigment_3_Branching_Decisions
 ## **Documentation Branching Decisions game Assessment 1** 
 
 ## **Research Game Comparision**  
