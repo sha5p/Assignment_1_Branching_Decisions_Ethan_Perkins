@@ -1,39 +1,44 @@
-*# Assigment_3_Branching_Decisions
+# Assigment 1 Branching Decisions
 ## **Documentation Branching Decisions game Assessment 1** 
 
 ## **Research Game Comparision**  
 
-|Compared|Fianl Fantasy XVI|Soul Knight|Stellaris|
+|Compared|Final Fantasy XIV|Soul Knight|Stellaris|
 |:-----|:----|:-----|:----|
 |Branching Images|![image](https://github.com/user-attachments/assets/0e7ff2b8-ba09-4004-8291-a69e1f660ed8)(GMAJ0R, 2023)|![image](https://github.com/user-attachments/assets/b274cc58-828d-4eab-ba2d-4cc3aa0b7b07)(BSRDACCT, n.d.)|![image](https://github.com/user-attachments/assets/1ae077a0-bf7f-44f2-ad34-6da55b76a1d3)(aremonmoonserpent, n.d.)|
-|Branching choices|Final Fantasy XVI is a narrative Focus game and through few but impactful choices the player is left to choose narritive choices. Along with cutscences to the narritive Final Fantasy XVI sets is designed to give the player an emotional experience.|Soul Knight gives the player diffrent branching decisions through a skill tree and a shop system (Aaron, 2024) this makes the game feel more open world to the player in which they can choose exactly how to progress through their playthrough|Stellaris is a game heavily based on interactions with other emperies from npcs to online players. Its gameplay based on decisions like negotiate treaties, alliances, and trade deals which set the player |
-|Purposes|An RPG game orientating around a story with branching decisions to progress the player based on their choices|A rouge like with choices effecting how the user intreacts with enemys|A stratgey game in which the user makes decisions through  exploration, empire-building, negotiate treaties, alliances, and trade deals through dialogue .|
+|Branching choices|Final Fantasy XIV is a narrative Focus game and through few but impactful choices the player is left to make via narrative decisions. Along with cutscenes to the narrative, Final Fantasy XIV sets are designed to give the player an emotional experience.|Soul Knight gives the player different branching decisions through a skill tree and a shop system (Aaron, 2024) this makes the game feel more open world to the player in which they can choose exactly how to progress through their playthrough.|Stellaris is a game heavily based on interactions with other empires from NPCs to online players. Its gameplay relies on decisions by the player from negotiating treaties, alliances, and trade deals.|
+|Purposes|An RPG game orientates around a story with branching decisions to progress the player based on their choices.|A rouge-like with choices affecting how the user interacts with enemies. |A strategy game in which the user makes decisions through exploration, empire-building, negotiating treaties, alliances, and trade deals through dialogue.|
 
 
 
 ### **Conclusion**
-Drawing inspiration from these games I planned to design a game based on Soul Knight for its core game play in which the player will go through diffrent levels and choose to change their ablity to fight the enemys. Then allowing the player if they so choose to interact with 'npcs' in the game informing the player of certain information and giving them certain choices like Stellaris. These 'npcs' will fit a narritive for the game as Final Fantasy XVI does for its and the players choices when interacing with the narritive effecting the narritive of the game.
+
+Drawing inspiration from these games I planned to design a game based on Soul Knight for its core gameplay in which the player will go through different levels and choose to change their ability to fight the enemies. Then allowing the player if they so choose to interact with 'NPCs' in the game informing the player of certain information and giving them certain choices like Stellaris. These 'NPCs' will fit a narrative for the game as Final Fantasy XIV does for its and the player's choices when interacting with the narrative affecting the narrative of the game.
 
 ## **Planning & Design the Game**
 ### **Plan**
 |Project|Status|Goals|
 |:-------|:-------|:-------|
 |Week 4|Completed|Implement Modulated code|
-|Week 4|Completed|Inital Game Concept/Design| 
-|Week 5|Completed|Inital Shop Branching/Enemys|  
+|Week 4|Completed|Initial Game Concept/Design| 
+|Week 5|Completed|Initial Shop Branching/Enemies|  
 |Week 5|Completed|Story|
-|Week 5|Completed|Cut Scence| 
+|Week 5|Completed|Cut Scene| 
 |Week 6|Completed|Documentation| 
+### **Design**
+
+![image](https://github.com/user-attachments/assets/f2faa143-a375-4126-88b3-e7292328f4c7)
+
 
 ### ***Branching choices***
 
 ### **Shop System Branching Choices**
 
-The shop system allows the user to interact with an NPC giving that with enough circuita the NPC can 'hack' into the systen and can acquire powerful weapons, increase their current weapons power and aquire health and shields. They also may choose to upgrade their weapon to evolve it into a more powerful or less powerful weapon depending on how much they have upgraded their current one. This evolution not shown to the player so that the player will have to branch out and go back to get the best weapon prefrence. 
+The shop system allows the user to interact with an NPC given that with enough circuits the NPC can 'hack' into the system and can acquire powerful weapons, increase the power of their current weapons and acquire health and shields. They also may choose to upgrade their weapon to evolve it into a more powerful or less powerful weapon depending on how much they have upgraded their current one. This evolution is not shown to the player so the player will have to branch out and go back to get the best weapon preference.
 
 #### **Flow Chart**
 ![image](https://github.com/user-attachments/assets/827d2e58-e4a6-48b3-968f-5f854553e919)
-
+	
 |Buying Weapon UI|Evolving and Upgrading UI|
 |:---------|:---------|
 |![image](https://github.com/user-attachments/assets/c0ef7202-862a-4738-8944-a604aef2f225)|![image](https://github.com/user-attachments/assets/bcf47cbf-2910-4e56-8c35-b9f5d7622181)|
@@ -62,8 +67,7 @@ func _on_buy_pressed(): #When pressed checks if the weapon is the current weapon
 
 ##### Buying items 
 
-This code checks if the item is not bought and maxed and if it is the NPC wont take any curcits. If it isnt bought or maxed it takes the dictonary value of the price and then deducts that many circuits from the players current amount if there is not eenough curcits nothing will happen as well. The reason that the health is in a diffrent dictonary is due to animation sizes for the sprites. Prefrabley these diffrent items would be in the same dictonary or instead a list which then would loop through to deduct prices. Alternativly the shop system could have run through signals that would add items to a list and when the signal is activated other items in the list could have been altered but this was not done due to time constraints. 
-
+This code checks if the item is not bought and maxed and if it is the NPC won't take any circuits. If it isn't bought or maxed it takes the dictionary value of the price and then deducts that many circuits from the player's current amount if there are not enough circuits nothing will happen as well. The reason that the health is in a different dictionary is due to the animation sizes for the sprites. Preferably these different items would be in the same dictionary or instead a list which then would loop through to deduct prices. Alternatively, the shop system could have run through signals that would add items to a list and when the signal is activated other items in the list could have been altered but this was not done due to time constraints. 
 
 #### **Code Upgrading and Evolving Example**
 ```
@@ -85,7 +89,40 @@ func _on_range_evolve_button_pressed(): #evolves if requirment met (maxed) to de
 
 ##### Upgrading and Evolving the weapon
 
-Running through a prebuilt system  'On Button Pressed' will only be functional on the current weapon. Taking the current dictonary values then changing the the values for the upgrade and its current level as well as deducting circuits. The reason that not all these upgrades were in the same script was for useriblty for the player. Evolutions running  simlilar but instead checks the upgrade level and if applicable then evolves the weapon. This could have been implmented instead by using a varity of varibles and changing the current weapon to the varible though this improves readiblity it would require much more lines of code for the same effect. These evolutions and powerups branch throughout the diffrent upgrades and give diffrent weapons letting the player fight against the mobs in diffrent ways from closer to further to more risky. 
+Running through a prebuilt system 'On Button Pressed' will only be functional on the current weapon. Taking the current dictionary values then changing the values for the upgrade and its current level and deducting circuits. The reason that not all these upgrades were in the same script was for useability for the player. Evolutions run similarly but instead, check the upgrade level and if applicable then evolve the weapon. This could have been implemented instead by using a variety of variables and changing the current weapon to the variable though this improves readability it would require many more lines of code for the same effect. These evolutions and powerups branch throughout the different upgrades and give different weapons letting the player fight against the mobs in different ways from closer to further to more risky. 
+
+#### **Code-switching through shop items**
+
+```
+func switchItem(select):   #setting the text and animation for the shop item via for loops and elifs
+	for i in range(5):
+		if select==i and select!=0:
+			currentItem=select
+			weapons.play(Global.items[currentItem]["Name"])
+			utlitys.visible=false
+			weapons.visible=true
+			item.text=Global.items[currentItem]["Name"]
+			des.text=Global.items[currentItem]["Des"]+"\n Cost "+"$"+str(Global.items[currentItem]["Cost"])
+			if Global.items[currentItem]["Name"]==Global.item[0]["Weapon"]:
+				print("works")
+				upgrade.visible=true
+		elif select ==0:
+			currentItem=select
+			utlitys.play(Global.Health[currentItem]["Name"])
+			weapons.visible=false
+			utlitys.visible=true
+			item.text=Global.Health[currentItem]["Name"]
+			des.text=Global.Health[currentItem]["Des"]+"\n Cost "+"$"+str(Global.Health[currentItem]["Cost"])
+			upgrade.visible=false
+```
+#### **Analysis**
+
+##### Switching through shop items
+
+To change through the different branching decisions this function is called when clicking the two side buttons 
+![image](https://github.com/user-attachments/assets/257f6670-6d41-4968-b83b-8524545f4380)
+then selecting is set to the current item. The system's distinctive side buttons the game telling the user 'These are your options' making the branching 'choices' that they can make clear. The code takes the 'select' or the number for which item and then goes through a global dictionary. This dictionary looks for a key 'number' to set the description of the item its name and the animation of the item. Without this navigation being clear the player may struggle to find where they can make choices to impact their game options
+
 
 ### **Story Branching Choices**
 
@@ -147,31 +184,14 @@ func _on_area_2d_body_exited(body):
 
 #### **Analysis**
 
-By using an import known as dialogic instead of creating my own dialogue system it made the interactions and sending signals much more powerful. Instead of using a dialogic based system modulated code could have been used alternativly which reads through txt files and print dialogue. However this code would be much more jankey when sending signals as many if and else staments would have to be run when reading files to look for key words. Which is why a dialogic timeline was used taking in diffrent choices to alter the timeline based on what the user inputs from 'Your lying' to 'A fake?'. These diffrent branching choices then emit diffrent signals recived in the scripts. The script connecting to dialogic and changing the values of certain signals which will allow diffrent dialogue to play later on. These change in values could have been done via save states but was avoided due to bugs inside dialogics functions like the below. 
+By using an import known as dialogic instead of creating my own dialogue system it made the interactions and sending signals much more powerful. Instead of using a dialogic-based system, modulated code could have been used alternatively which reads through Text files and prints dialogue. However, this code would be much jankier when sending signals as many if and else statements would have to be run when reading files to look for keywords. This is why a dialogic timeline was used taking in different choices to alter the timeline based on what the user inputs from 'Your lying' to 'A fake?'. These different branching choices then emit different signals received in the scripts. The script connects to dialogic and changes the values of certain signals which will allow different dialogues to play later on. These changes in values could have been done via save states but were avoided due to bugs inside dialogics functions like the one below. 
 
-|Dialogic Probelmm|Solution|
+|Dialogic Problem|Solution|
 |:---|:----|
-|The Dialogue would constantly break constantly after the first timeline was played|The issue did not stem from a code error nor a signal sending error but a inbuilt function in dialogic known as the wait for 'time' which would then cause dialogue to wait indefinitely|
+|The Dialogue would constantly break after the first timeline was played|The issue did not stem from a code error nor a signal sending error but an inbuilt function in dialogic known as the wait for 'time' which would then cause dialogue to wait indefinitely|
 
-#### **Dialogic to game cutscence**
-
+#### **Dialogic to game cutscene**
 ```
-extends Node2D
-@onready var animation_player = $AnimationPlayer
-@onready var camera = $Camera
-var PLAYER = load("res://Scences/Player/Player.tscn")
-@onready var _66x_66x_31 = $"66x66x31"
-@onready var _66x_66x_32 = $"66x66x32"
-@onready var _66x_66x_30 = $"66x66x30"
-@onready var main =get_tree().get_root().get_node("Level_4")
-@onready var camera_2d = $Camera2D
-@onready var label = $Label
-@onready var boom = $Boom
-@onready var kobob = $Kobob
-@onready var audio_stream_player_2d = $AudioStreamPlayer2D
-
-#sets values
-
 func _ready():
 	#makes sure you can only talk when all enemys killed and resets values via 
 	Global.final=0
@@ -180,7 +200,25 @@ func _ready():
 	animation_player.play("Cut Scence")
 	Dialogic.start("Final")
 	Global.talking=true
+```
 
+First the connecting save values to dialogic via the script so that the different cutscenes are playable depending on the choices made beforehand. Then once the cutscene has finished and the player interacts with the general kabob where the comparison with the connected variables and signals is made. 
+
+```		
+func _unhandled_input(event: InputEvent):
+	if event.is_action_pressed("Talk") and Global.cantalk and Global.final==3:
+		print(SaveData.end)
+		Global.talking=true
+		if SaveData.end==true:
+			Dialogic.start("kobob_saved_good")
+		if SaveData.end==false:
+			Dialogic.start("kobob_saved_bad")
+```
+
+Then the ending of the game uses signals from dialogic again which will emit different signals depending on which cutscene was player 'kobob_saved_good' or 'kobob_saved_
+bad'. 
+
+```
 func DialogicSignal(arugment: String):
 	if arugment =="Camera":
 		camera.play("Camera")
@@ -203,28 +241,8 @@ func DialogicSignal(arugment: String):
 		boom.play("default")
 		await get_tree().create_timer(1).timeout
 		get_tree().change_scene_to_file("res://Scences/Levels/good_ending.tscn")
-
-		
-func _unhandled_input(event: InputEvent):
-	if event.is_action_pressed("Talk") and Global.cantalk and Global.final==3:
-		print(SaveData.end)
-		Global.talking=true
-		if SaveData.end==true:
-			Dialogic.start("kobob_saved_good")
-		if SaveData.end==false:
-			Dialogic.start("kobob_saved_bad")
-func _on_area_2d_body_entered(body):
-	var talk = SaveSettings.config.get_value("keybinding", "Talk")
-	label.visible=true
-	label.text= "Cick: %s to talk" % [talk]
-	Global.cantalk=true
-
-func _on_area_2d_body_exited(body):
-	label.visible=false
-	Global.cantalk=false
 ```
-The ending of the game based on savedata values is checked when general kobob is rescued. And so depending on the signals that are emmited a diffrent dialogic timeline will start and a diffrent ending scence. This was done through script as well as dialogic instead of plainly using dialogic due to bugs such as the above that would render parts of the dialogue system usless as no system is perfect. 
-
+Alternatively, the two different dialogues could have been run under the same timeline and then run through the built-in if, else checker in dialogic. However, this was not done as two distinctive timelines depending on the ending results are cleaner if others were to read through rather than having a long dialogic script. 
 
 ### **Interactions and Level Design**
 
@@ -234,27 +252,36 @@ The ending of the game based on savedata values is checked when general kobob is
 
 #### **Analysis**
 
-This branching game is designed to make the next destination for the player very apprant with labels for diffrent parts of the levels for navigation and an NPC interaction to explain the game.  Distinctive designs like similar doors and telporters for each of the sections allow for the navigation to be further inhanced with the addtion to the instructions. From the feedback evident is apparant from the players that this narritive was indeed navigatble. 
+This branching game is designed to make the next destination for the player very apparent with labels for different parts of the levels for navigation and an NPC interaction to explain the game. ![image](https://github.com/user-attachments/assets/5acbc641-269c-4426-95e1-efaa13824d87)![image](https://github.com/user-attachments/assets/020848df-6beb-425b-ad09-5c7a52ab278f)
+
+These navigation choices let the player easily understand the type of branching choices that they can make while progressing through the levels. While each level is indicated via the same sprites for doors and teleporters allowing for the navigation to be further enhanced with the addition of the instructions. This navigation was done due to feedback given on the game and after altering these mechanics it is apparent to the players that navigation was improved. 
+
 ![image](https://github.com/user-attachments/assets/d6c09872-ab67-4a85-901c-72c02f0ad42e)
 
-
-
-
 ## **Testing / Evaluation of Your Game**
+### **Heuristics approaches**
+
+Due to time constraints, there were different approaches made to cut time. In which things that could happen under one scene such as NPCs or sounds were put under different ones. 
+
+![image](https://github.com/user-attachments/assets/788f02b6-858e-4bc6-a76c-3b5b127308da)
+
+Though not affecting the player modulated code would enhance readability for people going through the game. However, cuts like this were made throughout the game due to when the assignment was due.
 
 
-Having branching decisions from the story line to the dialogue that the player can make effecting how the user interacts if each level and how they finish the game. I have made few dialogue choices but they are important effecting the narritive ending as a whole and a Shop system for the player to interact with the levels diffrently depending on their item choices. When running a shop system in later games as lots of the code is modelable it will allow me to easily add it much like my save states added from last assigment. 
 
-The branching is apparant and taking feedback from the user to 
+
+### **Evaluation**
+Having branching decisions from the storyline to the dialogue that the player can make affects how the user interacts at each level and how they finish the game. I have made a few dialogue choices but they are important affecting the narrative ending as a whole and a Shop system for the player to interact with the levels differently depending on their item choices. When running a shop system in later games as lots of the code is modelable it will allow me to easily add it much like my save states added from the last assignment. 
+
+The branching is apparent and taking feedback from the user to 
 ![image](https://github.com/user-attachments/assets/e93f2f76-338b-441d-9bc7-b0ad36e3533a)
-As stated above in the level design made the nire navigatable with insturctions throughout from game from NPCs to labels 
-![image](https://github.com/user-attachments/assets/5acbc641-269c-4426-95e1-efaa13824d87)![image](https://github.com/user-attachments/assets/020848df-6beb-425b-ad09-5c7a52ab278f)
-If i where to do this assigment again I would make the game incorprate more modulated script through my weapon system much like the shop system making a thorough list of dialogic functions that work and don't work so my decisions and process would happen plainly in dialogic. But in conclusion this game runs through multiple diffrent branching choices from the games stroy to how the player interacts with the levels.  
+
+If I were to do this assignment again I would make the game incorporate more modulated script through my weapon system much like the shop system making a thorough list of dialogic functions that work and don't work so my decisions and process would happen plainly in dialogic. In conclusion, this game runs through multiple different branching choices from the game's story to how the player interacts with the levels.  
 
 
 
 
-## **Biblogrpathy**
+## **Bibliography**
 
 Aaron. (2024). *Season Shop.* [online] Soul Knight Wiki. Available at: https://soul-knight.fandom.com/wiki/Season_Shop [Accessed 22 Aug. 2024].
 
