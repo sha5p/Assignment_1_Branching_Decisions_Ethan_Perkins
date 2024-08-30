@@ -91,6 +91,39 @@ func _on_range_evolve_button_pressed(): #evolves if requirment met (maxed) to de
 
 Running through a prebuilt system'On Button Pressed' will only be functional on the current weapon. Taking the current dictionary values then changing the values for the upgrade and its current level and deducting circuits. The reason that not all these upgrades were in the same script was for useability for the player. Evolutions run similarly but instead, check the upgrade level and if applicable then evolve the weapon. This could have been implemented instead by using a variety of variables and changing the current weapon to the variable though this improves readability it would require many more lines of code for the same effect. These evolutions and powerups branch throughout the different upgrades and give different weapons letting the player fight against the mobs in different ways from closer to further to more risky. 
 
+#### **Code switching through shop items**
+
+```
+func switchItem(select):   #setting the text and animation for the shop item via for loops and elifs
+	for i in range(5):
+		if select==i and select!=0:
+			currentItem=select
+			weapons.play(Global.items[currentItem]["Name"])
+			utlitys.visible=false
+			weapons.visible=true
+			item.text=Global.items[currentItem]["Name"]
+			des.text=Global.items[currentItem]["Des"]+"\n Cost "+"$"+str(Global.items[currentItem]["Cost"])
+			if Global.items[currentItem]["Name"]==Global.item[0]["Weapon"]:
+				print("works")
+				upgrade.visible=true
+		elif select ==0:
+			currentItem=select
+			utlitys.play(Global.Health[currentItem]["Name"])
+			weapons.visible=false
+			utlitys.visible=true
+			item.text=Global.Health[currentItem]["Name"]
+			des.text=Global.Health[currentItem]["Des"]+"\n Cost "+"$"+str(Global.Health[currentItem]["Cost"])
+			upgrade.visible=false
+```
+#### **Analysis**
+
+##### Switching through shop items
+
+To change through the different branching decisions this function is called when clicking the two side buttons 
+![image](https://github.com/user-attachments/assets/257f6670-6d41-4968-b83b-8524545f4380)
+then selecting is set to the current item. The system's distinctive side buttons the game telling the user 'These are your options' making the branching 'choices' that they can make clear. The code takes the 'select' or the number for which item and then goes through a global dictionary. This dictionary looks for a key 'number' to set the description of the item its name and the animation of the item. Without this navigation being clear the player may struggle to find where they can make choices to impact their game options
+
+
 ### **Story Branching Choices**
 
 #### **Dialogue Photos**
@@ -232,7 +265,7 @@ Having branching decisions from the storyline to the dialogue that the player ca
 The branching is apparent and taking feedback from the user to 
 ![image](https://github.com/user-attachments/assets/e93f2f76-338b-441d-9bc7-b0ad36e3533a)
 
-If I where to do this assignment again I would make the game incorporate more modulated script through my weapon system much like the shop system making a thorough list of dialogic functions that work and don't work so my decisions and process would happen plainly in dialogic. In conclusion, this game runs through multiple different branching choices from the game's story to how the player interacts with the levels.  
+If I were to do this assignment again I would make the game incorporate more modulated script through my weapon system much like the shop system making a thorough list of dialogic functions that work and don't work so my decisions and process would happen plainly in dialogic. In conclusion, this game runs through multiple different branching choices from the game's story to how the player interacts with the levels.  
 
 
 
