@@ -1,13 +1,13 @@
-# Assigment 1 Branching Decisions
+# Assignment 1 Branching Decisions
 ## **Documentation Branching Decisions game Assessment 1** 
 
-## **Research Game Comparision**  
+## **Research Game Comparison**  
 
 |Compared|Final Fantasy XIV|Soul Knight|Stellaris|
 |:-----|:----|:-----|:----|
 |Branching Images|![image](https://github.com/user-attachments/assets/0e7ff2b8-ba09-4004-8291-a69e1f660ed8)(GMAJ0R, 2023)|![image](https://github.com/user-attachments/assets/b274cc58-828d-4eab-ba2d-4cc3aa0b7b07)(BSRDACCT, n.d.)|![image](https://github.com/user-attachments/assets/1ae077a0-bf7f-44f2-ad34-6da55b76a1d3)(aremonmoonserpent, n.d.)|
 |Branching choices|Final Fantasy XIV is a narrative Focus game and through few but impactful choices the player is left to make via narrative decisions. Along with cutscenes to the narrative, Final Fantasy XIV sets are designed to give the player an emotional experience.|Soul Knight gives the player different branching decisions through a skill tree and a shop system (Aaron, 2024) this makes the game feel more open world to the player in which they can choose exactly how to progress through their playthrough.|Stellaris is a game heavily based on interactions with other empires from NPCs to online players. Its gameplay relies on decisions by the player from negotiating treaties, alliances, and trade deals.|
-|Purposes|An RPG game orientates around a story with branching decisions to progress the player based on their choices.|A rouge-like with choices affecting how the user interacts with enemies. |A strategy game in which the user makes decisions through exploration, empire-building, negotiating treaties, alliances, and trade deals through dialogue.|
+|Purposes|An RPG game orientates around a story with branching decisions to progress the player based on their choices.|A rogue-like with choices affecting how the user interacts with enemies. |A strategy game in which the user makes decisions through exploration, empire-building, negotiating treaties, alliances, and trade deals through dialogue.|
 
 
 
@@ -89,7 +89,9 @@ func _on_range_evolve_button_pressed(): #evolves if requirment met (maxed) to de
 
 ##### Upgrading and Evolving the weapon
 
-Running through a prebuilt system 'On Button Pressed' will only be functional on the current weapon. Taking the current dictionary values then changing the values for the upgrade and its current level and deducting circuits. The reason that not all these upgrades were in the same script was for useability for the player. Evolutions run similarly but instead, check the upgrade level and if applicable then evolve the weapon. This could have been implemented instead by using a variety of variables and changing the current weapon to the variable though this improves readability it would require many more lines of code for the same effect. These evolutions and powerups branch throughout the different upgrades and give different weapons letting the player fight against the mobs in different ways from closer to further to more risky. 
+Running through a prebuilt system 'On Button Pressed' will only be functional on the current weapon. Taking the current dictionary values then changing the values for the upgrade and its current level and deducting circuits. The reason that not all these upgrades were in the same script was for useability for the player. Evolutions run similarly but instead, check the upgrade level and if applicable then evolve the weapon. This could have been implemented instead by using a variety of variables and changing the current weapon to the variable though this improves readability it would require many more lines of code for the same effect. These evolutions and powerups branch throughout the different upgrades and give different weapons letting the player fight against the mobs in different ways from closer to further to more risky. The amount of circuits not spent was then shown to the player at the end affecting their final 'ending'.  
+
+![image](https://github.com/user-attachments/assets/a5122a00-97e5-4080-b7cf-eef56bad97a1)
 
 #### **Code-switching through shop items**
 
@@ -121,7 +123,7 @@ func switchItem(select):   #setting the text and animation for the shop item via
 
 ![image](https://github.com/user-attachments/assets/257f6670-6d41-4968-b83b-8524545f4380)
 
-To change through the different branching decisions this function is called when clicking the two side buttons then selecting is set to the current item. The system's distinctive side buttons the game telling the user 'These are your options' making the branching 'choices' that they can make clear. The code takes the 'select' or the number for which item and then goes through a global dictionary. This dictionary looks for a key 'number' to set the description of the item its name and the animation of the item. Without this navigation being clear the player may struggle to find where they can make choices to impact their game options
+To change through the different branching decisions this function is called when clicking the two side buttons then selecting is set to the current item. The system's distinctive side buttons the game telling the user 'These are your options' making the branching 'choices' that they can make clear. The code takes the 'select' or the number for which item and then goes through a global dictionary. This dictionary looks for a key 'number' to set the description of the item, its name and the animation of the item. Without this navigation being clear the player may struggle to find where they can make choices to impact their game options. 
 
 
 ### **Story Branching Choices**
@@ -130,7 +132,7 @@ To change through the different branching decisions this function is called when
 |Dialogue logic|
 |:---------|
 |![image](https://github.com/user-attachments/assets/c078f1d2-a62d-4fc4-b9aa-2da6b53eff78)|
-|Scence display|
+|Scene display|
 |![image](https://github.com/user-attachments/assets/6cf2962b-bb4a-42a0-83bb-f36c3a3611b9)![image](https://github.com/user-attachments/assets/96be63ce-3fa0-481e-b581-8f653b73939d)![image](https://github.com/user-attachments/assets/7820852d-3b40-4aba-bb71-7f22da0f07c4)|
 #### **Flow Chart**
 ![image](https://github.com/user-attachments/assets/9ff801a1-d4c7-4ea4-b1c4-73209258ee93)
