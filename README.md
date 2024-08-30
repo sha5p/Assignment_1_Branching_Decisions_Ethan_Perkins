@@ -154,24 +154,7 @@ By using an import known as dialogic instead of creating my own dialogue system 
 |The Dialogue would constantly break constantly after the first timeline was played|The issue did not stem from a code error nor a signal sending error but a inbuilt function in dialogic known as the wait for 'time' which would then cause dialogue to wait indefinitely|
 
 #### **Dialogic to game cutscence**
-
 ```
-extends Node2D
-@onready var animation_player = $AnimationPlayer
-@onready var camera = $Camera
-var PLAYER = load("res://Scences/Player/Player.tscn")
-@onready var _66x_66x_31 = $"66x66x31"
-@onready var _66x_66x_32 = $"66x66x32"
-@onready var _66x_66x_30 = $"66x66x30"
-@onready var main =get_tree().get_root().get_node("Level_4")
-@onready var camera_2d = $Camera2D
-@onready var label = $Label
-@onready var boom = $Boom
-@onready var kobob = $Kobob
-@onready var audio_stream_player_2d = $AudioStreamPlayer2D
-
-#sets values
-
 func _ready():
 	#makes sure you can only talk when all enemys killed and resets values via 
 	Global.final=0
@@ -180,7 +163,23 @@ func _ready():
 	animation_player.play("Cut Scence")
 	Dialogic.start("Final")
 	Global.talking=true
+```
+First the connecting save values to dialogic via the script so that the diffrent cutscenes are playable depending on the choices made beforehand. Then once the cutscene has finished and the player interacts with general kobob where the comparision with the connected varibles and signals is made. 
+```		
+func _unhandled_input(event: InputEvent):
+	if event.is_action_pressed("Talk") and Global.cantalk and Global.final==3:
+		print(SaveData.end)
+		Global.talking=true
+		if SaveData.end==true:
+			Dialogic.start("kobob_saved_good")
+		if SaveData.end==false:
+			Dialogic.start("kobob_saved_bad")
+```
 
+Then the ending of the game uses signals from dialogic again which will emit diffrent signals depending on which cutscence was player 'kobob_saved_good' or 'kobob_saved_
+bad'. 
+
+```
 func DialogicSignal(arugment: String):
 	if arugment =="Camera":
 		camera.play("Camera")
@@ -204,32 +203,8 @@ func DialogicSignal(arugment: String):
 		await get_tree().create_timer(1).timeout
 		get_tree().change_scene_to_file("res://Scences/Levels/good_ending.tscn")
 ```
-First the connecting save values the script and the 
+Alternativly the two diffrent dialogues could have been run under the same timline and then running through the built in if, else checker in dialogic. However this was not done as two distinctive timelines depending on the ending results is cleaner if others were to read through rather then having a long dialogic sciprt. 
 
-**FIXX**
-The ending of the game based on savedata values is checked when general kobob is rescued. And so depending on the signals that are emmited a diffrent dialogic timeline will start and a diffrent ending scence. This was done through script as well as dialogic instead of plainly using dialogic due to bugs such as the above that would render parts of the dialogue system usless as no system is perfect. 
-
-
-
-```		
-func _unhandled_input(event: InputEvent):
-	if event.is_action_pressed("Talk") and Global.cantalk and Global.final==3:
-		print(SaveData.end)
-		Global.talking=true
-		if SaveData.end==true:
-			Dialogic.start("kobob_saved_good")
-		if SaveData.end==false:
-			Dialogic.start("kobob_saved_bad")
-func _on_area_2d_body_entered(body):
-	var talk = SaveSettings.config.get_value("keybinding", "Talk")
-	label.visible=true
-	label.text= "Cick: %s to talk" % [talk]
-	Global.cantalk=true
-
-func _on_area_2d_body_exited(body):
-	label.visible=false
-	Global.cantalk=false
-```
 ### **Interactions and Level Design**
 
 |Images|
