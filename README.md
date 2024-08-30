@@ -259,7 +259,18 @@ These navigation choices let the player easily understand the type of branching 
 ![image](https://github.com/user-attachments/assets/d6c09872-ab67-4a85-901c-72c02f0ad42e)
 
 ## **Testing / Evaluation of Your Game**
+### **Heuristics approaches**
 
+Due to time constraints, there were different approaches made to cut time. In which things that could happen under one scene such as NPCs or sounds were put under different ones. 
+
+![image](https://github.com/user-attachments/assets/788f02b6-858e-4bc6-a76c-3b5b127308da)
+
+Though not affecting the player modulated code would enhance readability for people going through the game. However, cuts like this were made throughout the game due to when the assignment was due.
+
+
+
+
+### **Evaluation**
 Having branching decisions from the storyline to the dialogue that the player can make affects how the user interacts at each level and how they finish the game. I have made a few dialogue choices but they are important affecting the narrative ending as a whole and a Shop system for the player to interact with the levels differently depending on their item choices. When running a shop system in later games as lots of the code is modelable it will allow me to easily add it much like my save states added from the last assignment. 
 
 The branching is apparent and taking feedback from the user to 
