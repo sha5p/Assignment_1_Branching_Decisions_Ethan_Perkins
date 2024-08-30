@@ -234,21 +234,19 @@ The ending of the game based on savedata values is checked when general kobob is
 
 #### **Analysis**
 
-This branching game is designed to make the next destination for the player very apprant with labels for diffrent parts of the levels for navigation and an NPC interaction to explain the game.  Distinctive designs like similar doors and telporters for each of the sections allow for the navigation to be further inhanced with the addtion to the instructions. From the feedback evident is apparant from the players that this narritive was indeed navigatble. 
+This branching game is designed to make the next destination for the player very apprant with labels for diffrent parts of the levels for navigation and an NPC interaction to explain the game. ![image](https://github.com/user-attachments/assets/5acbc641-269c-4426-95e1-efaa13824d87)![image](https://github.com/user-attachments/assets/020848df-6beb-425b-ad09-5c7a52ab278f)
+
+These navigation choices let the player easily understand the type of branching choices that they can make while progressing through the levels. While each leve is indicated via the same sprites for doors and teleporters allowing for the navigation to be further inhanced with the addtion to the instructions. This navigation was done due to feedback given on the game and after altering these mechanics it is apparant that the players that navigation was improved. 
+
 ![image](https://github.com/user-attachments/assets/d6c09872-ab67-4a85-901c-72c02f0ad42e)
 
-
-
-
 ## **Testing / Evaluation of Your Game**
-
 
 Having branching decisions from the story line to the dialogue that the player can make effecting how the user interacts if each level and how they finish the game. I have made few dialogue choices but they are important effecting the narritive ending as a whole and a Shop system for the player to interact with the levels diffrently depending on their item choices. When running a shop system in later games as lots of the code is modelable it will allow me to easily add it much like my save states added from last assigment. 
 
 The branching is apparant and taking feedback from the user to 
 ![image](https://github.com/user-attachments/assets/e93f2f76-338b-441d-9bc7-b0ad36e3533a)
-As stated above in the level design made the nire navigatable with insturctions throughout from game from NPCs to labels 
-![image](https://github.com/user-attachments/assets/5acbc641-269c-4426-95e1-efaa13824d87)![image](https://github.com/user-attachments/assets/020848df-6beb-425b-ad09-5c7a52ab278f)
+
 If i where to do this assigment again I would make the game incorprate more modulated script through my weapon system much like the shop system making a thorough list of dialogic functions that work and don't work so my decisions and process would happen plainly in dialogic. But in conclusion this game runs through multiple diffrent branching choices from the games stroy to how the player interacts with the levels.  
 
 
