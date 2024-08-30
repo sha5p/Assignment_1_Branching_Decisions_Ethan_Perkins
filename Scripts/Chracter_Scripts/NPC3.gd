@@ -33,7 +33,7 @@ func _unhandled_input(event: InputEvent):
 func _on_area_2d_body_entered(body):
 	var talk = SaveSettings.config.get_value("keybinding", "Talk")
 	label.visible=true
-	label.text= "Cick: %s to talk" % [talk]
+	label.text= "Cick: %s to talk " % [talk]
 	Global.cantalk=true
 	
 
